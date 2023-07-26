@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel ./*.html",
     "predeploy": "rm -rf dist && parcel build ./*.html --public-url 'https://ccalobeto.github.io/portafolio.github.io/'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
