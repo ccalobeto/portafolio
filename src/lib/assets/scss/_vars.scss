@@ -37,10 +37,11 @@ $xxxl: 122rem;
 	--black: hsl(var(--blackHSL));
 	--trueBlack: hsl(var(--trueBlackHSL));
 
-	--headingFont: 'Averta-Std', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-		'Helvetica Neue', Arial, sans-serif;
+	--headingFont: 'Averta-Std', -apple-system, system-ui, BlinkMacSystemFont,
+		'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 	--bodyFont: 'Alkes', Georgia, serif;
-	--codeFont: 'MonoLisa', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	--codeFont: 'MonoLisa', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+		monospace;
 
 	--bodyFontWeight: normal;
 	--bodyFontSize: 1.125rem;
@@ -69,7 +70,8 @@ $xxxl: 122rem;
 	--darkBlue: hsl(var(--darkBlueHSL));
 	--darkerBlue: hsl(var(--darkBlueHSL), 20%);
 
-	--blueToYellow: #7ba7bc, #75b1bf, #66c6b6, #4fd27b, #56e035, #acef1b, #faf008, #ffd100;
+	--blueToYellow: #7ba7bc, #75b1bf, #66c6b6, #4fd27b, #56e035, #acef1b, #faf008,
+		#ffd100;
 
 	--ink: var(--darkGray);
 	--paper: var(--white);

@@ -48,14 +48,14 @@ textarea {
 }
 
 input {
-	&[type=radio],
-	&[type=checkbox] {
+	&[type='radio'],
+	&[type='checkbox'] {
 		display: initial;
 		width: initial;
 		margin: initial;
 	}
 
-	&[type=search] {
+	&[type='search'] {
 		color: inherit;
 		font-style: inherit;
 	}
@@ -70,7 +70,7 @@ select {
 }
 
 button,
-input[type=submit] {
+input[type='submit'] {
 	border: 1px solid;
 	padding: 0.5rem 1rem;
 	background: var(--lighterBlue);
@@ -85,7 +85,7 @@ input[type=submit] {
 	.dark & {
 		background: var(--darkBlue);
 	}
-	
+
 	&:hover {
 		background: hsla(var(--lightBlueHSL), 0.2);
 	}
@@ -106,7 +106,8 @@ input[type=submit] {
 	border: 2px solid var(--ink);
 	background: var(--buttonBackground);
 	transition: background var(--itemTransition), color var(--itemTransition),
-		border-color var(--itemTransition), transform .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+		border-color var(--itemTransition),
+		transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 	z-index: 11;
 
 	+ .settings-toggle {

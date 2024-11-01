@@ -83,7 +83,11 @@ hr {
 			height: 100%;
 			position: absolute;
 			width: 2rem;
-			background: linear-gradient(to right, hsla(var(--whiteHSL), 0), hsla(var(--whiteHSL), 1));
+			background: linear-gradient(
+				to right,
+				hsla(var(--whiteHSL), 0),
+				hsla(var(--whiteHSL), 1)
+			);
 			top: 0;
 			right: 0;
 		}
@@ -142,10 +146,16 @@ table {
 	}
 }
 
-
 .toc-wrap {
 	background: linear-gradient(to bottom right, var(--lightGray), var(--yellow));
-	background: linear-gradient(to bottom right, #a7a8aa, #92abb2, #5eca78, #b6ec1f, #ffd100);
+	background: linear-gradient(
+		to bottom right,
+		#a7a8aa,
+		#92abb2,
+		#5eca78,
+		#b6ec1f,
+		#ffd100
+	);
 	padding: 2px;
 	margin: 3rem 0;
 }

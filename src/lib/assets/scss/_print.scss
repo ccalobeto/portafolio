@@ -23,8 +23,8 @@
 	html,
 	body,
 	.layout,
-	#app { 
-		height: auto !important; 
+	#app {
+		height: auto !important;
 		min-height: unset !important;
 	}
 
@@ -36,7 +36,7 @@
 	}
 
 	.loader + div {
-		display: none!important;
+		display: none !important;
 	}
 
 	* {

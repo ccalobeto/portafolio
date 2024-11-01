@@ -92,7 +92,11 @@ pre[class*='language-'] {
 		width: 100%;
 		position: absolute;
 		background: var(--darkBlue);
-		background: linear-gradient(to right, var(--darkBlue), hsla(var(--darkBlueHSL), 0));
+		background: linear-gradient(
+			to right,
+			var(--darkBlue),
+			hsla(var(--darkBlueHSL), 0)
+		);
 	}
 }
 
