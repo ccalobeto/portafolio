@@ -10,8 +10,6 @@ Experienced with React/Preact, TypeScript, Tailwind, Deno, Fresh, Knockout, jQue
 
 ## Experience
 
-
-
 ### [Deno](https://deno.com/)
 
 **Frontend Engineer**
@@ -19,10 +17,9 @@ Experienced with React/Preact, TypeScript, Tailwind, Deno, Fresh, Knockout, jQue
 _August 2023 – present_
 
 - Lead frontend developer, and occasional design roles. Projects include:
-	- Implementing a full-scale redesign of [Deno.com](https://deno.com)
-	- Adding new features to the [Deploy](https://deno.com/deploy) dashboard
-	- Design, branding, and frontend work on [JSR.io](https://jsr.io)
-
+  - Implementing a full-scale redesign of [Deno.com](https://deno.com)
+  - Adding new features to the [Deploy](https://deno.com/deploy) dashboard
+  - Design, branding, and frontend work on [JSR.io](https://jsr.io)
 
 ### [Shopify](https://shopify.com/)
 
@@ -41,7 +38,6 @@ _August 2021 – August 2023_
 - Reviewed code, proposals and pull requests across teams
 - Administered code exercise interviews and feedback for prospective applicants
 
-
 ### Various publications
 
 **Freelance technical writer**
@@ -52,8 +48,8 @@ _Including articles published for:_
 - [LogRocket blog](https://blog.logrocket.com/author/joshcollinsworth/)
 - [The Layout](https://getflywheel.com/layout/leveling-up-flywheels-retreat-website/) (_misattributed_)
 
-
 ### [Aware3](https://aware3.com)
+
 **Senior JavaScript Developer**
 
 _February 2021 – August 2021_
@@ -68,8 +64,8 @@ _February 2021 – August 2021_
 - Spearheaded accessibility audits and updates to markup semantics, focus styles, and accessible text
 - Actively participated in GitHub code reviews and applicant code sample reviews
 
-
 ### [WP Engine](https://wpengine.com)
+
 **Associate Front-End Engineer**
 
 _August 2019 – January 2021_
@@ -82,7 +78,6 @@ _August 2019 – January 2021_
 - Mentored WP Engine’s development intern on processes, Vue, JavaScript, CSS, and code editor tools
 - Acted as interim project manager on two occasions; directed team feature improvements and bug fixes using Jira and GitHub to track and manage progress in an Agile environment
 - Actively participated in code reviews, suggesting improvements, proposing alternatives, and discussing tradeoffs of possible development approaches to problem-solving
-
 
 ### [Flywheel - Managed WordPress Hosting](https://getflywheel.com)
 
@@ -101,7 +96,6 @@ _(Acquired by WP Engine June 2019)_
 - Authored numerous help guides and trainings, both customer-facing and internal
 - Two-time finalist and one-time winner for all-company support MVP of the year
 
-
 ### [AIM Code School](https://aiminstitute.org/programs/technical-training/aim-code-school-2/)
 
 **WordPress course instructor**
@@ -113,8 +107,8 @@ _(Formerly Interface Code School)_
 - Solely responsible for creating and delivering curriculum teaching students WordPress with a focus on theme development. Class sizes ranged from 4–12 students, and topics included running WordPress locally, PHP, MySQL, WordPress theming, the template hierarchy, and touched on fundamentals such as web performance, design foundations, and ensuring general accessibility
 - Guided students in-person and remotely as they built custom WordPress sites and themes either as portfolio pieces or for a real-life clients, often meeting the needs of a local nonprofit organization.
 
-
 ### [David Day & Associates](https://dday.com)
+
 **Graphic designer/WordPress developer**
 
 _August 2014 – September 2015_
@@ -137,16 +131,19 @@ _August 2014 – September 2015_
 ## Education
 
 ### Codecademy
+
 **January 2018**
 
 _Certification: Codecademy Pro Intensive React web app builder course_
 
 ### Interface Web School
+
 **Spring 2015**
 
 _WordPress Developer Certification_
 
 ### Metropolitan Community College
+
 **August 2012 – November 2014**
 
 _Associate’s of Graphic Communication Art and Design_

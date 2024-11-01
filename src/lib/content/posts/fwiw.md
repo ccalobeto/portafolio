@@ -9,7 +9,6 @@ coverImage: fwiw.svg
 coverWidth: 1920
 coverHeight: 1080
 excerpt: "A collection of things I've learned over my decade in the industry, on how and where to look for jobs, applying, interviewing, talking about yourself and your work, and all those other fun things. For whatever it's worth."
-
 ---
 
 <script>
@@ -20,7 +19,6 @@ excerpt: "A collection of things I've learned over my decade in the industry, on
 	import Footnote from '$lib/components/FootnoteLink.svelte'
 	import FootnoteAnnotations from '$lib/components/FootnoteAnnotations.svelte'
 </script>
-
 
 Every once in a while, somebody will reach out to me with advice on navigating their development career. Sometimes it's how to break into the industry; sometimes it's more about career progression, where to look for jobs, or how to interview.
 
@@ -33,7 +31,6 @@ Hence: this post.
 </CalloutPlusQuote>
 
 This will serve as a collection of whatever I've learned, for whatever it's worth. I'll do my best to keep it up to date as the months and years roll on, but this is everything I know (or at least, am pretty sure I know) right now.
-
 
 <!-- This markup was generated using the deprecated TableOfContents component. -->
 <div class="toc-wrap s-QxGJVNas-JkL"><aside class="toc s-QxGJVNas-JkL"><h2 class="s-QxGJVNas-JkL"><span class="opening-bracket s-QxGJVNas-JkL" aria-hidden="true">[</span>Table of contents<span class="closing-bracket s-QxGJVNas-JkL" aria-hidden="true">]</span></h2> <ul class="toc-list s-QxGJVNas-JkL"><li><a href="#what-this-is-and-isnt">What this is (and isn’t)</a></li><li><a href="#before-you-start">Before you start</a><ul><li><a href="#know-what-you-want">Know what you want</a></li><li><a href="#shore-up-weaknesses-but-focus-on-strengths">Shore up weaknesses, but focus on strengths</a></li><li><a href="#create-a-behavioral-story-bank">Create a behavioral story bank</a></li><li><a href="#if-you-can-be-financially-prepared">If you can, be financially prepared</a></li><li><a href="#get-out-there-and-network">Get out there and network</a></li><li><a href="#you-need-a-website">You need a website</a></li><li><a href="#have-some-writing-templates-ready">Have some writing templates ready</a></li></ul></li><li><a href="#where-to-look">Where to look</a></li><li><a href="#applying">Applying</a><ul><li><a href="#track-your-efforts">Track your efforts</a></li><li><a href="#front-load-the-search">Front-load the search</a></li><li><a href="#be-among-the-first-to-apply">Be among the first to apply</a></li><li><a href="#go-to-the-source">Go to the source</a></li><li><a href="#dont-worry-how-many-other-applicants-there-are">Don’t worry how many other applicants there are</a></li><li><a href="#write-good-cover-letters-if-you-can-dont-if-you-cant">Write good cover letters if you can; don’t if you can’t</a></li><li><a href="#dont-disqualify-yourself">Don’t disqualify yourself</a></li><li><a href="#invest-in-your-web-presence">Invest in your web presence</a></li></ul></li><li><a href="#resume-advice">Resume advice</a><ul><li><a href="#focus-on-effect-not-actions">Focus on effect, not actions</a></li><li><a href="#talk-about-yourself-as-a-human-not-a-technology-checklist">Talk about yourself as a human, not a technology checklist</a></li><li><a href="#tailor-your-resume-to-the-job">Tailor your resume to the job</a></li><li><a href="#keep-it-short-and-simple">Keep it short and simple</a></li><li><a href="#sweat-the-details">Sweat the details</a></li></ul></li><li><a href="#interviewing">Interviewing</a><ul><li><a href="#fail-early-and-often">Fail early and often</a></li><li><a href="#have-your-behavioral-story-bank-ready">Have your behavioral story bank ready</a></li><li><a href="#take-the-time-you-need">Take the time you need</a></li><li><a href="#never-ever-ever-say-bad-things-about-previous-jobs-or-coworkers">Never, ever, EVER say bad things about previous jobs or coworkers</a></li><li><a href="#always-have-questions-ready-and-always-ask-them">Always have questions ready, and always ask them</a></li><li><a href="#be-prepared-to-talk-salary">Be prepared to talk salary</a></li><li><a href="#follow-up-and-connect-after-interviews">Follow up and connect after interviews</a></li><li><a href="#invest-in-your-setup">Invest in your setup</a></li><li><a href="#ask-for-feedback">Ask for feedback</a></li><li><a href="#one-weird-trick">One weird trick</a></li></ul></li><li><a href="#handling-live-coding-interviews">Handling live coding interviews</a><ul><li><a href="#preparation-and-mindset">Preparation and mindset</a></li><li><a href="#once-the-clock-starts">Once the clock starts</a></li><li><a href="#dont-panic">Don’t panic</a></li><li><a href="#after-times-up">After time’s up</a></li></ul></li><li><a href="#talking-salary">Talking salary</a></li><li><a href="#mindset">Mindset</a><ul><li><a href="#things-are-bad-but-i-think-theyre-getting-better">Things are bad, but I think they’re getting better</a></li><li><a href="#its-not-you-its-them">It’s not you, it’s them</a></li><li><a href="#take-care-of-yourself">Take care of yourself</a></li></ul></li></ul></aside></div>
@@ -72,7 +69,7 @@ For whatever it's worth.
 
 (Your mileage may vary.)
 
-##  Before you start
+## Before you start
 
 Regardless of where you are in your journey, these are things you might want to work on sooner than later.
 
@@ -102,7 +99,7 @@ While I'm not generally a fan of personality tests and the like, I've found the 
 
 In any case, keep your list handy; it will help you filter your search, and answer interview questions like "why are you interested in this company?"
 
-As a bonus: the list will  _also_ help guide you to some good questions _you_ can ask in interviews.
+As a bonus: the list will _also_ help guide you to some good questions _you_ can ask in interviews.
 
 ### Shore up weaknesses, but focus on strengths
 
@@ -224,7 +221,7 @@ Your website doesn't need to be fancy at all. Bonus points for building it yours
 
 You don't have to blog, though it's a good idea if you're into it at all. You can just write about stuff you're working on and learning, if nothing else. (“_But I don't have anything new or unique to say_,” you might argue—to which I might reply, “_this ain't the world's first job advice post, yet here we both are_.”)
 
-You don't need a lot of content. Even one page will do, if that's what you feel fits best. (This should go without saying, but: do ***not*** fill your website with AI-generated writing. It's easy to spot and it looks terrible.)
+You don't need a lot of content. Even one page will do, if that's what you feel fits best. (This should go without saying, but: do **_not_** fill your website with AI-generated writing. It's easy to spot and it looks terrible.)
 
 Whatever the size and shape of your site, though: it should be well-made. After all, you're trying to get a job coding things, so make the things you code nice enough that somebody might want to hire you to code their thing, too.
 
@@ -266,9 +263,9 @@ If a recruiter catches any whiff of AI slop in your writing, it'll signal you're
 
 </CalloutPlusQuote>
 
-In any case: having these templates ready to go from the beginning will help minimize friction and time spent on tertiary tasks during the actual job search. When it's time to write a thank you, or a follow up, or a cover letter, you'll have  a head start, and won't lose a whole day researching and drafting.
+In any case: having these templates ready to go from the beginning will help minimize friction and time spent on tertiary tasks during the actual job search. When it's time to write a thank you, or a follow up, or a cover letter, you'll have a head start, and won't lose a whole day researching and drafting.
 
-##  Where to look
+## Where to look
 
 It's hard to deny the sheer volume of jobs, connections, and info available on LinkedIn. If you're not on there, you won't exist to a lot of employers.
 
@@ -413,7 +410,7 @@ still enough out there to give anyone searching for you an idea of the amazing p
 
 Showing who you are online helps promote you from a generic applicant to a real, fleshed-out human. Invest in your web presence; it can be a big differentiator.
 
-##  Resume advice
+## Resume advice
 
 I won't get too deep into writing or designing resumes here; that's well-covered territory elsewhere online. I do have a few specific points to keep in mind, however.
 
@@ -461,7 +458,7 @@ If companies just want somebody who knows React, it's easy to find that person. 
 
 It's also fairly easy to find somebody who, for instance, communicates well. Or, someone who's good at managing projects.
 
-But finding _all_ of those in the same person? *That's* value. So find your value, and then talk about it. It's not just what you know; it's in _everything_ you bring to the table all together, and your hard skills are only one dimension of that.
+But finding _all_ of those in the same person? _That's_ value. So find your value, and then talk about it. It's not just what you know; it's in _everything_ you bring to the table all together, and your hard skills are only one dimension of that.
 
 <CalloutPlusQuote>
 
@@ -541,7 +538,7 @@ If you find typos or grammatical errors in my writing—and I don't doubt you co
 
 </SideNote>
 
-##  Interviewing
+## Interviewing
 
 So you've made it through the application process, and now it's time to actually _talk_ to somebody.
 
@@ -678,11 +675,13 @@ Try to avoid the words "I" and "you." Focus the conversation on the topic, not t
 Soften your language; try not to speak in absolutes. If you have to involve pronouns, make it collaborative; use "us" or "we" instead of "I" or "you."
 
 **Bad**:
+
 - “You're unclear.”
 - “I don't think that scales well.”
 - “You should rethink that.”
 
 **Better**:
+
 - “_That code_ could be clearer.”
 - “_That approach_ _may not_ scale as well as it could.”
 - “_Let's_ rethink that.”
@@ -751,7 +750,7 @@ Get lots of it, and receive it with gratitude. Don't take any one data point too
 
 Say you want the job. Really. You'd be surprised how far just vocalizing your enthusiasm will go.
 
-##  Handling live coding interviews
+## Handling live coding interviews
 
 Honestly, I wish I didn't have to write this section. In my opinion, live coding interviews should die immediately and forever. (This includes anything by similar names; whiteboarding, leetcode exercises, whatever you want to call them.)
 
@@ -868,7 +867,7 @@ Sometimes, showing you have a strong understanding of the problem is worth at le
 
 If it helps to know: I've gotten two different jobs where I failed at least one of the code interviews. I've never asked, but I'm pretty sure I managed to salvage them both by talking honestly about the failure afterwards, and how I would do better next time.
 
-##  Talking salary
+## Talking salary
 
 Of all the sections in this post, this is the area where I'd most encourage you to do your own further research. Here's my advice if you want it, but I strongly advise you to weigh it against what other, more qualified sources have to say on this topic.
 
@@ -933,7 +932,7 @@ If this happens, at the _very_ least, get every detail you can, in writing, incl
 
 Promises are quickly forgotten. They might be sincere and in good faith, but regardless: if you're relying on anyone's word for anything, get the receipts. If it's not in writing, it didn't happen.
 
-##  Mindset
+## Mindset
 
 It's possible you'll find something quickly, and I hope you do. However, even if you find yourself looking month after month after month, I do think there are some ways to steel your outlook and conserve some of your energy, to move at a sustainable pace over the long haul.
 

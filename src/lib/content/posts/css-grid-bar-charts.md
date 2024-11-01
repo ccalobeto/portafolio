@@ -86,7 +86,7 @@ In Svelte, that might look something like this:
 ```svelte
 <script>
 	// This component will expect the data as a prop
-	export let dataPoints;
+	export let dataPoints
 </script>
 
 <ul class="chart">
@@ -138,7 +138,7 @@ Our final Svelte version, then, might look like this:
 
 ```svelte
 <script>
-	export let dataPoints;
+	export let dataPoints
 </script>
 
 <ul class="chart">

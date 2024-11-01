@@ -1,5 +1,5 @@
 ---
-title: "Follow-up: the Glove80 after six months"
+title: 'Follow-up: the Glove80 after six months'
 date: 2024-04-08
 updated: 2024-04-08
 categories:

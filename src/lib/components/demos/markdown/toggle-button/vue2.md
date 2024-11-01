@@ -24,7 +24,7 @@
   <div>
     <p>
       Svelte is a JavaScript framework.
-    
+
       <​template v-if="isTextShown">
         Though actually, if you want to get technical...
       </template>

@@ -39,7 +39,7 @@ const items = [
 		id: 42
 	}
 	// ...etc.
-];
+]
 ```
 
 In my case, the IDs were hard-coded (rather than generated programmatically). As such, they were subject to human error, and I discovered that some IDs were duplicated.
@@ -56,7 +56,7 @@ This was an issue because the ID numbers were being used for setting the HTML `i
 To extract only the IDs of the original array, the code looks like this (where the original array is named `items`):
 
 ```javascript
-const IDs = new Set(items.map((item) => item.id));
+const IDs = new Set(items.map((item) => item.id))
 ```
 
 Now we've got an array of only unique IDs. What next?
@@ -64,7 +64,7 @@ Now we've got an array of only unique IDs. What next?
 Well, if we _did_ have duplicate IDs in our original `items` array, then the length of `IDs` will be _different_ than the length of the original array. So it's a quick conditional check, which would _seem_ like this, but beware! We're missing a step:
 
 ```javascript
-IDs.length === items.length;
+IDs.length === items.length
 // Always returns false 🤔
 ```
 
@@ -73,7 +73,7 @@ IDs.length === items.length;
 To fix the issue, we can just add a bit of ES6 destructuring to convert the set into an array:
 
 ```javascript
-[...IDs].length === items.length;
+;[...IDs].length === items.length
 // Now it works!
 // true if all IDs were unique, false if not
 ```
@@ -82,7 +82,7 @@ If you prefer, this is a little more explicit and works the same way; I just pre
 
 ```javascript
 // Another way to do the same thing:
-Array.from(IDs).length === items.length;
+Array.from(IDs).length === items.length
 ```
 
 ## Make it reusable
@@ -106,15 +106,15 @@ To find out _which_ ones are duplicates, you can use this handy function which I
 ```javascript
 // Reusable function to show the duplicate keys in an array of objects
 const getDuplicates = (arr, key) => {
-	const keys = arr.map((item) => item[key]);
-	return keys.filter((key) => keys.indexOf(key) !== keys.lastIndexOf(key));
-};
+	const keys = arr.map((item) => item[key])
+	return keys.filter((key) => keys.indexOf(key) !== keys.lastIndexOf(key))
+}
 ```
 
 Call this function just like the one above, e.g., `getDuplicates(items, 'id')`, which in our case, would get you an array that contains the non-unique IDs, like this:
 
 ```javascript
-getDuplicates(items, 'id');
+getDuplicates(items, 'id')
 
 // [42, 42]
 ```

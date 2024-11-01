@@ -141,7 +141,7 @@ Since this will be a global transition that applies on every page, we'll want to
 ```svelte
 <!-- src/routes/+layout.svelte -->
 <script>
-	import { fade } from 'svelte/transition';
+	import { fade } from 'svelte/transition'
 </script>
 ```
 
@@ -229,12 +229,12 @@ At a minimum, that might look like this:
 ```js
 // src/routes/+layout.js
 export const load = ({ url }) => {
-	const { pathname } = url;
+	const { pathname } = url
 
 	return {
 		pathname
-	};
-};
+	}
+}
 ```
 
 There's a bit of destructuring going on there, so let's break it down:
@@ -255,9 +255,9 @@ So, heading back to `+layout.svelte`, we can declare and access the `data` prop,
 
 ```svelte
 <script>
-	import { fade } from 'svelte/transition';
+	import { fade } from 'svelte/transition'
 
-	export let data;
+	export let data
 </script>
 
 {#key data.pathname}
@@ -278,9 +278,9 @@ In other words, this won't work:
 ```svelte
 <!-- src/routes/+layout.svelte -->
 <script>
-	export let data;
+	export let data
 
-	let pathname = data.pathname; // ⚠️ This won't work as desired
+	let pathname = data.pathname // ⚠️ This won't work as desired
 </script>
 
 {#key pathname}
@@ -299,9 +299,9 @@ This works instead:
 ```svelte
 <!-- src/routes/+layout.svelte -->
 <script>
-	export let data;
+	export let data
 
-	$: pathname = data.pathname; // 👍 This works!
+	$: pathname = data.pathname // 👍 This works!
 </script>
 
 {#key pathname}
@@ -314,9 +314,9 @@ Alternatively, you could use this shorthand, if you prefer destructuring:
 ```svelte
 <!-- src/routes/+layout.svelte -->
 <script>
-	export let data;
+	export let data
 
-	$: ({ pathname } = data); // 😎 This shorthand works, too
+	$: ({ pathname } = data) // 😎 This shorthand works, too
 </script>
 
 {#key pathname}
@@ -336,9 +336,9 @@ Here's where we should be now with `+layout.svelte`:
 
 ```svelte
 <script>
-	import { fade } from 'svelte/transition';
+	import { fade } from 'svelte/transition'
 
-	export let data;
+	export let data
 </script>
 
 {#key data.pathname}
@@ -393,20 +393,20 @@ Here's the final code, if you'd like to see all the changes in one place togethe
 ```js
 // src/routes/+layout.js
 export const load = ({ url }) => {
-	const { pathname } = url;
+	const { pathname } = url
 
 	return {
 		pathname
-	};
-};
+	}
+}
 ```
 
 ```svelte
 <!-- src/routes/+layout.svelte -->
 <script>
-	import { fade } from 'svelte/transition';
+	import { fade } from 'svelte/transition'
 
-	export let data;
+	export let data
 </script>
 
 {#key data.pathname}
@@ -430,10 +430,10 @@ To use one, import it from `svelte/easing`. Then, you can apply it in the option
 
 ```svelte
 <script>
-	import { fade } from 'svelte/transition';
-	import { cubicIn, cubicOut } from 'svelte/easing';
+	import { fade } from 'svelte/transition'
+	import { cubicIn, cubicOut } from 'svelte/easing'
 
-	export let data;
+	export let data
 </script>
 
 {#key data.pathname}
@@ -460,10 +460,10 @@ Plus, arguably, a fade alone isn't really that cool anyway. When it comes to Sve
 
 ```svelte
 <script>
-	import { fly } from 'svelte/transition';
-	import { cubicIn, cubicOut } from 'svelte/easing';
+	import { fly } from 'svelte/transition'
+	import { cubicIn, cubicOut } from 'svelte/easing'
 
-	export let data;
+	export let data
 </script>
 
 {#key data.pathname}
@@ -488,17 +488,17 @@ So we can make life a little easier on ourselves by organizing the transition op
 
 ```svelte
 <script>
-	import { fly } from 'svelte/transition';
-	import { cubicIn, cubicOut } from 'svelte/easing';
+	import { fly } from 'svelte/transition'
+	import { cubicIn, cubicOut } from 'svelte/easing'
 
-	export let data;
+	export let data
 
-	const duration = 300;
-	const delay = duration + 100;
-	const y = 10;
+	const duration = 300
+	const delay = duration + 100
+	const y = 10
 
-	const transitionIn = { easing: cubicOut, y, duration, delay };
-	const transitionOut = { easing: cubicIn, y: -y, duration };
+	const transitionIn = { easing: cubicOut, y, duration, delay }
+	const transitionOut = { easing: cubicIn, y: -y, duration }
 </script>
 
 {#key data.pathname}
@@ -537,13 +537,13 @@ Here's a very basic example (with the other bits stripped out, just to keep the 
 ```svelte
 <!-- src/routes/+layout.svelte -->
 <script>
-	import Loader from '$lib/components/Loader.svelte'; // Or whatever your component path is
-	import { beforeNavigate, afterNavigate } from '$app/navigation';
+	import Loader from '$lib/components/Loader.svelte' // Or whatever your component path is
+	import { beforeNavigate, afterNavigate } from '$app/navigation'
 
-	let isLoading = false;
+	let isLoading = false
 
-	beforeNavigate(() => (isLoading = true));
-	afterNavigate(() => (isLoading = false));
+	beforeNavigate(() => (isLoading = true))
+	afterNavigate(() => (isLoading = false))
 </script>
 
 {#if isLoading}
@@ -558,9 +558,9 @@ One other small note: you may want to check if the clicked link is an external l
 ```js
 beforeNavigate(({ to }) => {
 	if (to.route.id) {
-		isLoading = true;
+		isLoading = true
 	}
-});
+})
 ```
 
 `to.route.id` contains the internal SvelteKit ID of the route being accessed. If the property is undefined, we can conclude pretty safely that the clicked link was external. (Though you may want to use [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) when drilling down into the object, just to be extra safe.)
@@ -568,7 +568,7 @@ beforeNavigate(({ to }) => {
 If you want to get fancy, you can make that a one-liner with a little Nancy Sinatra:
 
 ```js
-beforeNavigate(({ to }) => (isLoading = !!to.route.id));
+beforeNavigate(({ to }) => (isLoading = !!to.route.id))
 ```
 
 (Nancy Sinatra...get it? _Bang Bang_? ...Ugh. I knew I should've gone with Jessie J instead. Ok, moving on.)

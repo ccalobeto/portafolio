@@ -46,7 +46,6 @@ Or, maybe it's just like any other implicit bias; maybe it seems like it doesn't
 
 So: let's talk about what I see. Maybe you'll see it, too.
 
-
 ## I see it in the way we talk about frontend languages
 
 I notice CSS is widely considered some or all of the following: unmaintainable; subjective; messy; unruly; unpredictable; a footgun; overly complicated; unscalable; and a nightmare.
@@ -111,7 +110,7 @@ Engineering is unquestionably difficult and respectable work. The idea that othe
 
 <CalloutPlusQuote>
 
-Mostly, nobody actually *says* frontend is less important, or less real, or that you don't have to be as smart to do it. But it often seems to be implied.
+Mostly, nobody actually _says_ frontend is less important, or less real, or that you don't have to be as smart to do it. But it often seems to be implied.
 
 </CalloutPlusQuote>
 

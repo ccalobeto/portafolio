@@ -215,7 +215,7 @@ React is the default, and absent a strong reason to choose otherwise, people usu
 
 ```js
 while (reactIsPopular) {
-	reactIsPopular = true;
+	reactIsPopular = true
 }
 ```
 

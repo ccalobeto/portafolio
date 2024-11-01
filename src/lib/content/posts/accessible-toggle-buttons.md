@@ -209,11 +209,11 @@ Like most things Svelte, this one is pretty straightforward. You _could_ go with
 ```svelte
 <!-- ToggleButton.svelte -->
 <script>
-	let isPressed = false;
+	let isPressed = false
 
 	const toggleIsPressed = () => {
-		isPressed = !isPressed;
-	};
+		isPressed = !isPressed
+	}
 </script>
 
 <button aria-pressed={isPressed} on:click={toggleIsPressed}>
@@ -299,14 +299,14 @@ As in the Svelte example, here I use a `toggleIsPressed` function, but you could
 
 ```jsx
 // ToggleButton.jsx
-import { useState } from 'react';
+import { useState } from 'react'
 
 const ToggleButton = () => {
-	let [isPressed, setIsPressed] = useState(false);
+	let [isPressed, setIsPressed] = useState(false)
 
 	const toggleIsPressed = () => {
-		setIsPressed(!isPressed);
-	};
+		setIsPressed(!isPressed)
+	}
 
 	return (
 		<>
@@ -319,8 +319,8 @@ const ToggleButton = () => {
 
 			{isPressed && <p>The button is pressed!</p>}
 		</>
-	);
-};
+	)
+}
 ```
 
 ---

@@ -96,11 +96,11 @@ I followed the spirit of his example closely, but changed it in a few ways. Here
 ```svelte
 <!-- Comments.svelte -->
 <script>
-	import { onMount } from 'svelte';
-	import { prefersDarkMode } from '$lib/data/store';
+	import { onMount } from 'svelte'
+	import { prefersDarkMode } from '$lib/data/store'
 
 	// Translate the user's dark mode preference to a theme
-	const siteTheme = $prefersDarkMode ? 'github-dark' : 'github-light';
+	const siteTheme = $prefersDarkMode ? 'github-dark' : 'github-light'
 
 	// An object with all the utterances options I want
 	const options = {
@@ -111,19 +111,19 @@ I followed the spirit of his example closely, but changed it in a few ways. Here
 		theme: siteTheme,
 		async: '',
 		'issue-term': 'pathname'
-	};
+	}
 
 	onMount(() => {
-		const utteranceScript = document.createElement('script');
-		const targetTag = document.getElementById('utterances-comments');
+		const utteranceScript = document.createElement('script')
+		const targetTag = document.getElementById('utterances-comments')
 
 		// Loop over the options & apply each property as an attribute
 		for (const prop in options) {
-			utteranceScript.setAttribute(prop, options[prop]);
+			utteranceScript.setAttribute(prop, options[prop])
 		}
 
-		targetTag.appendChild(utteranceScript);
-	});
+		targetTag.appendChild(utteranceScript)
+	})
 </script>
 
 <div id="utterances-comments" />

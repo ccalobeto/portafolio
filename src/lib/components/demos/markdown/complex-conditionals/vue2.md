@@ -1,4 +1,4 @@
 ```vue
-  <WelcomeBanner v-if="isUserLoggedIn" />
-  <LoginForm v-else />
+<WelcomeBanner v-if="isUserLoggedIn" />
+<LoginForm v-else />
 ```

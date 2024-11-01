@@ -331,27 +331,27 @@ module.exports = function (api) {
 		//Create a new "categories" collection
 		const categories = actions.addCollection({
 			typeName: 'category'
-		});
+		})
 
 		//Get all the posts (which already exist from the vue-remark plugin)
-		const allPosts = actions.getCollection('post')._collection.data;
+		const allPosts = actions.getCollection('post')._collection.data
 
 		//Loop over the posts and add their categories to an array
-		let allPostsCategories = [];
-		allPosts.forEach((post) => allPostsCategories.push(...post.categories));
+		let allPostsCategories = []
+		allPosts.forEach((post) => allPostsCategories.push(...post.categories))
 
 		//Filter out duplicates
-		const uniqueCategories = new Set(allPostsCategories);
+		const uniqueCategories = new Set(allPostsCategories)
 
 		//Finally, add each category as a data node, with an array of the matching posts
 		uniqueCategories.forEach((category) => {
 			categories.addNode({
 				title: category,
 				posts: allPosts.filter((post) => post.categories.includes(category))
-			});
-		});
-	});
-};
+			})
+		})
+	})
+}
 ```
 
 <SideNote>

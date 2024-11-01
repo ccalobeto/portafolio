@@ -14,7 +14,7 @@
       Volume: {{ volume }}%
     </label>
 
-    <input 
+    <input
       id="volume-control"
       type="range"
       min="0"

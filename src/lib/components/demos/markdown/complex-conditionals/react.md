@@ -1,7 +1,5 @@
 ```jsx
 {
-  isUserLoggedIn 
-    ? <WelcomeBanner />
-    : <LoginForm />
+	isUserLoggedIn ? <WelcomeBanner /> : <LoginForm />
 }
 ```

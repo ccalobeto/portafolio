@@ -8,8 +8,7 @@ categories:
 coverImage: html-css-book.webp
 coverWidth: 1920
 coverHeight: 1080
-excerpt: "A personal (read: meandering) post inspired by the realization that I first began to learn HTML and CSS exactly ten years ago, reflecting on the lucky turning points that brought me to where I am today."
-
+excerpt: 'A personal (read: meandering) post inspired by the realization that I first began to learn HTML and CSS exactly ten years ago, reflecting on the lucky turning points that brought me to where I am today.'
 ---
 
 <script>
@@ -177,4 +176,4 @@ I still get to do a very cool thing every single day. Although the shine has fad
 
 And despite all the mess of the way things are now, I'm excited to see where the web is another ten years from now.
 
-<FootnoteAnnotations  footnotes={[`The website for the book itself is not responsive, ironically enough. Just locked in at 940px wide.`,`If you don't remember those days, check out the CodePen here, and generally just be grateful that the web has come a long, long way since then.`,`Actually, technically, my first tech job was as a call center rep for America Online, but we don't need to go back that far.`]}/>
+<FootnoteAnnotations footnotes={[`The website for the book itself is not responsive, ironically enough. Just locked in at 940px wide.`,`If you don't remember those days, check out the CodePen here, and generally just be grateful that the web has come a long, long way since then.`,`Actually, technically, my first tech job was as a call center rep for America Online, but we don't need to go back that far.`]}/>

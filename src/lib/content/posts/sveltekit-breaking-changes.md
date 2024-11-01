@@ -189,8 +189,8 @@ This is the other really big part of the newest breaking changes.
 			props: {
 				// The stuff to return
 			}
-		};
-	};
+		}
+	}
 </script>
 
 <script>
@@ -241,7 +241,7 @@ Data returned from the `load` function is available in the template as the `data
 ```svelte
 <script>
 	// Data returned from `load` is automatically available as `data`
-	export let data;
+	export let data
 </script>
 
 <article>
@@ -264,12 +264,12 @@ Which to use will depend mainly on your use case. There's one key thing to remem
 
   ```js
   // +page.js only
-  import { json } from '@sveltejs/kit';
+  import { json } from '@sveltejs/kit'
 
   export const load = ({ fetch }) => {
-  	const myData = fetch('/relative/path/here');
-  	return json(myData);
-  };
+  	const myData = fetch('/relative/path/here')
+  	return json(myData)
+  }
   ```
 
 That's because **the client and server have different versions of fetch**; the Node version and the browser `fetch` API are _not_ identical. So when you pass `fetch` as a parameter to a `load` function, SvelteKit does a bit of magic (and adds some niceties) to make sure your fetch call works, and works well, on both the server and client.
@@ -280,12 +280,12 @@ This also means when using `fetch` on the server only, you'll need to be explici
 
 ```js
 // +page.server only
-import { json } from '@sveltejs/kit';
+import { json } from '@sveltejs/kit'
 
 export const load = ({ url }) => {
-	const myData = fetch(`${url.origin}/my/api/path`);
-	return json(myData);
-};
+	const myData = fetch(`${url.origin}/my/api/path`)
+	return json(myData)
+}
 ```
 
 ## Server routes (API endpoints)
@@ -322,15 +322,15 @@ Another change to be aware of: previously, SvelteKit handled setting the proper 
 ```js
 // Previously:
 export const get = () => {
-	const message = 'Hello!';
+	const message = 'Hello!'
 
 	return {
 		status: 200,
 		body: {
 			message
 		}
-	};
-};
+	}
+}
 ```
 
 _Now_, however, **server routes _must_ return a proper [Response object](https://developer.mozilla.org/en-US/docs/Web/API/Response/Response)**.
@@ -339,12 +339,12 @@ That would be a pain to do on our own, but fortunately, SvelteKit ships with a `
 
 ```js
 // The new way:
-import { json } from '@sveltejs/kit';
+import { json } from '@sveltejs/kit'
 
 export const GET = () => {
-	const message = 'Hello!';
-	return json(message);
-};
+	const message = 'Hello!'
+	return json(message)
+}
 ```
 
 Even if you use the conversion script mentioned above, you'll still need to adjust your endpoints' responses; adjust relative file paths (since SvelteKit's new routing syntax often requires nesting files a level deeper); and handle implementing the `json()` responses.
@@ -355,12 +355,12 @@ The only other big difference to be aware of--which you may have noticed already
 // Old:
 export const get = () => {
 	// Do the thing
-};
+}
 
 // New:
 export const GET = () => {
 	// Do the thing
-};
+}
 ```
 
 Oh, and one last thing: since we're not returning an object with a `status` and a `body` anymore, we'll want to import SvelteKit's `error` function wherever we need to return a non-200 status.
@@ -370,15 +370,15 @@ Oh, and one last thing: since we're not returning an object with a `status` and 
 return {
 	status: 400,
 	body: new Error('not found')
-};
+}
 
 // New:
-import { error } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit'
 
 try {
 	//return something here
 } catch ({ message }) {
-	throw error(400, message);
+	throw error(400, message)
 }
 ```
 

@@ -40,18 +40,18 @@ excerpt: 'How does the Glove80 stack up against similar keyboards like the Moonl
 <details class="toc-details">
 	<summary>Table of contents</summary>
 
-	- [Backstory: my history with keyboards, ergonomics, and RSI](#backstory-my-history-with-keyboards-ergonomics-and-rsi)
-	- [Why the Glove80?](#why-the-glove80)
-	- [Options](#options)
-	- [Pricing and shipping](#pricing-and-shipping)
-	- [Layout customization](#layout-customization)
-	- [Lights](#lights)
-	- [Wireless and battery](#wireless-and-battery)
-	- [Ergonomics and customization](#ergonomics-and-customization)
-		- [Did it solve my issues?](#did-it-solve-my-issues)
-	- [Switches and keycaps](#switches-and-keycaps)
-	- [Summary](#summary)
-		- [Pros and cons](#pros-and-cons)
+    - [Backstory: my history with keyboards, ergonomics, and RSI](#backstory-my-history-with-keyboards-ergonomics-and-rsi)
+    - [Why the Glove80?](#why-the-glove80)
+    - [Options](#options)
+    - [Pricing and shipping](#pricing-and-shipping)
+    - [Layout customization](#layout-customization)
+    - [Lights](#lights)
+    - [Wireless and battery](#wireless-and-battery)
+    - [Ergonomics and customization](#ergonomics-and-customization)
+    	- [Did it solve my issues?](#did-it-solve-my-issues)
+    - [Switches and keycaps](#switches-and-keycaps)
+    - [Summary](#summary)
+    	- [Pros and cons](#pros-and-cons)
 
 </details>
 
@@ -133,7 +133,7 @@ I don't think _all_ my issues stemmed from working on a computer; I notice minor
 
 Still: I was adjusting the Moonlander a dozen times a day trying to figure out the problem. Turns out: it doesn't really allow your hands to just _rest_ when they're not typing. (Or at least, it didn't how I was using it, and certainly not without bending your wrists upward.) So over time, my left arm muscles fatigued from constant activation. I had to train myself to move my arm off the keyboard when not in use, since, again, there wasn't any really comfortable way to just rest my hand (especially at higher tenting angles).
 
-I'm not here to tell you the Moonlander is bad, or that it won't work for you.  However, I will [say again](https://joshcollinsworth.com/blog/moonlander): I think it's a keyboard that wants to be cool first, and ergonomic second.
+I'm not here to tell you the Moonlander is bad, or that it won't work for you. However, I will [say again](https://joshcollinsworth.com/blog/moonlander): I think it's a keyboard that wants to be cool first, and ergonomic second.
 
 I initially thought the similar [Ergodox EZ](https://ergodox-ez.com/) might solve my problems, with its thicker palm rests. However, the keyboard itself is so tall, it really wasn't any different. And sadly, like the Moonlander, the Ergodox was a letdown in the range of customizations it offered.
 
@@ -218,7 +218,6 @@ The keyboard comes with the palm rests already attached, but they can be removed
 There's also a version available with unsoldered switches, in case you're mechanically minded and want to add your own, but most of us will probably just choose switches and color.
 
 Worth noting: the keycaps (and included cable) will be white regardless of what color you choose for the body of the keyboard.
-
 
 ## Pricing and shipping
 
@@ -502,7 +501,6 @@ I wasn't a firm believer at first. (Earlier drafts of this post weren't this pos
 
 Granted, other keyboards have solved my issues before, too, before eventually creating new ones. So I'll be sticking with the Glove80 for the foreseeable future to see if it can both exorcise old demons and ward off new ones. The strongest signals will only emerge with time, and I may revisit this post (or write a new one) as I learn more.
 
-
 ## Switches and keycaps
 
 The switches on the Glove80 are low-profile Choc v1 switches, and unfortunately, they are _not_ hot-swappable; they're soldered in place.
@@ -584,7 +582,7 @@ I've assembled a final pros and cons list, if you're just looking for the tl;dr 
 - Good value for price; lots included
 - Feels great
 - Broad range of adjustments
-- Good wireless connection  and battery life
+- Good wireless connection and battery life
 - Likely to be comfortable for a wide range of hand types
 - Relatively low profile for a raised keyboard
 - Lightweight; travels easily

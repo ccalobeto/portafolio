@@ -1,5 +1,5 @@
 ---
-title: "I worry our Copilot is leaving some passengers behind"
+title: 'I worry our Copilot is leaving some passengers behind'
 date: '2024-2-13'
 updated: '2024-2-15'
 categories:
@@ -157,21 +157,17 @@ It could probably be a better prompt, but it's clear enough, I think. Here's wha
 
 ```svelte
 <script>
-  let showFootnote = false
+	let showFootnote = false
 
-  function toggleFootnote() {
+	function toggleFootnote() {
 		showFootnote = !showFootnote
 	}
 </script>
 
 <div>
-	<p>This is some text with a
-		<span
-			class="footnote"
-			on:click={toggleFootnote}
-		>
-			footnote
-		</span>
+	<p>
+		This is some text with a
+		<span class="footnote" on:click={toggleFootnote}> footnote </span>
 	</p>
 
 	{#if showFootnote}
@@ -225,7 +221,6 @@ I'm not going to bother posting the result I got here, because it was more of th
 
 Another solution with most of the same problems, so clear that my editor already had them underlined.
 
-
 ## The burden of responsibility
 
 Some might be inclined to defend Copilot here, and place the responsibility of code quality (in all its forms) on the developer. There's a certain amount of fairness to that position. After all, I'm the one with the job, not the computer. Shouldn't I be the gatekeeper? If the code is bad because of a tool I used, isn't that at least partially down to my wielding of the tool?
@@ -255,7 +250,6 @@ Products of all kinds are required to ensure misuse is discouraged, at a minimum
 We wouldn't even find it acceptable if ChatGPT, or any other LLM, failed to build some basic safety into the product. It shouldn't fail to give you help if you desperately need it, and it shouldn't put anyone in harm's way. (LLMs have done both of those things before, in fact, and faced sharp backlash that led directly to the products being improved. So we know it's possible.)
 
 Plus, there are _far less_ sophisticated technologies that are fully capable of warning us, or even stopping us, when we're writing inaccessible or improper code. Why should we just accept that LLM tools not only _fail_ to at least give us the same warnings, but _actively push us the wrong way_?
-
 
 ### Fighting gravity
 
@@ -295,7 +289,6 @@ We're all bad developers at least some of the time.
 
 None of us is perfect. We have deadlines, and other responsibilities, and bosses who want lots of things that aren't necessarily directly related to code quality. We're not all going to spot every piece of bad code that comes across our screen. (Heck, most of us have _pushed_ bad code, that we wrote, on a Friday afternoon.) So when we use a tool that throws bad code our way some percentage of the time, we're effectively guaranteeing it influences what we make.
 
-
 ### The quality delta
 
 Another common argument I see in defense of Copilot is: yes, bad developers will push bad code with it. But they're bad developers; they would've been pushing bad code anyway! And along the way, maybe Copilot actually helps them do something better, too.
@@ -316,7 +309,6 @@ A system is what it does. A machine that hands bad code to bad developers is a m
 
 </CalloutPlusQuote>
 
-
 ### The time idealist
 
 Ok, let's say bad devs gonna bad dev. But some still argue: that's fine, because _now_, the _good_ developers are doing much _better_! And, they'll have time to make the web a better place, because of all the other helpful things Copilot is doing!
@@ -326,7 +318,6 @@ Oh, how I wish the world worked that way, my sweet summer child.
 Even if you're one of the "good devs," and even if Copilot suddenly makes you twice as productive, as Microsoft (dubiously) claims, _your day didn't just suddenly get half as long_. You just suddenly got twice as many responsibilities.
 
 If organizations actually cared about putting resources towards accessibility, they'd already be doing it. They don't. They care about profit, and the moment you have 40% more time, you're going to spend 100% of it on something that makes the company money.
-
 
 ### But AI will fix what it broke
 
@@ -343,7 +334,6 @@ Again, I think there's warranted optimism here. However:
 1. That's still a long ways off, if it ever comes;
 2. There's no guarantee of how well it will work even when it does arrive (will it describe the image correctly? Will it understand the context, and the vibes of the image? _Should it_ in the first place, if the author left the `alt` empty on purpose? And by the way, why do we have such faith in an LLM to get this right when we've spent this whole time talking about an LLM getting accessibility very wrong? Are we sure we have the cause for optimism we think we do here?); and finally
 3. There's no credit card for inequity. I don't think it's ethically sound to suggest that any present wrongdoing is justified by a future solution that will undo it, especially given points 1 and 2.
-
 
 ### What's the alternative?
 
@@ -370,7 +360,6 @@ Copilot doesn't tell you why it picked that suggestion, or how it's better than 
 But even if it did: how could you fully trust it?
 
 </CalloutPlusQuote>
-
 
 ## Other unavoidable issues with LLMs
 
@@ -404,7 +393,6 @@ That's not on purpose. These issues are every bit as important, if not more so. 
 
 The accessibility-in-code angle is one I haven't seen discussed as much, however, and so I wanted to especially call attention to that in particular.
 
-
 ## We deserve better
 
 We've casually accepted that LLMs are wrong a lot, mostly without asking _why_.
@@ -436,7 +424,3 @@ The internet is already an overwhelmingly inequitable place.
 I don't think we should accept that what we get in exchange for our money is, inevitably, a force for further inequity, and yes, ultimately, for discrimination.
 
 <FootnoteAnnotations footnotes={[`Like this.`,`“Hallucination” is a nice word the AI industry made up to explain that its product is failing, without admitting its product is failing, and framing it as a charming side effect rather than a massive flaw.`,`AI is not actually the proper term for Copilot, or ChatGPT, or just about any technology we call AI these days. In reality, they’re large language models, i.e., very complex prediction engines built on statistics. They aren’t intelligent. (“Spicy autocomplete” is my personal favorite moniker for them.)`,`I guess I shouldn’t assume; I wasn’t around when microwaves were first introduced. But the point still stands even if it wasn’t that way to begin with.`]}/>
-
-
-
-

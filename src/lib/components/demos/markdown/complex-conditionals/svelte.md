@@ -1,7 +1,7 @@
 ```svelte
 {#if isUserLoggedIn}
-  <WelcomeBanner />
+	<WelcomeBanner />
 {:else}
-  <LoginForm />
+	<LoginForm />
 {/if}
 ```

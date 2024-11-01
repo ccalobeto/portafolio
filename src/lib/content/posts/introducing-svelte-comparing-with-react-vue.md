@@ -281,7 +281,7 @@ Conditional styling is a _breeze_ in Svelte thanks to its simple shorthands. Let
 
 ```svelte
 <script>
-	let enabled = false;
+	let enabled = false
 </script>
 
 <input class={enabled ? 'enabled' : ''} />
@@ -293,7 +293,7 @@ Like in React, you _could_ shorten this to a "short-circuit" conditional:
 
 ```svelte
 <script>
-	let enabled = false;
+	let enabled = false
 </script>
 
 <input class={enabled && 'enabled'} />
@@ -305,7 +305,7 @@ As an alternative, in Svelte, we can just do this instead:
 
 ```svelte
 <script>
-	let enabled = false;
+	let enabled = false
 </script>
 
 <input class:enabled />
@@ -317,7 +317,7 @@ That's pretty cool! It's easier to read, too; you can simply see what class will
 
 ```svelte
 <script>
-	let enabled = false;
+	let enabled = false
 </script>
 
 <input class:enabled />
@@ -328,7 +328,12 @@ That's pretty cool! It's easier to read, too; you can simply see what class will
 Also worth mentioning: you can have as many `class` attributes as you want (dynamic or otherwise) on a single element:
 
 ```svelte
-<div class="layout" class:logged-in={isLoggedIn} class:darkMode class:reduceMotion>
+<div
+	class="layout"
+	class:logged-in={isLoggedIn}
+	class:darkMode
+	class:reduceMotion
+>
 	<!-- ...Content here -->
 </div>
 ```
@@ -389,7 +394,7 @@ To create a prop in a Svelte component, you simply create a variable using the `
 
 ```svelte
 <script>
-	export let propToBePassedIn;
+	export let propToBePassedIn
 </script>
 ```
 
@@ -397,7 +402,7 @@ The above indicates a _required_ prop; if you want to create an optional prop, j
 
 ```svelte
 <script>
-	export let propToBePassedIn = false;
+	export let propToBePassedIn = false
 </script>
 ```
 
@@ -410,7 +415,10 @@ Let's have one last comparison, just to look at how it's done in other framework
 In any of the above cases (since both props are just strings), you'd use the component just like so:
 
 ```html
-<PageHeading pageTitle="The big page title text…" pageSubtitle="…and a little subheading" />
+<PageHeading
+	pageTitle="The big page title text…"
+	pageSubtitle="…and a little subheading"
+/>
 ```
 
 A couple of things to point out:
@@ -515,12 +523,12 @@ Svelte's one notable "gotcha" is in how it handles automatic reactivity with arr
 
 ```svelte
 <script>
-	let colors = ['red', 'orange', 'yellow'];
+	let colors = ['red', 'orange', 'yellow']
 
-	colors.push('green');
+	colors.push('green')
 	// ❌ Updates the array, but doesn't cause a re-render
 
-	colors = [...colors, 'blue'];
+	colors = [...colors, 'blue']
 	// ✅ Reassigning causes a re-render
 </script>
 ```
@@ -531,12 +539,12 @@ The same principle works with objects, as well:
 <script>
 	let me = {
 		firstName: 'Josh'
-	};
+	}
 
-	me.lastName = 'Collinsworth';
+	me.lastName = 'Collinsworth'
 	// ❌ Updates the object, but doesn't cause a re-render
 
-	me = { ...me, lastName: 'Collinsworth' };
+	me = { ...me, lastName: 'Collinsworth' }
 	// ✅ Reassigning causes a re-render
 </script>
 ```
@@ -544,14 +552,14 @@ The same principle works with objects, as well:
 If for some reason you _had_ to use `.push()`, you could just assign the array to itself afterwards. This would work:
 
 ```js
-myArray.push(newThing);
-myArray = myArray;
+myArray.push(newThing)
+myArray = myArray
 ```
 
 But I think this is a little nicer (and works the exact same way):
 
 ```js
-myArray = [...myArray, newThing];
+myArray = [...myArray, newThing]
 ```
 
 If you want to get nerdy for a second: **this is actually a quirk of JavaScript itself**, rather than of Svelte. JavaScript still considers the array or object as the same unique thing until and unless it's reassigned. (This is why you can use `const` to declare an array or object and still modify its properties; the variable itself hasn't been mutated, even though its contents have.)

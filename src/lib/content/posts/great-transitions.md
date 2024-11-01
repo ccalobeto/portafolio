@@ -233,7 +233,8 @@ In those cases, you can split the `@keyframes` animations by property, or specif
 }
 
 .my-element {
-	animation: scale 0.5s cubic-bezier(0.5, 0, 0.5, 1) forwards, appear 0.5s linear forwards;
+	animation: scale 0.5s cubic-bezier(0.5, 0, 0.5, 1) forwards, appear 0.5s
+			linear forwards;
 }
 ```
 
@@ -379,10 +380,12 @@ We can either do this in CSS, using a media query (like this, [from MDN](https:/
 _Or_ we can use JavaScript. In this example, we'll check for a reduced-motion preference, and add a class to the `<html>` tag if found:
 
 ```js
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const prefersReducedMotion = window.matchMedia(
+	'(prefers-reduced-motion: reduce)'
+).matches
 
 if (prefersReducedMotion) {
-	document.documentElement.classList.add('reduce-motion');
+	document.documentElement.classList.add('reduce-motion')
 }
 ```
 

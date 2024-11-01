@@ -408,7 +408,7 @@ Also: Matt apparently owns WordPress.org, too. So he has a dizzying interweaving
 
 <CalloutPlusQuote>
 
-Let's acknowledge the irony that the guy who basically _is_ WordPress.com, _and_ WordPress.org, ***and*** the WordPress Foundation, wants you to think the name "WP Engine" is confusing.
+Let's acknowledge the irony that the guy who basically _is_ WordPress.com, _and_ WordPress.org, **_and_** the WordPress Foundation, wants you to think the name "WP Engine" is confusing.
 
 </CalloutPlusQuote>
 
@@ -540,7 +540,7 @@ It's very unclear how Matt thinks a takeover would theoretically happen, which m
 
 A sale doesn't seem very likely to me; Matt and WPE probably aren't even in the same ballpark on a price tag, since Matt already feels the company owes him many millions of dollars—and that's even if WPE _was_ motivated to negotiate, which I seriously doubt.
 
-_Maybe_ Matt comes in really high with (*_ahem_*) an offer they can't refuse, to pressure the investors into a sale. That also seems unlikely to me, but crazier takeovers have happened in tech in recent memory.
+_Maybe_ Matt comes in really high with (_*ahem*_) an offer they can't refuse, to pressure the investors into a sale. That also seems unlikely to me, but crazier takeovers have happened in tech in recent memory.
 
 So if that doesn't happen, are we off to court? No idea. There's a strong chance it's all just posturing. But I'm sure I'm not the only one who would be deeply curious to see how Matt's antics would play in a courtroom.
 
@@ -612,15 +612,15 @@ Most of the things they allege are things covered here already, but there are a 
 
 2. WP Engine also asserts **Matt probably messed up real bad in IRS filings for the Foundation**. For one thing, it's a .org domain, which is generally reserved for nonprofits, which probably isn't a crime in itself, but which does sorta imply some shady dealings.
 
-  More seriously, however: **the Foundation apparently never disclosed to the IRS that it owns the WordPress trademark, nor that it provided an exclusive license to use this trademark to Matt's companies**—which is a big problem, as Matt's claiming it's worth the millions and millions of dollars WP Engine allegedly owes him. Yet, no asset remotely near that value has ever been reported on the Foundation's taxes, according to the filing.
+More seriously, however: **the Foundation apparently never disclosed to the IRS that it owns the WordPress trademark, nor that it provided an exclusive license to use this trademark to Matt's companies**—which is a big problem, as Matt's claiming it's worth the millions and millions of dollars WP Engine allegedly owes him. Yet, no asset remotely near that value has ever been reported on the Foundation's taxes, according to the filing.
 
   <CalloutPlusQuote>
 
-  Essentially, either the WordPress trademark owned by the Foundation is _not_ worth the millions Matt wants for it (because if it was, he should've reported that asset to the IRS)...or it _is_, and Matt's been filing bad tax reports for several years.
+Essentially, either the WordPress trademark owned by the Foundation is _not_ worth the millions Matt wants for it (because if it was, he should've reported that asset to the IRS)...or it _is_, and Matt's been filing bad tax reports for several years.
 
   </CalloutPlusQuote>
 
-  _Yikes!_
+_Yikes!_
 
 WP Engine also officially states that **there were no conversations about licensing the WordPress trademark prior to mid September**, just before WCUS. A They say any prior conversations had been specifically about a WooCommerce partner program. Automattic, they allege, suddenly pulled the rug on those talks in August, before suddenly bringing Matt's extortion attempt days before WCUS. (WPE concedes there had been talk of "a license," as part of these dealings, but says no details about what the license was, or was for, or would cost, had been mentioned prior to mid September.)
 
@@ -692,7 +692,7 @@ He didn't disclose the specifics (except to WPE), but that info _will_ be releas
 
 Pretty awful to start that clock on a Saturday, though. Matt knows the engineers in charge of the plugin are now likely forced to work on the weekend to try to keep users safe.
 
-However—and this is the _really_ shitty thing: remember, **WP Engine is still locked out of the .org plugin repo _because of Matt_**. So even once WPE does fix the issue, it _can't_ automatically go out to actual users; they have to *manually* update, which I don't need to tell you, a huge chunk of them aren't going to do.
+However—and this is the _really_ shitty thing: remember, **WP Engine is still locked out of the .org plugin repo _because of Matt_**. So even once WPE does fix the issue, it _can't_ automatically go out to actual users; they have to _manually_ update, which I don't need to tell you, a huge chunk of them aren't going to do.
 
 <CalloutPlusQuote>
 
@@ -796,12 +796,11 @@ But to do that because _you_ forced the developer to go around you by refusing t
 
 Matt put people on the trolley tracks, WP Engine pulled the lever to save them, and Matt is punishing them for it.
 
-
 ### 10.15: Previous lawsuits against Matt come to light
 
 Folks online dug up [a whole different lawsuit against Matt, filed in 2022](https://freewp.com/wp-content/uploads/2024/10/Complaint-MATTHEW-C.-MULLENWEG-CGC-22-600093.pdf) by a private nurse hired by Matt, who worked for his mom Kathleen as a full-time (and then some) caretaker.
 
-There's a ***lot*** to go into here, and [this tweet summarizes the claims pretty well](https://x.com/trentlapinski/status/1845700375589826701). A quick summary doesn't do it justice, but: it claims this nurse (a mom, and a Muslim) was lured by promises of pay she never received, given half the pay of a male colleague, forced to work overtime in brutal conditions, defamed, abused, and exposed to horrific harassment and bigotry of pretty much every kind. When she spoke up—directly to Matt, who had allegedly promised her much more pay than he actually gave her—she was retaliated against and threatened. She eventually quit due to unbearable working conditions.
+There's a **_lot_** to go into here, and [this tweet summarizes the claims pretty well](https://x.com/trentlapinski/status/1845700375589826701). A quick summary doesn't do it justice, but: it claims this nurse (a mom, and a Muslim) was lured by promises of pay she never received, given half the pay of a male colleague, forced to work overtime in brutal conditions, defamed, abused, and exposed to horrific harassment and bigotry of pretty much every kind. When she spoke up—directly to Matt, who had allegedly promised her much more pay than he actually gave her—she was retaliated against and threatened. She eventually quit due to unbearable working conditions.
 
 Read the actual filing and your jaw will drop. Just be warned it details _shocking_ levels of racism and mistreatment, along with just about every other kind of bigotry and harassment. (I'd argue the term "sexual assault" even applies here.) Most of it is on the part of Matt's mom, but Matt was allegedly very much aware of it, and not only did nothing, but made the caretaker's life even worse whenever complaints arose.
 
@@ -913,7 +912,7 @@ The injunction points out, accurately, that doing so would cost Matt/Automattic 
 
 And since the whole reason Matt took over ACF in the _first place_ is that he says WP Engine's updates weren't safe (because they didn't go through the official .org repo, which they couldn't, because of Matt), it seems like he doesn't really have a leg to stand on here. (Again: not a lawyer; just personal commentary.)
 
-Seems to me you can't very well argue that a company being *outside* of .org is harmful if _you're_ the one keeping them out.
+Seems to me you can't very well argue that a company being _outside_ of .org is harmful if _you're_ the one keeping them out.
 
 That is, unless you're prepared to admit you _want_ users to be in harm's way, as an extortion tactic.
 
@@ -929,7 +928,7 @@ Basically, "yeah, we did everything they said, and we had every right to do it."
 
 Anyway: I'm not qualified to speak on the legal soundness of this defense, but in the real world, there are a lot of problems with it.
 
-For starters: as I've mentioned several times now, we were all led to believe that the Foundation actually ***is*** .org, and that its entire reason for existence was to prevent this exact flavor of corporate white-collar crime.
+For starters: as I've mentioned several times now, we were all led to believe that the Foundation actually **_is_** .org, and that its entire reason for existence was to prevent this exact flavor of corporate white-collar crime.
 
 For another, the Foundation's _explicit mission_ and reason for existence is:
 
@@ -951,7 +950,6 @@ I just downloaded the latest version of WordPress, and did a quick search: `word
 
 I didn't actually try it, but I'm gonna make a well-educated guess that if I started commenting out those lines of code, or replacing that domain, my WordPress install wouldn't keep working for very long.
 
-
 <CalloutPlusQuote>
 
 Whatever the courts decide, I think it's more than fair to say WordPress.org _is_, for all intents and purposes, a part of WordPress.
@@ -966,7 +964,7 @@ But he _also_ never did anything to suggest to anyone this whole enterprise was 
 
 We've never had any reason to think otherwise.
 
-**I can't help but feel that _everyone_ in WordPress is being betrayed here**.  We _all_ believed WordPress.org was in the hands of a benevolent nonprofit, not a tyrannical dictator. We _all_ thought this could never happen to _anyone_ in the community.
+**I can't help but feel that _everyone_ in WordPress is being betrayed here**. We _all_ believed WordPress.org was in the hands of a benevolent nonprofit, not a tyrannical dictator. We _all_ thought this could never happen to _anyone_ in the community.
 
 <CalloutPlusQuote>
 
@@ -1106,7 +1104,7 @@ Imagine if Apple got into a dispute with Google, and blocked all text messages f
 
 Imagine if Google had a dispute with Amazon, and blocked all Amazon communications in Gmail. Or with Walmart, and prevented store locations from showing up on Google Maps.
 
-And imagine if _one person_ at any one of those companies had both the power to make that decision, ***and*** was the sole arbiter of what justified that measure, unilaterally and without challenge.
+And imagine if _one person_ at any one of those companies had both the power to make that decision, **_and_** was the sole arbiter of what justified that measure, unilaterally and without challenge.
 
 _This is the scale of thing we're talking about._ This is the collateral damage Matt has unleashed on the WordPress community, and it's not to _anyone's_ benefit, except maybe Matt's and his own companies'. (For now, anyway. We'll see how it all shakes out; it seems pretty inevitable that a class action suit will follow and this all gets dragged into court.)
 
@@ -1135,7 +1133,6 @@ It's clear that the blurry lines between WordPress.org and WordPress.com should 
 </CalloutPlusQuote>
 
 I don't care about Automattic giving 5% to WordPress anymore. I want it to give up Matt's unchecked, unilateral power. Because it's clearer than ever he can't be trusted with it.
-
 
 ## Addendum: on the future of WordPress
 

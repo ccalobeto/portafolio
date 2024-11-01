@@ -265,7 +265,7 @@ To use a component, we first need to `import` it, which means we'll need to add 
 ```svelte
 <!-- +layout.svelte -->
 <script>
-	import Header from '$lib/components/Header.svelte';
+	import Header from '$lib/components/Header.svelte'
 </script>
 
 <Header />
@@ -365,8 +365,8 @@ Once we've got a stylesheet with some CSS in it, loading it globally is as easy 
 ```svelte
 <!-- +layout.svelte -->
 <script>
-	import Header from '$lib/components/Header.svelte';
-	import '$lib/styles/style.css';
+	import Header from '$lib/components/Header.svelte'
+	import '$lib/styles/style.css'
 </script>
 
 <!-- ...HTML here -->
@@ -412,7 +412,7 @@ This change is minimal; we just need to import `svelte-preprocess`, and then add
 
 ```js
 // svelte.config.js
-import sveltePreprocess from 'svelte-preprocess';
+import sveltePreprocess from 'svelte-preprocess'
 
 const config = {
 	kit: {
@@ -420,7 +420,7 @@ const config = {
 	},
 
 	preprocess: [sveltePreprocess()]
-};
+}
 ```
 
 Note that you'll need to create the `preprocess` option; it's not there by default. (We'll add Markdown processing here later, too.)
@@ -452,7 +452,7 @@ Linking to Sass files is actually exactly the same as linking to CSS files, like
 ```svelte
 <!-- +layout.svelte -->
 <script>
-	import '$lib/styles/style.scss';
+	import '$lib/styles/style.scss'
 </script>
 ```
 
@@ -487,7 +487,7 @@ Next, we'll need to add mdsvex to our config. Open `svelte.config.js`, and modif
 ```js
 // svelte.config.js
 /* Other imports here */
-import { mdsvex } from 'mdsvex';
+import { mdsvex } from 'mdsvex'
 
 const config = {
 	kit: {
@@ -502,7 +502,7 @@ const config = {
 			extensions: ['.md']
 		})
 	]
-};
+}
 ```
 
 If you'd like to get into the details of that config:
@@ -716,8 +716,8 @@ Inside our mdsvex layout file, all we need to do is `export` a prop for each fro
 ```svelte
 <!-- post.svelte -->
 <script>
-	export let title;
-	export let date;
+	export let title
+	export let date
 </script>
 
 <article>
@@ -747,7 +747,7 @@ const config = {
 			}
 		})
 	]
-};
+}
 ```
 
 mdsvex does some really nice magic for us with this approach. The `blog` key means the layout will _only_ be used on Markdown files inside our `/blog` path. (Neat!) And the value is, of course, the file to use as the layout.
@@ -862,15 +862,15 @@ Inside `+page.js`, we'll just need to export a `load` function that returns data
 ```js
 // src/routes/blog/[slug]/+page.js
 export async function load({ params }) {
-	const post = await import(`../${params.slug}.md`);
-	const { title, date } = post.metadata;
-	const content = post.default;
+	const post = await import(`../${params.slug}.md`)
+	const { title, date } = post.metadata
+	const content = post.default
 
 	return {
 		content,
 		title,
 		date
-	};
+	}
 }
 ```
 
@@ -902,7 +902,7 @@ The data from the `load` function in `+page.js` is automatically available to us
 ```svelte
 <!-- src/routes/[slug]/+page.svelte -->
 <script>
-	export let data;
+	export let data
 </script>
 
 <article>
@@ -931,8 +931,8 @@ This is equivalent to the above:
 ```svelte
 <!-- Alternate approach! 👀 -->
 <script>
-	export let data;
-	const { title, date, Content } = data;
+	export let data
+	const { title, date, Content } = data
 </script>
 
 <article>
@@ -997,8 +997,8 @@ Let's do a quick test, just to see it in action:
 ```js
 // +server.js
 export const GET = () => {
-	return new Response('Welcome to my API');
-};
+	return new Response('Welcome to my API')
+}
 ```
 
 With that in place, we should be able to visit `/api/posts` and see the following (unimpressive, but neat!) text loaded in the browser:
@@ -1030,23 +1030,23 @@ Inside our new JS file, we'll export an asynchronous `fetchMarkdownPosts` functi
 
 ```js
 export const fetchMarkdownPosts = async () => {
-	const allPostFiles = import.meta.glob('/src/routes/blog/*.md');
-	const iterablePostFiles = Object.entries(allPostFiles);
+	const allPostFiles = import.meta.glob('/src/routes/blog/*.md')
+	const iterablePostFiles = Object.entries(allPostFiles)
 
 	const allPosts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
-			const { metadata } = await resolver();
-			const postPath = path.slice(11, -3);
+			const { metadata } = await resolver()
+			const postPath = path.slice(11, -3)
 
 			return {
 				meta: metadata,
 				path: postPath
-			};
+			}
 		})
-	);
+	)
 
-	return allPosts;
-};
+	return allPosts
+}
 ```
 
 <SideNote>
@@ -1079,18 +1079,18 @@ Inside our `+server.js` file from above, we'll put the following code:
 
 ```js
 // src/routes/api/posts/+server.js
-import { fetchMarkdownPosts } from '$lib/utils';
-import { json } from '@sveltejs/kit';
+import { fetchMarkdownPosts } from '$lib/utils'
+import { json } from '@sveltejs/kit'
 
 export const GET = async () => {
-	const allPosts = await fetchMarkdownPosts();
+	const allPosts = await fetchMarkdownPosts()
 
 	const sortedPosts = allPosts.sort((a, b) => {
-		return new Date(b.meta.date) - new Date(a.meta.date);
-	});
+		return new Date(b.meta.date) - new Date(a.meta.date)
+	})
 
-	return json(sortedPosts);
-};
+	return json(sortedPosts)
+}
 ```
 
 That might look like a lot, but when you consider it's actually _everything_ we need to create an API endpoint to return _all_ our site's posts, sorted by date, it's kind of remarkable!
@@ -1137,13 +1137,13 @@ Other important things to know about the `load` function:
 ```js
 // src/routes/blog/+page.js
 export const load = async ({ fetch }) => {
-	const response = await fetch(`/api/posts`);
-	const posts = await response.json();
+	const response = await fetch(`/api/posts`)
+	const posts = await response.json()
 
 	return {
 		posts
-	};
-};
+	}
+}
 ```
 
 That tiny bit of pre-loading handles everything we need! Now we've got a `posts` being passed to the component (again, as `data`), and we can use it to loop over and render posts in the corresponding `+page.svelte` file:
@@ -1151,7 +1151,7 @@ That tiny bit of pre-loading handles everything we need! Now we've got a `posts`
 ```svelte
 <!-- src/routes/blog/+page.svelte -->
 <script>
-	export let data;
+	export let data
 </script>
 
 <h1>Blog</h1>
@@ -1198,7 +1198,7 @@ First, inside of `svelte.config.js`, change `adapter-auto` to `adapter-static` (
 
 ```js
 // Replace the original `adapter-auto` line with this in svelte.config.js
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-static'
 ```
 
 And second, we'll need to tell all of our routes to prerender, by exporting a `prerender` prop and setting it to `true`.
@@ -1207,7 +1207,7 @@ You _could_ do this manually for every page, but that would be tedious. The much
 
 ```js
 // src/routes/+layout.js
-export const prerender = true;
+export const prerender = true
 ```
 
 Just as the `+layout.svelte` file handles layout on every page, the `+layout.js` file handles server-side scripting for every page. By setting our exported `prerender` prop inside of the layout JS file, it will "trickle down" to every page, saving us the trouble of manually setting it on any child route.
@@ -1303,9 +1303,9 @@ Just to get an idea of what we're working with, let's start with any JavaScript 
 ```js
 // src/routes/blog/category/[category]/+page.js
 export const load = ({ params }) => {
-	console.log(params);
-	return {};
-};
+	console.log(params)
+	return {}
+}
 ```
 
 Notice if you load a blog category page now, you can see `params` in the browser console, as well as in the terminal where your local dev server is running. Try visiting `/blog/category/numbers` and you should see:
@@ -1319,17 +1319,19 @@ Knowing that the current `/blog/category/*` route will be available as `params.c
 ```js
 // src/routes/blog/category/[category]/+page.js
 export const load = async ({ fetch, params }) => {
-	const { category } = params;
-	const response = await fetch(`/api/posts`);
-	const allPosts = await response.json();
+	const { category } = params
+	const response = await fetch(`/api/posts`)
+	const allPosts = await response.json()
 
-	const posts = allPosts.filter((post) => post.meta.categories.includes(category));
+	const posts = allPosts.filter((post) =>
+		post.meta.categories.includes(category)
+	)
 
 	return {
 		category,
 		posts
-	};
-};
+	}
+}
 ```
 
 That bit should return us just the posts that match the current category!
@@ -1343,7 +1345,7 @@ Elsewhere, inside the `[slug]/+page.svelte` template, listing a post's categorie
 ```svelte
 <!-- src/routes/blog/[slug]/+page.svelte -->
 <script>
-	export let data;
+	export let data
 </script>
 
 <!-- ...Post HTML here -->
@@ -1379,12 +1381,12 @@ Inside `+layout.js`, we just need to export a simple `load` function that passes
 ```js
 // src/routes/+layout.js
 export const load = ({ url }) => {
-	const currentRoute = url.pathname;
+	const currentRoute = url.pathname
 
 	return {
 		currentRoute
-	};
-};
+	}
+}
 ```
 
 That handled, we can use the route inside the `+layout.svelte` file:
@@ -1393,9 +1395,9 @@ That handled, we can use the route inside the `+layout.svelte` file:
 <!-- src/routes/+layout.svelte -->
 <script>
 	// ...Other imports here
-	import { fade } from 'svelte/transition';
+	import { fade } from 'svelte/transition'
 
-	export let data;
+	export let data
 </script>
 
 <Header />
@@ -1434,28 +1436,30 @@ To start, create an `rss/+server.js` file in your `src/routes` folder, to make t
 Inside that file, we'll use our `fetchMarkdownPosts` helper again, and convert it to XML.
 
 ```js
-import { fetchMarkdownPosts } from '$lib/utils';
+import { fetchMarkdownPosts } from '$lib/utils'
 
-const siteURL = 'https://your-domain.tld';
-const siteTitle = 'Your site title here';
-const siteDescription = 'Your site description here';
+const siteURL = 'https://your-domain.tld'
+const siteTitle = 'Your site title here'
+const siteDescription = 'Your site description here'
 
-export const prerender = true;
+export const prerender = true
 
 export const GET = async () => {
-	const allPosts = await fetchMarkdownPosts();
-	const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+	const allPosts = await fetchMarkdownPosts()
+	const sortedPosts = allPosts.sort(
+		(a, b) => new Date(b.date) - new Date(a.date)
+	)
 
-	const body = render(sortedPosts);
+	const body = render(sortedPosts)
 	const options = {
 		headers: {
 			'Cache-Control': 'max-age=0, s-maxage=3600',
 			'Content-Type': 'application/xml'
 		}
-	};
+	}
 
-	return new Response(body, options);
-};
+	return new Response(body, options)
+}
 
 const render = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -1477,7 +1481,7 @@ ${posts
 	.join('')}
 </channel>
 </rss>
-`;
+`
 ```
 
 **Please note that the above code block will need some modification!** The example above is more or less straight from this site, and may not be the right shape for your needs. At the very least, you'll need to replace the URL and text placeholders, but you may also need to update the routes and the post frontmatter properties being referenced.
@@ -1518,8 +1522,8 @@ Then we'll pop open our `svelte.config.js` file, import our two new rehype plugi
 ```js
 // svelte.config.js
 /* Other imports here */
-import rehypeSlug from 'rehype-slug';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 const config = {
 	/* Other config properties here */
@@ -1531,9 +1535,9 @@ const config = {
 			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
 		})
 	]
-};
+}
 
-export default config;
+export default config
 ```
 
 Note that the plugins **must** go in that order! `rehypeSlug` adds IDs to our headings, and `rehypeAutolinkHeadings` only works on headings that have IDs.
@@ -1604,7 +1608,7 @@ Then add it in the `sveltePreprocess()` function arguments:
 // svelte.config.js
 
 /* Other imports here */
-import autoprefixer from 'autoprefixer';
+import autoprefixer from 'autoprefixer'
 
 const config = {
 	/* Other config options here */
@@ -1617,7 +1621,7 @@ const config = {
 		})
 		/* Other preprocessors here, like mdsvex */
 	]
-};
+}
 ```
 
 That's all we need to do! Autoprefixer is now working automatically to prefix any CSS properties that might need it for maximum backwards compatibility with other browsers.
@@ -1699,7 +1703,7 @@ To use them, just import them in a page or layout (our global layout file might 
 
 ```svelte
 <script>
-	import { preloadCode, preloadData } from '$app/navigation';
+	import { preloadCode, preloadData } from '$app/navigation'
 </script>
 ```
 
@@ -1718,11 +1722,11 @@ If you don't use a `load` function (or if it doesn't do anything dynamic), then 
 
 ```svelte
 <script>
-	import { preloadCode, preloadData } from '$app/navigation';
+	import { preloadCode, preloadData } from '$app/navigation'
 
-	preloadCode('/blog', '/about', '/blog/*');
+	preloadCode('/blog', '/about', '/blog/*')
 	// OR:
-	preloadData('/blog', '/about', '/blog/*');
+	preloadData('/blog', '/about', '/blog/*')
 </script>
 ```
 

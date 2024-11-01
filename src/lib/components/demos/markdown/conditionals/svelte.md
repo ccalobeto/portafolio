@@ -1,5 +1,5 @@
 ```svelte
 {#if isShown}
-  <Hello />
+	<Hello />
 {/if}
 ```

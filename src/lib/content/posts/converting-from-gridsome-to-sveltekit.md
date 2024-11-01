@@ -150,20 +150,22 @@ Here's a somewhat simplified example of how you might create an endpoint to retu
 // The `get` function responds to GET requests; you can have post(), etc. as well
 export const get = async () => {
 	const posts = await Promise.all(
-		Object.entries(import.meta.glob('/blog/posts/*.md')).map(async ([path, page]) => {
-			const { metadata } = await page();
-			const slug = path.split('/').pop().split('.').shift();
-			return { ...metadata, slug };
-		})
-	);
+		Object.entries(import.meta.glob('/blog/posts/*.md')).map(
+			async ([path, page]) => {
+				const { metadata } = await page()
+				const slug = path.split('/').pop().split('.').shift()
+				return { ...metadata, slug }
+			}
+		)
+	)
 
 	return {
 		status: 200,
 		body: {
 			posts //Automatically converted to JSON ✨
 		}
-	};
-};
+	}
+}
 ```
 
 Once you've retrieved the post data as JSON, you can display it in a Svelte page or component; here's a short example:
