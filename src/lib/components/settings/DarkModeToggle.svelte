@@ -14,7 +14,7 @@
 	// There's also some code in app.html to help avoid unwanted flashes of dark/light
 	const toggleDarkMode = async (): Promise<void> => {
 		theme.set(isDarkMode ? Themes.Light : Themes.Dark)
-		
+
 		if (browser) {
 			window.localStorage.setItem('theme', JSON.stringify($theme))
 
@@ -34,15 +34,15 @@
 	onMount(() => {
 		// This same logic is in app.html also, but I didn't want to import it there, so it's just duplicated in both places.
 		if (
-			('theme' in localStorage && JSON.parse(localStorage.theme) === Themes.Dark)
-			||
-			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			('theme' in localStorage &&
+				JSON.parse(localStorage.theme) === Themes.Dark) ||
+			(!('theme' in localStorage) &&
+				window.matchMedia('(prefers-color-scheme: dark)').matches)
 		) {
 			theme.set(Themes.Dark)
 		}
 	})
 </script>
-
 
 <button
 	id="dark-mode-toggle"
@@ -56,7 +56,6 @@
 	<LightDarkIcon />
 </button>
 
-
 <style lang="scss" global>
 	#dark-mode-toggle {
 		background: var(--buttonBackground);
@@ -64,7 +63,8 @@
 		&:hover,
 		&:focus {
 			svg {
-				path, circle {
+				path,
+				circle {
 					stroke: var(--yellow);
 				}
 			}
@@ -75,15 +75,17 @@
 		}
 
 		svg {
-			--itemTransition: .4s cubic-bezier(.7,-0.01,0,1.01);
+			--itemTransition: 0.4s cubic-bezier(0.7, -0.01, 0, 1.01);
 			width: 2rem;
 			height: 4rem;
 			transform: translateY(-1.975rem);
-			transition: transform var(--itemTransition), fill var(--itemTransition), stroke var(--itemTransition), background var(--itemTransition);
+			transition: transform var(--itemTransition), fill var(--itemTransition),
+				stroke var(--itemTransition), background var(--itemTransition);
 
 			path,
 			circle {
-				transition: transform var(--itemTransition), fill var(--itemTransition), stroke var(--itemTransition), background var(--itemTransition);
+				transition: transform var(--itemTransition), fill var(--itemTransition),
+					stroke var(--itemTransition), background var(--itemTransition);
 				stroke: var(--ink);
 			}
 		}

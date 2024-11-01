@@ -17,12 +17,15 @@
 
 	onMount(() => {
 		openHeight = accordion.getBoundingClientRect().height
-		const margin = parseInt(getComputedStyle(document.querySelector('body')).getPropertyValue('font-size'))
+		const margin = parseInt(
+			getComputedStyle(document.querySelector('body')).getPropertyValue(
+				'font-size'
+			)
+		)
 		accordion.style.setProperty('--openHeight', `${openHeight + 30}px`)
 		isOpen = false
 	})
 </script>
-
 
 <div class="accordion" class:open={isOpen} bind:this={accordion}>
 	<h3 id={headingID} class="accordion__heading">
@@ -45,22 +48,21 @@
 	</div>
 </div>
 
-
 <style lang="scss" global>
 	.accordion {
 		height: 2.5em;
-		transition: height .15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+		transition: height 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 		overflow: hidden;
 
 		.accordion__heading {
 			font-size: 1rem;
-			margin: 0 0 .5em;
+			margin: 0 0 0.5em;
 			font-weight: bold;
 			font-family: var(--headingFont);
 			width: 100%;
 			max-width: unset;
 		}
-		
+
 		.accordion__button {
 			padding: 0;
 			border: 0;
@@ -73,8 +75,8 @@
 			&::before {
 				content: '\25B6';
 				display: inline-block;
-				transition: .1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-				margin-right: .5em;
+				transition: 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+				margin-right: 0.5em;
 				color: var(--midGray);
 			}
 		}
@@ -95,7 +97,7 @@
 
 			.accordion__button::before {
 				transform: rotate(90deg);
-					color: var(--yellow);
+				color: var(--yellow);
 			}
 		}
 	}

@@ -1,9 +1,9 @@
-  import preprocess from 'svelte-preprocess'
-	import autoprefixer from 'autoprefixer'
-  import adapter from '@sveltejs/adapter-static'
-  import { mdsvex } from 'mdsvex'
-	import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-	import rehypeSlug from 'rehype-slug'
+import preprocess from 'svelte-preprocess'
+import autoprefixer from 'autoprefixer'
+import adapter from '@sveltejs/adapter-static'
+import { mdsvex } from 'mdsvex'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeSlug from 'rehype-slug'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -24,16 +24,13 @@ const config = {
 			highlight: {
 				alias: { vue: 'html' }
 			},
-			rehypePlugins: [
-				rehypeSlug,
-				rehypeAutolinkHeadings,
-			],
-		}),
+			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
+		})
 	],
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter()
 	}
 }
 
-export default config;
+export default config

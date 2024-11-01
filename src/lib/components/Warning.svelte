@@ -1,5 +1,5 @@
 <script>
-import WarningIcon from './icons/warning-icon.svelte'
+	import WarningIcon from './icons/warning-icon.svelte'
 </script>
 
 <div class="warning">
@@ -10,7 +10,6 @@ import WarningIcon from './icons/warning-icon.svelte'
 		<slot />
 	</div>
 </div>
-
 
 <style lang="scss">
 	.warning {
@@ -33,11 +32,15 @@ import WarningIcon from './icons/warning-icon.svelte'
 
 		:global(code) {
 			background: transparent;
-			font-size: .9em;
+			font-size: 0.9em;
 		}
 	}
 
 	:global(.dark .warning) {
-		background: linear-gradient(to right, hsla(var(--redHS), 22%), hsla(var(--redHS), 28%));
+		background: linear-gradient(
+			to right,
+			hsla(var(--redHS), 22%),
+			hsla(var(--redHS), 28%)
+		);
 	}
 </style>

@@ -5,8 +5,8 @@ export const load = async ({ fetch }) => {
 
 	let uniqueCategories = {}
 
-	posts.forEach(post => {
-		post.categories.forEach(category => {
+	posts.forEach((post) => {
+		post.categories.forEach((category) => {
 			if (uniqueCategories.hasOwnProperty(category)) {
 				uniqueCategories[category].count += 1
 			} else {
@@ -18,11 +18,11 @@ export const load = async ({ fetch }) => {
 		})
 	})
 
-	const sortedUniqueCategories = 
-		Object.values(uniqueCategories)
-			.sort((a, b) => a.title > b.title)
+	const sortedUniqueCategories = Object.values(uniqueCategories).sort(
+		(a, b) => a.title > b.title
+	)
 
-	return { 
+	return {
 		uniqueCategories: sortedUniqueCategories
 	}
 }

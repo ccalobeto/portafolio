@@ -11,7 +11,7 @@ const months: string[] = [
 	'September',
 	'October',
 	'November',
-	'December',
+	'December'
 ]
 
 const readableDate = (date: string): string => {

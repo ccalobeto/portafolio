@@ -2,19 +2,17 @@
 	export let loading: boolean
 </script>
 
-
 <div class="loader" class:loading>
 	<div class="loading-wrapper">
-		<div class="dot outer first"></div>
-		<div class="dot outer second"></div>
-		<div class="dot outer third"></div>
+		<div class="dot outer first" />
+		<div class="dot outer second" />
+		<div class="dot outer third" />
 
-		<div class="dot inner first"></div>
-		<div class="dot inner second"></div>
-		<div class="dot inner third"></div>
+		<div class="dot inner first" />
+		<div class="dot inner second" />
+		<div class="dot inner third" />
 	</div>
 </div>
-
 
 <style lang="scss">
 	.loader {
@@ -29,7 +27,7 @@
 		opacity: 0;
 		pointer-events: none;
 		transition: opacity 0.1s;
-		
+
 		&.loading {
 			opacity: 1;
 			pointer-events: unset;
@@ -54,22 +52,22 @@
 			&.outer {
 				animation: outer_pop 1000ms infinite var(--easing);
 				background: var(--yellow);
-				
+
 				&:nth-of-type(2) {
 					animation-delay: 100ms;
 					background: var(--lightBlue);
 				}
-				
+
 				&:nth-of-type(3) {
 					animation-delay: 200ms;
 					background: var(--lightGray);
 				}
 			}
-			
+
 			&.inner {
 				background: var(--paper);
 				animation: inner_pop 1000ms infinite var(--easing);
-				
+
 				+ .inner {
 					animation-delay: 100ms;
 
@@ -79,7 +77,7 @@
 				}
 			}
 		}
-		
+
 		.first {
 			grid-column: 2 / 3;
 		}
@@ -95,16 +93,16 @@
 
 	@keyframes outer_pop {
 		0% {
-			transform: scale(0)
+			transform: scale(0);
 		}
 		50% {
-			transform: scale(1)
+			transform: scale(1);
 		}
 		75% {
-			transform: scale(1)
+			transform: scale(1);
 		}
 		100% {
-			transform: scale(0)
+			transform: scale(0);
 		}
 	}
 

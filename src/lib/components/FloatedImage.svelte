@@ -1,19 +1,18 @@
 <script lang="ts">
-export let path: string
-export let alt: string = ''
+	export let path: string
+	export let alt: string = ''
 </script>
 
-
-<img src={path} alt={alt} />
-
+<img src={path} {alt} />
 
 <style lang="scss">
-img {
-	margin-top: 0;
+	img {
+		margin-top: 0;
 
-	@media (min-width: vars.$xs) {
-		float: right;
-		margin: 0 calc(var(--quarterNote) * -2) var(--quarterNote) var(--quarterNote);
+		@media (min-width: vars.$xs) {
+			float: right;
+			margin: 0 calc(var(--quarterNote) * -2) var(--quarterNote)
+				var(--quarterNote);
+		}
 	}
-}
 </style>

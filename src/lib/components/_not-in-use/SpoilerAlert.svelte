@@ -6,7 +6,6 @@
 	}
 </script>
 
-
 <div class="spoiler">
 	<div class="spoiler__controls">
 		⚠️ SPOILER ALERT
@@ -18,7 +17,6 @@
 		<slot />
 	{/if}
 </div>
-
 
 <style lang="scss">
 	.spoiler {

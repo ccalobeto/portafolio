@@ -31,7 +31,9 @@
 	 * it works and as a bonus, is a progressive enhancement.
 	 */
 	onMount(() => {
-		const allHeadings = document.querySelectorAll('article h1 ~ :is(h2, h3, h4, h5, h6)')
+		const allHeadings = document.querySelectorAll(
+			'article h1 ~ :is(h2, h3, h4, h5, h6)'
+		)
 
 		if (allHeadings.length < 5) return
 
@@ -50,7 +52,10 @@
 			} else if (previousHeadingLevel < level) {
 				output += `<ul><li>`
 			} else if (previousHeadingLevel > level) {
-				const subtraction = i + 1 === allHeadings.length ? level + 1 : previousHeadingLevel - level
+				const subtraction =
+					i + 1 === allHeadings.length
+						? level + 1
+						: previousHeadingLevel - level
 				for (let n = 0; n < subtraction; n++) {
 					output += '</li></ul>'
 				}
@@ -80,8 +85,19 @@
 
 <style lang="scss" global>
 	.toc-wrap {
-		background: linear-gradient(to bottom right, var(--lightGray), var(--yellow));
-		background: linear-gradient(to bottom right, #a7a8aa, #92abb2, #5eca78, #b6ec1f, #ffd100);
+		background: linear-gradient(
+			to bottom right,
+			var(--lightGray),
+			var(--yellow)
+		);
+		background: linear-gradient(
+			to bottom right,
+			#a7a8aa,
+			#92abb2,
+			#5eca78,
+			#b6ec1f,
+			#ffd100
+		);
 		padding: 2px;
 		margin: 3rem 0;
 	}

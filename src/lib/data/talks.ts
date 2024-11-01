@@ -3,7 +3,8 @@ import type Talk from '../types/talk'
 const talks: Talk[] = [
 	{
 		title: 'Be Classless – Optimizing Your CSS for WordPress',
-		link: 'https://wordpress.tv/2015/11/17/josh-collinsworth-be-classless-optimizing-your-css/',
+		link:
+			'https://wordpress.tv/2015/11/17/josh-collinsworth-be-classless-optimizing-your-css/',
 		event: 'WordCamp Omaha 2015',
 		year: 2015
 	},
@@ -14,12 +15,14 @@ const talks: Talk[] = [
 	},
 	{
 		title: 'Easy WordPress Security for Everyone',
-		link: 'https://wordpress.tv/2017/03/05/josh-collinsworth-easy-wordpress-security-for-everyone/',
+		link:
+			'https://wordpress.tv/2017/03/05/josh-collinsworth-easy-wordpress-security-for-everyone/',
 		event: 'WordCamp Omaha 2016',
 		year: 2016
 	},
 	{
-		title: 'A RESTed Development: Understanding the WP REST API Once and For All',
+		title:
+			'A RESTed Development: Understanding the WP REST API Once and For All',
 		link: '',
 		event: 'WordCamp Omaha 2017',
 		year: 2017
@@ -37,7 +40,8 @@ const talks: Talk[] = [
 		year: 2018
 	},
 	{
-		title: 'How Not to Make a Crappy-Looking Site: a Crash Course on (Web) Design',
+		title:
+			'How Not to Make a Crappy-Looking Site: a Crash Course on (Web) Design',
 		link: '',
 		event: 'WordCamp Omaha 2019',
 		year: 2019
@@ -86,7 +90,8 @@ const talks: Talk[] = [
 		month: 9
 	},
 	{
-		title: 'Deno, React Alternatives, and Copilot Concerns with Triple Threat Josh Collinsworth',
+		title:
+			'Deno, React Alternatives, and Copilot Concerns with Triple Threat Josh Collinsworth',
 		link: 'https://shoptalkshow.com/603/',
 		event: 'ShpTalk Show podcast',
 		year: 2024,

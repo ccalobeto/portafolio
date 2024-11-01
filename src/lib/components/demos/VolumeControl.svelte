@@ -3,20 +3,12 @@
 </script>
 
 <div class="example-component-wrapper">
-
 	<label for="volume">
 		Volume: {volume}%
 	</label>
-	
-	<input 
-		id="volume"
-		type="range"
-		min="0"
-		max="100"
-		bind:value={volume}
-	/>
-</div>
 
+	<input id="volume" type="range" min="0" max="100" bind:value={volume} />
+</div>
 
 <style lang="scss">
 	input {

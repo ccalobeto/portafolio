@@ -3,14 +3,19 @@
 	import { onMount } from 'svelte'
 
 	onMount(() => {
-		const userMotionPreference = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-			const storedMotionPreference = JSON.parse(window.localStorage.getItem('collinsworth-reduce-motion'))
+		const userMotionPreference = window.matchMedia(
+			'(prefers-reduced-motion: reduce)'
+		).matches
+		const storedMotionPreference = JSON.parse(
+			window.localStorage.getItem('collinsworth-reduce-motion')
+		)
 
-			if (
-				(userMotionPreference && storedMotionPreference !== false) 
-				|| storedMotionPreference === true) {
-				prefersReducedMotion.set(true)
-			}
+		if (
+			(userMotionPreference && storedMotionPreference !== false) ||
+			storedMotionPreference === true
+		) {
+			prefersReducedMotion.set(true)
+		}
 	})
 
 	const toggleReducedMotion = (): void => {
@@ -26,7 +31,6 @@
 	$: enableOrDisable = $prefersReducedMotion ? 'Disable' : 'Enable'
 </script>
 
-
 <button
 	id="motion-toggle"
 	class="settings-toggle"
@@ -38,20 +42,19 @@
 	<span aria-hidden="true">Move</span>
 </button>
 
-
 <style lang="scss">
 	#motion-toggle {
 		background: var(--buttonBackground);
 		font-weight: bold;
-		font-size: .6rem;
+		font-size: 0.6rem;
 		text-transform: uppercase;
 		color: var(--ink);
 		font-family: var(--headingFont);
 
-		&[aria-pressed="true"]::before {
+		&[aria-pressed='true']::before {
 			content: '';
-			width: calc(100% + .1rem);
-			height: .1rem;
+			width: calc(100% + 0.1rem);
+			height: 0.1rem;
 			background: var(--ink);
 			display: block;
 			position: absolute;

@@ -14,4 +14,3 @@ Assuming you already have Node and NPM installed, clone the repo, then in the di
 npm install
 npm run dev
 ```
-

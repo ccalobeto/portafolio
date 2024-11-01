@@ -2,7 +2,6 @@
 	<slot />
 </ul>
 
-
 <style lang="scss">
 	.tag-list {
 		display: flex;
@@ -11,6 +10,6 @@
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
-		font-size: .9rem;
+		font-size: 0.9rem;
 	}
 </style>

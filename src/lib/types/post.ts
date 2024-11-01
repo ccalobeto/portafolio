@@ -1,5 +1,5 @@
 export default interface Post {
-	categories?: string|string[]
+	categories?: string | string[]
 	coverImage: string
 	coverWidth?: number
 	coverHeight?: number

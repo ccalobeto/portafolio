@@ -20,7 +20,9 @@
 
 	const encode = (data: object): string => {
 		return Object.keys(data)
-			.map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+			.map(
+				(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+			)
 			.join('&')
 	}
 
@@ -55,8 +57,14 @@
 		name="description"
 		content="If you fill out this form, I'll probably send you an email. What a bargain!"
 	/>
-	<meta property="og:image" content="https://joshcollinsworth.com/images/site-image.png" />
-	<meta name="twitter:image" content="https://joshcollinsworth.com/images/site-image.png" />
+	<meta
+		property="og:image"
+		content="https://joshcollinsworth.com/images/site-image.png"
+	/>
+	<meta
+		name="twitter:image"
+		content="https://joshcollinsworth.com/images/site-image.png"
+	/>
 </svelte:head>
 
 <Main>
@@ -73,15 +81,20 @@
 				</p>
 			</noscript>
 
-			<p class="big">Happy to chat! Email used only for replies. No solicitations, please.</p>
+			<p class="big">
+				Happy to chat! Email used only for replies. No solicitations, please.
+			</p>
 
 			<ul class="small">
 				<li>
-					<strong>Yes</strong>, you may re-publish content from this blog in other languages with
-					attribution. No need to ask first.
+					<strong>Yes</strong>, you may re-publish content from this blog in
+					other languages with attribution. No need to ask first.
 				</li>
 
-				<li><strong>No</strong>, I do not publish guest posts on this blog. Please don't ask.</li>
+				<li>
+					<strong>No</strong>, I do not publish guest posts on this blog. Please
+					don't ask.
+				</li>
 			</ul>
 
 			<form
@@ -132,7 +145,9 @@
 				</div>
 
 				{#if showError}
-					<div class="error">Please be sure all above fields are filled out. Thanks!</div>
+					<div class="error">
+						Please be sure all above fields are filled out. Thanks!
+					</div>
 				{/if}
 
 				<button type="submit"> Send </button>
