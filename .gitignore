@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 /.svelte-kit
+/.vscode
 /package
 /build
 src/lib/content/most-retweeted.js

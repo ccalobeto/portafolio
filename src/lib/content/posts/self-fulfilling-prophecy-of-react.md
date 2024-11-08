@@ -135,7 +135,7 @@ Every major front-end framework has demonstrated ability to perform at large sca
 
 </PullQuote>
 
-I touch on this (albeit specifically to Svelte) in [another post](/blog/introducing-svelte-comparing-with-react-vue#debunking-the-small-community-argument), but to summarize: the idea that React has the largest community—while technically true—doesn't necessarily make it a better choice.
+I touch on this (albeit specifically to Svelte) in [another post](/blog/introducing-svelte-comparing-with-react-vue), but to summarize: the idea that React has the largest community—while technically true—doesn't necessarily make it a better choice.
 
 A big community can be a downside, too, especially in the case of a so-called "unopinionated" framework such as React. It can mean too many packages to choose from, and too many different, competing opinions that you'll have to decide between and take a stance on.
 

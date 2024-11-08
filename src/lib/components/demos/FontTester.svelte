@@ -1,4 +1,4 @@
-<script type="typescript">
+<script lang="ts">
 	import ExternalLink from '$lib/components/icons/ExternalLink.svelte'
 	import { onMount } from 'svelte'
 
