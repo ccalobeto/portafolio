@@ -85,13 +85,13 @@
 
 	{#each frameworks as framework}
 		<div id={framework.slug} hidden={currentFramework != framework.component}>
-			<svelte:component this={framework.component} />
+			<svelte:component this={framework.component.component} />
 		</div>
 	{/each}
 
 	<noscript>
 		{#each frameworks as framework}
-			<svelte:component this={framework.component} />
+			<svelte:component this={framework.component.component} />
 		{/each}
 	</noscript>
 </div>

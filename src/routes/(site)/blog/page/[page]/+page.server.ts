@@ -3,7 +3,7 @@ import { fetchPosts } from '$lib/assets/js/utils'
 
 // TODO: types
 export const load = async ({ params, url, fetch }) => {
-	const page = params.page ? params.page : 1
+	const page = params.page ? Number(params.page) : 1
 
 	if (!page || page <= 1) {
 		throw redirect(301, '/blog')

@@ -8,7 +8,7 @@
 	import Main from '$lib/components/Main.svelte'
 	import { appendScriptToHead, readableDate } from '$lib/assets/js/utils'
 	import { onMount } from 'svelte'
-	import type { SvelteComponent } from 'svelte'
+	import { SvelteComponent } from 'svelte'
 	import { dev } from '$app/environment'
 
 	export let PostContent: SvelteComponent
