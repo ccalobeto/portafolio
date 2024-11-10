@@ -8,7 +8,7 @@ export const GET = async ({ params }): Promise<Response> => {
 	}
 
 	if (params.offset) {
-		options.offset = params.offset
+		options.offset = Number(params.offset)
 	}
 
 	const posts = await fetchPosts({ ...options })
