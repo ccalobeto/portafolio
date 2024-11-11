@@ -13,7 +13,7 @@ const config = {
 	preprocess: [
 		preprocess({
 			scss: {
-				prependData: `@use 'src/lib/assets/scss/vars';`
+				prependData: `@use 'src/lib/assets/styles/vars';`
 			},
 			postcss: {
 				plugins: [autoprefixer]

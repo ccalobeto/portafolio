@@ -3,7 +3,7 @@
 	layout file with even more conditional logic to show or hide components, which didn't feel right, especially since it would
 	mean things like tracking scroll for nothing when the header is hidden.)-->
 <script lang="ts">
-	import '$lib/assets/scss/global.scss'
+	import '$lib/assets/styles/global.scss'
 
 	import Footer from '$lib/components/Footer.svelte'
 	import Loader from '$lib/components/Loader.svelte'

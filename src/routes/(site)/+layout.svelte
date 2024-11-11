@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { LayoutData } from './$types'
-	import '$lib/assets/scss/global.scss'
+	import '$lib/assets/styles/global.scss'
 
 	import throttle from 'just-throttle'
 	import Header from '$lib/components/header/Header.svelte'
