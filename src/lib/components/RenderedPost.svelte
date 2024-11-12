@@ -8,17 +8,22 @@
 	import Main from '$lib/components/Main.svelte'
 	import { appendScriptToHead, readableDate } from '$lib/assets/js/utils'
 	import { onMount } from 'svelte'
-	import { SvelteComponent } from 'svelte'
+	import type { Component } from 'svelte'
 	import { dev } from '$app/environment'
 
-	export let PostContent: SvelteComponent
-	export let meta: Post
+	interface Props {
+		PostContent: Component
+		meta: Post
+	}
+
+	let { PostContent, meta }: Props = $props()
 
 	const defaultImagePath = `/images/site-image.png`
-	let imagePath: string
-	$: imagePath = meta.coverImage
-		? `/images/post_images/${meta.coverImage}`
-		: defaultImagePath
+	let imagePath: string = $derived(
+		meta.coverImage
+			? `/images/post_images/${meta.coverImage}`
+			: defaultImagePath
+	)
 
 	const wrapTablesInScrollableDivs = (): void => {
 		/**
@@ -116,7 +121,7 @@
 		</div>
 
 		<!-- TODO: TypeScript doesn't like this, but I can't find a good answer what to do about it. :/ -->
-		<svelte:component this={PostContent} />
+		<PostContent />
 
 		<aside class="post-footer">
 			<Bio currentPage={meta.slug} />
