@@ -6,7 +6,17 @@
 
 	const siteTheme = $theme === Themes.Dark ? 'github-dark' : 'github-light'
 
-	const options = {
+	type Options = {
+		src: string
+		repo: string
+		label: string
+		crossorigin: string
+		theme: string
+		async: string
+		'issue-term': string
+		[key: string]: string
+	}
+	const options: Options = {
 		src: 'https://utteranc.es/client.js',
 		repo: 'josh-collinsworth/joco-sveltekit',
 		label: 'comments',
@@ -26,10 +36,10 @@
 				utteranceScript.setAttribute(prop, options[prop])
 			}
 
-			targetTag.appendChild(utteranceScript)
+			targetTag?.appendChild(utteranceScript)
 		}, TIMING_DURATION)
 	})
 </script>
 
 <noscript>JavaScript must be enabled to leave comments.</noscript>
-<div id="utterances-comments" />
+<div id="utterances-comments"></div>

@@ -1,8 +1,10 @@
-import type { PageData } from './$types'
-
 export const prerender = true
 
-export const load = ({ url }: { url: URL }): PageData => {
+interface CustomPageData {
+	path: string
+}
+
+export const load = ({ url }: { url: URL }): CustomPageData => {
 	const path: string = url.pathname
 
 	return {

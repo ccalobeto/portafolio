@@ -6,11 +6,18 @@
 	import { preloadCode } from '$app/navigation'
 	import { onMount } from 'svelte'
 
-	export let data: LayoutData
+	interface Props {
+		data: LayoutData;
+		children?: import('svelte').Snippet;
+	}
 
-	let popularPosts: Post[]
-	let allCategories: string[]
-	$: ({ popularPosts, allCategories } = data)
+	let { data, children }: Props = $props();
+
+	let popularPosts: Post[] = $state([])
+	let allCategories: string[] = $state([])
+	$effect(() => {
+		({ popularPosts, allCategories } = data)
+	});
 
 	onMount(() => {
 		if (!prefersReducedData()) {
@@ -26,7 +33,7 @@
 		<Sidebar {popularPosts} {allCategories} />
 	</div>
 
-	<slot />
+	{@render children?.()}
 </div>
 
 <style lang="scss">

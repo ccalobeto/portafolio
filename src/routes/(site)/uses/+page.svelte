@@ -1,11 +1,15 @@
 <script lang="ts">
-	import type { PageData } from './$types'
-
-	export let data: PageData
-	let Uses: SvelteComponent = data.Uses
-
-	import type { SvelteComponent } from 'svelte'
 	import Main from '$lib/components/Main.svelte'
+	import type { PageData } from './$types'
+	import type { Component } from 'svelte'
+
+	interface Props {
+		data: PageData
+	}
+
+	let { data }: Props = $props()
+
+	let Uses: Component = data.Uses
 </script>
 
 <svelte:head>
@@ -27,7 +31,7 @@
 
 <Main>
 	<div class="uses compressed-content">
-		<svelte:component this={Uses} />
+		<Uses />
 	</div>
 </Main>
 

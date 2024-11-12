@@ -1,25 +1,29 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
-	import type { SvelteComponent } from 'svelte'
+	import type { Component } from 'svelte'
 
-	export let includeBothVues: boolean = false
-	export let dir: string
+	interface Props {
+		includeBothVues?: boolean
+		dir: string
+	}
+
+	let { includeBothVues = false, dir }: Props = $props()
 
 	interface framework {
 		title: string
 		slug: string
-		component: SvelteComponent
+		component: Component
 	}
 
-	let React: SvelteComponent,
-		Vue2: SvelteComponent,
-		Vue3: SvelteComponent,
-		Svelte: SvelteComponent,
-		currentFramework: SvelteComponent
+	let React: Component,
+		Vue2: Component,
+		Vue3: Component,
+		Svelte: Component,
+		currentFramework: Component | undefined = $state()
 
-	let frameworks: framework[] = []
+	let frameworks: framework[] = $state([])
 
-	const changeFramework = (component: SvelteComponent): void => {
+	const changeFramework = (component: Component): void => {
 		currentFramework = component
 	}
 
@@ -62,6 +66,8 @@
 
 		currentFramework = Svelte
 	})
+	let theme = localStorage.getItem('theme')
+	let darkMode = $derived(theme === 'dark')
 </script>
 
 <div class="svelte-code-comparison">
@@ -72,7 +78,7 @@
 	>
 		{#each frameworks as framework}
 			<button
-				on:click={() => changeFramework(framework.component)}
+				onclick={() => changeFramework(framework.component)}
 				role="tab"
 				aria-controls={framework.slug}
 				aria-selected={currentFramework == framework.component}
@@ -85,13 +91,13 @@
 
 	{#each frameworks as framework}
 		<div id={framework.slug} hidden={currentFramework != framework.component}>
-			<svelte:component this={framework.component.component} />
+			<framework.component />
 		</div>
 	{/each}
 
 	<noscript>
 		{#each frameworks as framework}
-			<svelte:component this={framework.component.component} />
+			<framework.component />
 		{/each}
 	</noscript>
 </div>
@@ -112,7 +118,7 @@
 			border-bottom: 0 !important; // Overrides .current block below
 			border-width: 1px;
 
-			.dark & {
+			:global(.dark) & {
 				border-color: var(--paper);
 			}
 

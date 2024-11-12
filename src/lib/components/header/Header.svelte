@@ -6,19 +6,23 @@
 	import ReduceMotionToggle from '../settings/ReduceMotionToggle.svelte'
 	import { isMenuOpen, isScrollingDown } from '$lib/data/store'
 
-	export let path: string
+	interface Props {
+		path: string
+	}
+
+	let { path }: Props = $props()
 
 	// I don't love any part of this, but it's necessary to make the "skip to main content" link work properly, so we'll live with it.
 	const focusMain = (e: Event): void => {
 		e.preventDefault()
 		const main = document.querySelector('main')
-		main.focus()
+		main?.focus()
 	}
 </script>
 
 <div>
 	<header class="header">
-		<a on:click={focusMain} class="skip-to-content-link" href="#main">
+		<a onclick={focusMain} class="skip-to-content-link" href="#main">
 			Skip to main content
 		</a>
 
@@ -101,7 +105,9 @@
 	.skip-to-content-link {
 		--itemTransition: 0.15s cubic-bezier(0.86, 0, 0.07, 1);
 
-		transition: transform var(--itemTransition), opacity var(--itemTransition);
+		transition:
+			transform var(--itemTransition),
+			opacity var(--itemTransition);
 		position: absolute;
 		top: -6rem;
 		left: 1rem;

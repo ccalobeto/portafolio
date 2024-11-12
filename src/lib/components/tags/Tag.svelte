@@ -1,10 +1,10 @@
 <script lang="ts">
 	interface Props {
-		to: string;
-		children?: import('svelte').Snippet;
+		to: string
+		children?: import('svelte').Snippet
 	}
 
-	let { to, children }: Props = $props();
+	let { to, children }: Props = $props()
 </script>
 
 <template>
@@ -37,7 +37,9 @@
 		font-size: 0.65em;
 		line-height: 0;
 		text-transform: uppercase;
-		transition: background 0.15s, color 0.15s;
+		transition:
+			background 0.15s,
+			color 0.15s;
 
 		&:hover,
 		&:focus {
@@ -51,7 +53,7 @@
 		background: var(--darkBlue);
 	}
 
-	:global(html:not(.light)) {
+	html:not(.light) {
 		@media (prefers-color-scheme: dark) {
 			.tag .tag__link {
 				background: var(--darkBlue);

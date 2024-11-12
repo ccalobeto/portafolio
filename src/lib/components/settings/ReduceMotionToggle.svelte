@@ -6,9 +6,14 @@
 		const userMotionPreference = window.matchMedia(
 			'(prefers-reduced-motion: reduce)'
 		).matches
-		const storedMotionPreference = JSON.parse(
-			window.localStorage.getItem('collinsworth-reduce-motion')
+		const storedMotionPreferenceValue = window.localStorage.getItem(
+			'collinsworth-reduce-motion'
 		)
+
+		const storedMotionPreference =
+			storedMotionPreferenceValue !== null
+				? JSON.parse(storedMotionPreferenceValue)
+				: null
 
 		if (
 			(userMotionPreference && storedMotionPreference !== false) ||
@@ -27,14 +32,15 @@
 		)
 	}
 
-	let enableOrDisable: string
-	$: enableOrDisable = $prefersReducedMotion ? 'Disable' : 'Enable'
+	let enableOrDisable: string = $derived(
+		$prefersReducedMotion ? 'Disable' : 'Enable'
+	)
 </script>
 
 <button
 	id="motion-toggle"
 	class="settings-toggle"
-	on:click={toggleReducedMotion}
+	onclick={toggleReducedMotion}
 	title="{enableOrDisable} reduced motion"
 	aria-pressed={$prefersReducedMotion}
 >

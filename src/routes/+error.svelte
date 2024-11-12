@@ -5,7 +5,7 @@
 
 <Main>
 	<h2>{$page.status}</h2>
-	<p class="subhead">{$page.error.message}</p>
+	<p class="subhead">{$page.error?.message}</p>
 
 	<p><strong>Ope!</strong> Maybe try these links?</p>
 	<ul>

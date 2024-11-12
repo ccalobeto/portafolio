@@ -99,6 +99,6 @@ const talks: Talk[] = [
 	}
 ]
 
-talks.sort((a, b) => b.year - a.year || b.month - a.month)
+talks.sort((a, b) => b.year - a.year || (b.month ?? 0) - (a.month ?? 0))
 
 export { talks }

@@ -1,14 +1,21 @@
-<script>
-	// TODO: TypeScript
+<script lang="ts">
 	import * as svelteEasings from 'svelte/easing'
 	import { fly } from 'svelte/transition'
 
-	let currentEasingIn = 'linear'
-	let currentEasingOut = 'linear'
-	let rando = Date.now()
-	let bindEasings = true
-	let transitionDuration = 500
-	const allEasings = { none: () => {}, ...svelteEasings }
+	function createBubbler(): (type: string) => (event: Event) => boolean {
+		return (type: string) => (event: Event) => {
+			return true
+		}
+	}
+
+	const bubble = createBubbler()
+
+	let currentEasingIn = $state('linear')
+	let currentEasingOut = $state('linear')
+	let rando = $state(Date.now())
+	let bindEasings = $state(true)
+	let transitionDuration = $state(500)
+	const allEasings = { none: (t: number) => t, ...svelteEasings }
 
 	const updateRando = () => {
 		rando = Date.now()
@@ -18,24 +25,38 @@
 		bindEasings = !bindEasings
 	}
 
-	const handleSync = (e) => {
-		if (!bindEasings) return
+	const handleSync = (e: Event) => {
+		if (!bindEasings || !e.target) return
 
-		if (e.target.id === 'easing-in') {
-			currentEasingOut = e.target.value
-		} else {
-			currentEasingIn = e.target.value
+		const target = e.target
+		if (
+			target instanceof HTMLInputElement ||
+			target instanceof HTMLSelectElement
+		) {
+			if (target.id === 'easing-in') {
+				currentEasingOut = target.value
+			} else {
+				currentEasingIn = target.value
+			}
 		}
 	}
 
-	$: iterableEasings = Object.entries(allEasings)
-	$: renderProps = currentEasingIn + currentEasingOut + rando
-	$: inDuration = currentEasingIn === 'none' ? 0 : transitionDuration
-	$: outDuration = currentEasingOut === 'none' ? 0 : transitionDuration
+	let iterableEasings = $derived(Object.entries(allEasings))
+	let renderProps = $derived(currentEasingIn + currentEasingOut + rando)
+	let inDuration = $derived(currentEasingIn === 'none' ? 0 : transitionDuration)
+	let outDuration = $derived(
+		currentEasingOut === 'none' ? 0 : transitionDuration
+	)
 </script>
 
 <div class="demo">
-	<div class="demo__wrapper" on:click={updateRando} on:keyup={updateRando}>
+	<div
+		class="demo__wrapper"
+		role="button"
+		tabindex="0"
+		onclick={updateRando}
+		onkeyup={updateRando}
+	>
 		{#key renderProps}
 			<div
 				class="box"
@@ -44,27 +65,23 @@
 					delay: transitionDuration * 1.1,
 					y: -225,
 					opacity: 1,
-					easing: allEasings[currentEasingIn]
+					easing: allEasings[currentEasingIn as keyof typeof allEasings]
 				}}
 				out:fly|global={{
 					duration: outDuration,
 					y: 225,
 					opacity: 1,
-					easing: allEasings[currentEasingOut]
+					easing: allEasings[currentEasingOut as keyof typeof allEasings]
 				}}
 			>
 				Click to play transition
 			</div>
 		{/key}
 	</div>
-	<form on:submit|preventDefault>
+	<form onsubmit={bubble('submit')}>
 		<div class="select-wrap">
 			<label for="easing-in">Ease in:</label>
-			<select
-				bind:value={currentEasingIn}
-				id="easing-in"
-				on:change={handleSync}
-			>
+			<select bind:value={currentEasingIn} id="easing-in" onchange={handleSync}>
 				{#each iterableEasings as [title, _]}
 					<option value={title}>{title}</option>
 				{/each}
@@ -72,7 +89,7 @@
 			<div class="bind-wrap">
 				<button
 					aria-pressed={bindEasings}
-					on:click={handleBind}
+					onclick={handleBind}
 					class="bind-btn"
 				>
 					<span class="sr">Keep both types in sync</span>
@@ -83,7 +100,7 @@
 			<select
 				bind:value={currentEasingOut}
 				id="easing-out"
-				on:change={handleSync}
+				onchange={handleSync}
 			>
 				{#each iterableEasings as [title, _]}
 					<option value={title}>{title}</option>

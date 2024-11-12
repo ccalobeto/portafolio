@@ -1,4 +1,4 @@
-const months: string[] = [
+const months: (string | null) [] = [
 	null, // January should be 1, not 0, etc.
 	'January',
 	'February',
@@ -19,7 +19,7 @@ const readableDate = (date: string): string => {
 
 	const splitDate = date.split('-')
 
-	const month: string = months[parseInt(splitDate[1])]
+	const month: string = months[parseInt(splitDate[1])] ?? ''
 	const day: number = parseInt(splitDate[2])
 	const year: string = splitDate[0]
 

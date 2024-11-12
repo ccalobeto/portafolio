@@ -1,16 +1,17 @@
 // TODO: types
+import type Post from '$lib/types/post'
 interface Category {
 	title: string
 	count: number
 }
 export const load = async ({ fetch }) => {
 	const res = await fetch(`/api/posts/all`)
-	const posts = await res.json()
+	const posts: Post[] = await res.json()
 
 	const uniqueCategories : { [category: string]: Category } = {}
 
-	posts.forEach((post) => {
-		post.categories.forEach((category) => {
+	posts.forEach((post: Post) => {
+		(post.categories as string[]).forEach((category : string) => {
 			if (category in uniqueCategories) {
 				uniqueCategories[category].count += 1
 			} else {

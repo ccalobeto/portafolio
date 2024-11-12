@@ -2,31 +2,52 @@
 	import ExternalLink from '$lib/components/icons/ExternalLink.svelte'
 	import { onMount } from 'svelte'
 
-	export let font: string
-	export let label: string = ''
-	export let fontStyle: string = 'normal'
-	export let fontWeight: string = 'normal'
-	export let placeholder: string = ''
-	export let link: string = ''
-	export let bold: boolean = false
-	export let italic: boolean = false
+	function createBubbler(): (type: string) => (event: Event) => boolean {
+		return (type: string) => (event: Event) => {
+			return true
+		}
+	}
 
-	let size: number = 42
-	let text: string = ''
-	let displayBold: boolean = false
-	let displayItalic: boolean = false
+	const bubble = createBubbler()
 
-	let sizeInPx: string
-	$: sizeInPx = size + 'px'
+	interface Props {
+		font: string
+		label?: string
+		fontStyle?: string
+		fontWeight?: string
+		placeholder?: string
+		link?: string
+		bold?: boolean
+		italic?: boolean
+	}
 
-	let fontName: string
-	$: fontName = label || font
+	let {
+		font,
+		label = '',
+		fontStyle = 'normal',
+		fontWeight = 'normal',
+		placeholder = '',
+		link = '',
+		bold = false,
+		italic = false
+	}: Props = $props()
 
-	let computedFontWeight: string
-	$: computedFontWeight = (displayBold && 'bold') || fontWeight || 'normal'
+	let size: number = $state(42)
+	let text: string = $state('')
+	let displayBold: boolean = $state(false)
+	let displayItalic: boolean = $state(false)
 
-	let computedFontStyle: string
-	$: computedFontStyle = (displayItalic && 'italic') || fontStyle || 'normal'
+	let sizeInPx: string = $derived(size + 'px')
+
+	let fontName: string = $derived(label || font)
+
+	let computedFontWeight: string = $derived(
+		(displayBold && 'bold') || fontWeight || 'normal'
+	)
+
+	let computedFontStyle: string = $derived(
+		(displayItalic && 'italic') || fontStyle || 'normal'
+	)
 
 	onMount(() => {
 		text = label || font
@@ -39,14 +60,14 @@
 </script>
 
 <template>
-	<form class="tester-form" on:submit|preventDefault>
+	<form class="tester-form" onsubmit={bubble('submit')}>
 		<div class="flex-container">
 			<label for={fontName} class="sr">{fontName}</label>
 			<input
 				id={fontName}
 				type="text"
 				{placeholder}
-				on:click={select}
+				onclick={select}
 				bind:value={text}
 				style="
 					font-family: {font};

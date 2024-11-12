@@ -14,7 +14,7 @@ const fetchPosts = async ({
 		Object.entries(import.meta.glob(`../../../content/posts/*.md`)).map(
 			async ([path, page]) => {
 				const { metadata } = await page() as { metadata: Post }
-				const slug = path.split('/').pop().split('.').shift()
+				const slug = path.split('/').pop()?.split('.').shift() ?? ''
 				return { ...metadata, slug }
 			}
 		)
@@ -26,7 +26,7 @@ const fetchPosts = async ({
 				import.meta.glob(`../../../content/posts/drafts/*.md`)
 			).map(async ([path, page]) => {
 				const { metadata } = await page() as { metadata: Post }
-				const slug = path.split('/').pop().split('.').shift()
+				const slug = path.split('/').pop()?.split('.').shift() ?? ''
 				return { ...metadata, slug }
 			})
 		)
@@ -41,7 +41,7 @@ const fetchPosts = async ({
 	)
 
 	if (category) {
-		sortedPosts = posts.filter((post) => post.categories.includes(category))
+		sortedPosts = posts.filter((post) => post.categories?.includes(category))
 	}
 
 	if (year) {

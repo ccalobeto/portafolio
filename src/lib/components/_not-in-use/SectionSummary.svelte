@@ -1,6 +1,14 @@
+<script lang="ts">
+	interface Props {
+		children?: import('svelte').Snippet
+	}
+
+	let { children }: Props = $props()
+</script>
+
 <div class="summary">
 	<div class="summary__lead-in">Section summary:</div>
-	<slot />
+	{@render children?.()}
 </div>
 
 <style lang="scss">
@@ -13,11 +21,11 @@
 		margin-block: var(--quarterNote);
 		border: 1px solid var(--ink);
 
-		:global(.dark &) {
+		:global(.dark) {
 			background-color: var(--darkBlue);
 		}
 
-		:global(html:not(.light)) & {
+		html:not(.light) & {
 			@media (prefers-color-scheme: dark) {
 				background-color: var(--darkerBlue);
 			}

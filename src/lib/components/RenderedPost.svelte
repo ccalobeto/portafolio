@@ -81,8 +81,8 @@
 	<meta property="og:description" content={meta.excerpt} />
 	<meta name="twitter:description" content={meta.excerpt} />
 	<meta property="og:image" content="https://joshcollinsworth.com{imagePath}" />
-	<meta property="og:image:width" content={meta.coverWidth} />
-	<meta property="og:image:height" content={meta.coverHeight} />
+	<meta property="og:image:width" content={meta.coverWidth?.toString()} />
+	<meta property="og:image:height" content={meta.coverHeight?.toString()} />
 	<meta
 		name="twitter:image"
 		content="https://joshcollinsworth.com{imagePath}"
@@ -116,7 +116,7 @@
 			{#if meta.date != meta.updated}
 				<br />
 				<b>Updated:</b>
-				{readableDate(meta.updated)}
+				{readableDate(meta.updated ?? '')}
 			{/if}
 		</div>
 

@@ -2,27 +2,32 @@
 	import { onMount } from 'svelte'
 	import { sluggify } from '$lib/assets/js/utils'
 
-	export let title: string = ''
+	interface Props {
+		title?: string;
+		children?: import('svelte').Snippet;
+	}
 
-	let accordion: HTMLDivElement
-	let openHeight: number
-	let isOpen: boolean = true
+	let { title = '', children }: Props = $props();
+
+	let accordion: HTMLDivElement | undefined = $state()
+	let openHeight: number | undefined
+	let isOpen: boolean = $state(true)
 
 	const toggleOpen = () => {
 		isOpen = !isOpen
 	}
 
-	$: ID = sluggify(title)
-	$: headingID = `${ID}-heading`
+	let ID = $derived(sluggify(title))
+	let headingID = $derived(`${ID}-heading`)
 
 	onMount(() => {
-		openHeight = accordion.getBoundingClientRect().height
+		openHeight = accordion?.getBoundingClientRect().height
 		const margin = parseInt(
-			getComputedStyle(document.querySelector('body')).getPropertyValue(
+			getComputedStyle(document.querySelector('body') as Element).getPropertyValue(
 				'font-size'
 			)
 		)
-		accordion.style.setProperty('--openHeight', `${openHeight + 30}px`)
+		accordion?.style.setProperty('--openHeight', `${openHeight !== undefined ? openHeight + 30 : 0}px`)
 		isOpen = false
 	})
 </script>
@@ -31,7 +36,7 @@
 	<h3 id={headingID} class="accordion__heading">
 		<button
 			class="accordion__button"
-			on:click={toggleOpen}
+			onclick={toggleOpen}
 			aria-pressed={isOpen}
 			aria-controls={ID}
 		>
@@ -44,7 +49,7 @@
 		aria-labelledby={headingID}
 		id={ID}
 	>
-		<slot />
+		{@render children?.()}
 	</div>
 </div>
 

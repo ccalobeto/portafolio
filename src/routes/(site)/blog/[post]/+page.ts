@@ -7,7 +7,7 @@ interface MarkdownPost {
 	meta: Post
 }
 
-export const load = async ({ params }): Promise<MarkdownPost> => {
+export const load = async ({ params }): Promise<MarkdownPost | undefined> => {
 	// Ensures we don't let the route be handled by this file and kick it over to the `/blog` directory instead
 	if (params.post == 'page') {
 		throw redirect(301, '/blog')
@@ -23,7 +23,7 @@ export const load = async ({ params }): Promise<MarkdownPost> => {
 				meta: { ...post.metadata, slug: params.post }
 			}
 		}
-	} catch ({ message }) {
+	} catch (err: unknown) {
 		// I don't like the nested try/catch option, but since it's just to load drafts on dev and won't really do anything on prod, I don't mind it too much. Besides, it's one of the  only ways to get this to work properly.
 		try {
 			const draft: SvelteComponent = await import(
@@ -36,8 +36,10 @@ export const load = async ({ params }): Promise<MarkdownPost> => {
 					meta: { ...draft.metadata, slug: params.post }
 				}
 			}
-		} catch ({ message }) {
-			throw error(404, message)
+		} catch (err: unknown) {
+			if (err instanceof Error) {
+			throw error(404, err.message)
+		}
 		}
 	}
 }

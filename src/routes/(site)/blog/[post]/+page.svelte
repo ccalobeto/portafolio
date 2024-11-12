@@ -1,29 +1,40 @@
 <script lang="ts">
-	import type { PageData } from './$types'
+	import { onMount } from 'svelte'
+	import RenderedPost from '$lib/components/RenderedPost.svelte'
+	import throttle from 'just-throttle'
+
 	import type Post from '$lib/types/post'
-	import type { SvelteComponent } from 'svelte'
+	import type { Component } from 'svelte'
 
-	export let data: PageData
-	let PostContent: SvelteComponent
-	let meta: Post
+	let PostContent: Component | undefined = $state()
+	let meta: Post | undefined = $state()
 
-	let hasScrolled = false
-	$: ({ PostContent, meta } = data)
+	let hasScrolled = $state(false)
 
 	const handleScroll = throttle(() => {
 		hasScrolled = window.scrollY > 1200
 	}, 500)
 
-	import RenderedPost from '$lib/components/RenderedPost.svelte'
-	import throttle from 'just-throttle'
+	interface Props {
+		data: {
+			PostContent: Component
+			meta: Post
+		}
+	}
+
+	let { data }: Props = $props()
+	onMount(() => {
+		;({ PostContent, meta } = data)
+	})
 </script>
 
-<RenderedPost {PostContent} {meta} />
-
-<svelte:window on:scroll={handleScroll} />
+{#if PostContent && meta}
+	<RenderedPost {PostContent} {meta} />
+{/if}
+<svelte:window onscroll={handleScroll} />
 
 <a href="#app" class:show={hasScrolled}>
-	<div class="arrow" />
+	<div class="arrow"></div>
 	<div>Top</div>
 </a>
 
