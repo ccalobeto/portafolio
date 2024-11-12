@@ -1,4 +1,4 @@
-import sveltePreprocess from 'svelte-preprocess'
+import { sveltePreprocess } from 'svelte-preprocess'
 import autoprefixer from 'autoprefixer'
 import adapter from '@sveltejs/adapter-static'
 import { mdsvex } from 'mdsvex'
@@ -9,7 +9,7 @@ import rehypeSlug from 'rehype-slug'
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	extensions: ['.svelte', '.md'],
+	extensions: ['.svelte', '.md', '.svx'],
 	preprocess: [
 		sveltePreprocess({
 			scss: {
