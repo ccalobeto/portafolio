@@ -1,5 +1,9 @@
 <script lang="ts">
-	export let iconOnly: boolean = false
+	interface Props {
+		iconOnly?: boolean
+	}
+
+	let { iconOnly = false }: Props = $props()
 </script>
 
 <template>

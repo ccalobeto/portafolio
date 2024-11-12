@@ -1,5 +1,10 @@
-<script>
+<script lang="ts">
 	import WarningIcon from './icons/warning-icon.svelte'
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <div class="warning">
@@ -7,7 +12,7 @@
 		<WarningIcon />
 	</div>
 	<div>
-		<slot />
+		{@render children?.()}
 	</div>
 </div>
 

@@ -1,16 +1,20 @@
 <script lang="ts">
-	export let loading: boolean
+	interface Props {
+		loading: boolean;
+	}
+
+	let { loading }: Props = $props();
 </script>
 
 <div class="loader" class:loading>
 	<div class="loading-wrapper">
-		<div class="dot outer first" />
-		<div class="dot outer second" />
-		<div class="dot outer third" />
+		<div class="dot outer first"></div>
+		<div class="dot outer second"></div>
+		<div class="dot outer third"></div>
 
-		<div class="dot inner first" />
-		<div class="dot inner second" />
-		<div class="dot inner third" />
+		<div class="dot inner first"></div>
+		<div class="dot inner second"></div>
+		<div class="dot inner third"></div>
 	</div>
 </div>
 

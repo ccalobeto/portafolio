@@ -4,16 +4,27 @@
 	import { cubicIn, cubicOut } from 'svelte/easing'
 	import { fly } from 'svelte/transition'
 
-	let yIn: number
-	let yOut: number
+	let yIn: number = $derived($prefersReducedMotion ? 0 : 12)
+	let yOut: number = $derived($prefersReducedMotion ? 0 : -12)
 
-	$: yIn = $prefersReducedMotion ? 0 : 12
-	$: yOut = $prefersReducedMotion ? 0 : -12
+	
+	
 
-	export let refresh: string | boolean = ''
-	export let span: boolean = false
-	export let transitionIn: boolean = true
-	export let transitionOut: boolean = true
+	interface Props {
+		refresh?: string | boolean;
+		span?: boolean;
+		transitionIn?: boolean;
+		transitionOut?: boolean;
+		children?: import('svelte').Snippet;
+	}
+
+	let {
+		refresh = '',
+		span = false,
+		transitionIn = true,
+		transitionOut = true,
+		children
+	}: Props = $props();
 </script>
 
 {#key refresh}
@@ -32,7 +43,7 @@
 			easing: cubicIn
 		}}
 	>
-		<slot />
+		{@render children?.()}
 	</div>
 {/key}
 

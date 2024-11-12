@@ -34,7 +34,7 @@
 					style="background-color: {color}; outline: 1px solid {getOutlineColor(
 						color
 					)}"
-				/>
+				></div>
 				<span>{color}</span>
 			</li>
 		{/each}
@@ -47,7 +47,7 @@
 					style="background-color: {color}; outline: 1px solid {getOutlineColor(
 						color
 					)}"
-				/>
+				></div>
 				<div>{color}</div>
 			</li>
 		{/each}
