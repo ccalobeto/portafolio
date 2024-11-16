@@ -84,7 +84,7 @@
 			transform: translateY(16px);
 			animation: fade_in_intro 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 
-			.reduce-motion & {
+			:global(.reduce-motion) & {
 				transform: translateY(0);
 			}
 		}
@@ -103,7 +103,7 @@
 			font-weight: normal;
 			max-width: 17em;
 
-			strong {
+			:global(strong) {
 				background: var(--yellow);
 				color: var(--darkerGray);
 			}
@@ -121,7 +121,7 @@
 			line-height: 1.4;
 			max-width: 23em;
 
-			.dark & {
+			:global(.dark) & {
 				color: var(--ink);
 			}
 
@@ -147,7 +147,7 @@
 		}
 	}
 
-	:global(html:not(.light) .intro .subhead) {
+	html:not(.light) .intro .subhead {
 		@media (prefers-color-scheme: dark) {
 			color: var(--ink) !important;
 		}

@@ -46,8 +46,8 @@
 	#logo-svg {
 		width: auto;
 
-		a:hover &,
-		a:focus & {
+		:global(a:hover) &,
+		:global(a:focus) & {
 			#bracket-left {
 				transform: translateX(11%);
 			}
