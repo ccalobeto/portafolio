@@ -1,42 +1,63 @@
-<script>
+<script lang="ts">
 	import throttle from 'just-throttle'
 	import { clamp, formatDecimal } from '$lib/assets/js/utils'
-	import { onMount } from 'svelte'
+
+	interface PremadeEasings {
+		[key: string]: {
+			[key: string]: number[]
+		}
+	}
+
+	function createBubbler(): (type: string) => (event: Event) => boolean {
+		return (type: string) => (event: Event) => {
+			return true
+		}
+	}
+
+	const bubble = createBubbler()
 
 	// The SVG exists from 0 to 140 on the X axis, and 0 to 300 on the Y axis. The inner square is from 20/100 to 120/200.
-	let startHandleX = 30
-	let startHandleY = 140
-	let endHandleX = 90
-	let endHandleY = 100
-	let dragging = null
-	let currentEasingType = null
-	let copyButtonIcon = `📋`
+	let startHandleX = $state(30)
+	let startHandleY = $state(140)
+	let endHandleX = $state(90)
+	let endHandleY = $state(100)
+	let dragging: string | null = $state(null)
+	let currentEasingType: string[] | null = $state(null)
+	let copyButtonIcon = $state(`📋`)
 
-	let startHandle
-	let endHandle
-	let outerFrame
+	let startHandle = $state()
+	let endHandle = $state()
+	let outerFrame: SVGSVGElement | undefined = $state()
 
-	$: startHandleXToBinary = formatDecimal((startHandleX - 20) / 100)
-	$: startHandleYToBinary = formatDecimal((300 - startHandleY) / 100 - 1)
-	$: endHandleXToBinary = formatDecimal((endHandleX - 20) / 100)
-	$: endHandleYToBinary = formatDecimal((300 - endHandleY) / 100 - 1)
-	$: bezierCoordinates = `${startHandleXToBinary}, ${startHandleYToBinary}, ${endHandleXToBinary}, ${endHandleYToBinary}`
-	$: curveCSS = `cubic-bezier(${bezierCoordinates})`
+	let startHandleXToBinary = $derived(formatDecimal((startHandleX - 20) / 100))
+	let startHandleYToBinary = $derived(
+		formatDecimal((300 - startHandleY) / 100 - 1)
+	)
+	let endHandleXToBinary = $derived(formatDecimal((endHandleX - 20) / 100))
+	let endHandleYToBinary = $derived(formatDecimal((300 - endHandleY) / 100 - 1))
+	let bezierCoordinates = $derived(
+		`${startHandleXToBinary}, ${startHandleYToBinary}, ${endHandleXToBinary}, ${endHandleYToBinary}`
+	)
+	let curveCSS = $derived(`cubic-bezier(${bezierCoordinates})`)
 
-	const trackMovement = (e) => {
+	const trackMovement = (e: MouseEvent | TouchEvent) => {
 		if (!dragging) return
 
-		const rect = outerFrame.getBoundingClientRect()
+		const rect = outerFrame?.getBoundingClientRect()
 		// Need different props depending on whether this is a mouse event or a touch event
 		const left = e.type.includes('mouse')
-			? e.clientX
-			: e.changedTouches[0].clientX
+			? (e as MouseEvent).clientX
+			: (e as TouchEvent).changedTouches[0].clientX
 		const top = e.type.includes('mouse')
-			? e.clientY
-			: e.changedTouches[0].clientY
+			? (e as MouseEvent).clientY
+			: (e as TouchEvent).changedTouches[0].clientY
 
-		let xPosition = Math.round((140 / rect.width) * (left - rect.left))
-		let yPosition = Math.round((300 / rect.height) * (top - rect.top))
+		let xPosition = Math.round(
+			(140 / (rect?.width ?? 0)) * (left - (rect?.left ?? 0))
+		)
+		let yPosition = Math.round(
+			(300 / (rect?.height ?? 0)) * (top - (rect?.top ?? 0))
+		)
 
 		xPosition = clamp(20, xPosition, 120)
 		yPosition = clamp(0, yPosition, 300)
@@ -51,7 +72,7 @@
 		currentEasingType = null
 	}
 
-	const handleDragStart = (e) => {
+	const handleDragStart = (e: MouseEvent | TouchEvent) => {
 		if (startHandle === e.target) {
 			dragging = 'start'
 		} else if (endHandle === e.target) {
@@ -70,7 +91,7 @@
 		}, 1200)
 	}
 
-	const premadeEasings = {
+	const premadeEasings: PremadeEasings = {
 		browser: {
 			linear: [0.0, 0.0, 1.0, 1.0],
 			ease: [0.25, 0.1, 0.25, 1.0],
@@ -105,24 +126,26 @@
 			backInOut: [0.68, -0.55, 0.265, 1.55]
 		}
 	}
+	$effect(() => {
+		console.log('currentEasingType: ', currentEasingType)
+		if (currentEasingType) {
+			const thisEasing =
+				premadeEasings[currentEasingType[0]][currentEasingType[1]]
+			startHandleX = thisEasing[0] * 100 + 20
+			startHandleY = 300 - (thisEasing[1] * 100 + 100)
+			endHandleX = thisEasing[2] * 100 + 20
+			endHandleY = 300 - (thisEasing[3] * 100 + 100)
+		}
+	})
 
-	$: if (currentEasingType) {
-		const thisEasing =
-			premadeEasings[currentEasingType.group][currentEasingType.title]
-		startHandleX = thisEasing[0] * 100 + 20
-		startHandleY = 300 - (thisEasing[1] * 100 + 100)
-		endHandleX = thisEasing[2] * 100 + 20
-		endHandleY = 300 - (thisEasing[3] * 100 + 100)
-	}
+	let isFrame = $state(false)
 
-	let isFrame = false
-
-	onMount(() => {
+	$effect(() => {
 		if (window.self !== window.top) isFrame = true
 	})
 </script>
 
-<form class="easing-demo" class:is-frame={isFrame} on:submit|preventDefault>
+<form class="easing-demo" class:is-frame={isFrame} onsubmit={bubble('submit')}>
 	<div class="intro intro-mobile">
 		<h2>CSS easing playground</h2>
 		<p>
@@ -134,14 +157,16 @@
 	<div
 		class="current-curve"
 		id="demo-curve"
-		on:mousemove={throttle((e) => trackMovement(e), 10, { leading: true })}
-		on:mousedown={handleDragStart}
-		on:mouseup={handleDragEnd}
-		on:mouseleave={handleDragEnd}
-		on:touchstart={handleDragStart}
-		on:touchend={handleDragEnd}
-		on:touchmove={throttle((e) => trackMovement(e), 10, { leading: true })}
-		on:touchcancel={handleDragEnd}
+		role="button"
+		tabindex="0"
+		onmousemove={throttle((e) => trackMovement(e), 10, { leading: true })}
+		onmousedown={handleDragStart}
+		onmouseup={handleDragEnd}
+		onmouseleave={handleDragEnd}
+		ontouchstart={handleDragStart}
+		ontouchend={handleDragEnd}
+		ontouchmove={throttle((e) => trackMovement(e), 10, { leading: true })}
+		ontouchcancel={handleDragEnd}
 	>
 		<svg
 			bind:this={outerFrame}
@@ -158,7 +183,7 @@
 				text-anchor="middle"
 				class="current-curve__title"
 			>
-				{currentEasingType?.title || 'custom'}
+				{currentEasingType?.[1] || 'custom'}
 			</text>
 
 			<rect
@@ -219,7 +244,7 @@
 
 		<button
 			class="current-curve__copy-btn"
-			on:click={copyToClipboard}
+			onclick={copyToClipboard}
 			type="button"
 		>
 			<div class="sr">Copy CSS to clipboard</div>
@@ -248,8 +273,8 @@
 							bind:group={currentEasingType}
 							id={title}
 							class="sr"
-							value={{ group, title }}
 							type="radio"
+							value={[group, title]}
 							name="currentEasingType"
 						/>
 						<label for={title} class={title.slice(0, 4)}>
