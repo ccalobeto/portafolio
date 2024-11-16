@@ -1,32 +1,27 @@
 <script lang="ts">
+	import { siteTitles, metaImagesUrl } from '$lib/config'
 	import type { PageData } from './$types'
 	import type category from '$lib/types/category'
 	import Main from '$lib/components/Main.svelte'
 
 	interface Props {
-		data: PageData;
+		data: PageData
 	}
 
-	let { data }: Props = $props();
+	let { data }: Props = $props()
 
 	let uniqueCategories: category[] = data.uniqueCategories
 </script>
 
 <svelte:head>
-	<title>Blog | Categories</title>
-	<meta
-		property="og:image"
-		content="https://joshcollinsworth.com/images/site-image.png"
-	/>
-	<meta
-		name="twitter:image"
-		content="https://joshcollinsworth.com/images/site-image.png"
-	/>
+	<title>{siteTitles.allCategories}</title>
+	<meta property="og:image" content={metaImagesUrl.ogImage} />
+	<meta name="twitter:image" content={metaImagesUrl.twitterImage} />
 </svelte:head>
 
 <Main>
 	<div class="compressed-content">
-		<h1 class="h2">All blog categories</h1>
+		<h1 class="h2">Todas las categorías</h1>
 
 		<ul>
 			{#each uniqueCategories as category}

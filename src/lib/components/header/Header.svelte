@@ -3,7 +3,7 @@
 	import Grid from '$lib/components/Grid.svelte'
 	import NavMenu from '$lib/components/header/NavMenu.svelte'
 	import DarkModeToggle from '$lib/components/settings/DarkModeToggle.svelte'
-	import ReduceMotionToggle from '../settings/ReduceMotionToggle.svelte'
+	import ReduceMotionToggle from '../_not-in-use/ReduceMotionToggle.svelte'
 	import { isMenuOpen, isScrollingDown } from '$lib/data/store'
 
 	interface Props {
@@ -36,7 +36,7 @@
 			class:sticky={$isMenuOpen}
 			class:ghosty={$isScrollingDown && !$isMenuOpen}
 		>
-			<ReduceMotionToggle />
+			<!-- <ReduceMotionToggle /> -->
 			<DarkModeToggle />
 			<NavMenu {path} />
 		</div>

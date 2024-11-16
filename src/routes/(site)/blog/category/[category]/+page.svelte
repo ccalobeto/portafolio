@@ -1,30 +1,25 @@
 <script lang="ts">
 	import type { PageData } from './$types'
 	import type Post from '$lib/types/post'
+	import { siteTitles, metaImagesUrl } from '$lib/config'
 
 	import Main from '$lib/components/Main.svelte'
 	import PostList from '$lib/components/posts/PostList.svelte'
 
 	interface Props {
-		data: PageData;
+		data: PageData
 	}
 
-	let { data }: Props = $props();
+	let { data }: Props = $props()
 
 	let posts: Post[] = data.posts
 	let category: string = data.category
 </script>
 
 <svelte:head>
-	<title>Blog | Category: {category}</title>
-	<meta
-		property="og:image"
-		content="https://joshcollinsworth.com/images/site-image.png"
-	/>
-	<meta
-		name="twitter:image"
-		content="https://joshcollinsworth.com/images/site-image.png"
-	/>
+	<title>{siteTitles.category} {category}</title>
+	<meta property="og:image" content={metaImagesUrl.ogImage} />
+	<meta name="twitter:image" content={metaImagesUrl.twitterImage} />
 </svelte:head>
 
 <Main className="blog-roll">

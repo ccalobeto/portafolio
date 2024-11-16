@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Grid from './Grid.svelte'
+	import { navItems } from '$lib/config'
 
 	const currentYear: number = new Date().getFullYear()
 </script>
@@ -8,14 +9,16 @@
 	<Grid inverted={true} />
 	<footer class="footer">
 		<div class="footer__links">
-			<h2 class="h4" id="footer-pages">Pages</h2>
+			<h2 class="h4" id="footer-pages">Páginas</h2>
 			<nav>
 				<ul aria-labelledby="footer-pages">
-					<li><a href="/">Home</a></li>
-					<li><a href="/blog">Blog</a></li>
-					<li><a href="/about-me">About me</a></li>
-					<li><a href="/projects">Projects</a></li>
-					<li><a href="/contact">Contact</a></li>
+					<li><a href={navItems.home.route}>{navItems.home.title}</a></li>
+					<li><a href={navItems.blog.route}>{navItems.blog.title}</a></li>
+					<li><a href={navItems.about.route}>{navItems.about.title}</a></li>
+					<li>
+						<a href={navItems.projects.route}>{navItems.projects.title}</a>
+					</li>
+					<li><a href={navItems.contact.route}>{navItems.contact.title}</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -23,10 +26,10 @@
 			<h2 class="h4" id="footer-links">Links</h2>
 			<ul aria-labelledby="footer-links">
 				<li><a href="/api/rss.xml" data-sveltekit-reload>RSS</a></li>
-				<li><a href="https://ko-fi.com/collinsworth">Ko-Fi</a></li>
 				<li>
-					<a href="https://github.com/josh-collinsworth" rel="me">GitHub</a>
+					<a href="https://github.com/ccalobeto" rel="me">GitHub</a>
 				</li>
+				<li><a href="https://ko-fi.com/collinsworth">Ko-Fi</a></li>
 				<li><a href="https://codepen.io/collinsworth">CodePen</a></li>
 				<li>
 					<a rel="me" href="https://hachyderm.io/@collinsworth">Mastodon</a>
@@ -39,19 +42,16 @@
 				<img src="/images/ai-badge.svg" alt="Made by a human, not by AI." />
 			</a>
 
-			<p>©2015–{currentYear} Josh Collinsworth.</p>
+			<p>©2023–{currentYear} Carlos León.</p>
+
+			<p>Este sitio web no usa cookies.</p>
 
 			<p>
-				This site uses no tracking or cookies, other than privacy-respecting,
-				GDPR-compliant analytics via <a href="https://plausible.io">Plausible</a
-				>.
-			</p>
-
-			<p>
-				Made with
-				<a rel="external" href="https://kit.svelte.dev/">SvelteKit</a>;
-				hosted&nbsp;on&nbsp;<a rel="external" href="https://netlify.com"
-					>Netlify</a
+				Hecho en
+				<a rel="external" href="https://kit.svelte.dev/">SvelteKit</a>; con
+				alojamiento &nbsp;en&nbsp;<a
+					rel="external"
+					href="https://www.cloudflare.com/">Cloudflare</a
 				>.
 			</p>
 		</div>
