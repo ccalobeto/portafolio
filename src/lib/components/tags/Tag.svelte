@@ -53,7 +53,7 @@
 		background: var(--darkBlue);
 	}
 
-	html:not(.light) {
+	:global(html:not(.light)) {
 		@media (prefers-color-scheme: dark) {
 			.tag .tag__link {
 				background: var(--darkBlue);

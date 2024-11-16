@@ -25,7 +25,7 @@
 			background-color: var(--darkBlue);
 		}
 
-		html:not(.light) & {
+		:global(html:not(.light)) & {
 			@media (prefers-color-scheme: dark) {
 				background-color: var(--darkerBlue);
 			}

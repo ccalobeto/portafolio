@@ -147,7 +147,7 @@
 		}
 	}
 
-	html:not(.light) .intro .subhead {
+	:global(html:not(.light) .intro .subhead) {
 		@media (prefers-color-scheme: dark) {
 			color: var(--ink) !important;
 		}
