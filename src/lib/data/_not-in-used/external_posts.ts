@@ -1,4 +1,4 @@
-import type Post from '../types/post'
+import type Post from '../../types/post'
 
 const EXTERNAL_POSTS: Post[] = [
 	{

@@ -1,22 +1,28 @@
 <script lang="ts">
 	import NavLink from './NavLink.svelte'
 	import { isMenuOpen } from '$lib/data/store'
+	import { navItems } from '$lib/config'
 
 	interface Props {
-		path: string;
+		path: string
 	}
 
-	let { path }: Props = $props();
+	let { path }: Props = $props()
 </script>
 
 <ul class:open={$isMenuOpen}>
 	<!-- TODO: this is a lot of prop drilling and style encapsulation. Is there a better way? -->
-	<NavLink to="/" text="Home" {path} mobileOnly={true} />
-	<NavLink to="/blog" text="Blog" {path} />
-	<NavLink to="/projects" text="Projects" {path} />
-	<NavLink to="/about-me" text="About Me" {path} />
-	<NavLink to="/contact" text="Contact" {path} />
-	<NavLink to="/uses" text="Uses" {path} />
+	<NavLink
+		to={navItems.home.route}
+		text={navItems.home.title}
+		{path}
+		mobileOnly={true}
+	/>
+	<NavLink to={navItems.blog.route} text={navItems.blog.title} {path} />
+	<NavLink to={navItems.projects.route} text={navItems.projects.title} {path} />
+	<NavLink to={navItems.about.route} text={navItems.about.title} {path} />
+	<NavLink to={navItems.contact.route} text={navItems.contact.title} {path} />
+	<NavLink to={navItems.uses.route} text={navItems.uses.title} {path} />
 </ul>
 
 <style lang="scss">

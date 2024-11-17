@@ -3,102 +3,60 @@
   import SiteColors from '$lib/components/demos/SiteColors.svelte'
 </script>
 
-## Development
+## Desarrollo de Software
 
-### Languages and frameworks
+### Lenguajes y frameworks
+Los proyectos presentados en este blog usan código abierto. Su gran ventaja *a mi concepto* es que de lejos tienen un ecosistema más colaborativo y un pipeline de datos más corto.
 
-- Aside from good old fashioned HTML and CSS, JavaScript is my main language these days, and [SvelteKit](https://kit.svelte.dev/) is my framework of choice for just about any new project. I've begun to default to [TypeScript](https://www.typescriptlang.org/) for pretty much all new projects, as well (even though I'm not convinced it's always doing much for me, but it's still nice, and not a bad habit to have).
+- **CSS** y **HTML** son la base para comprender a fondo el desarrollo web; aprende los fundamentos básicos ya que interactuan con *javascript*.
 
-- Previously, I've worked a good deal with [Vue](https://vuejs.org/) and [Nuxt](https://nuxtjs.org). Professionally, I work/have worked a lot in various [React](https://reactjs.org/) flavors, including [Preact](https://preactjs.com/), [Fresh](https://fresh.deno.dev), and [Remix](http://remix.run/). I've also got working experience with jQuery and Knockout.
+- El siguiente paso es familiarizarte con **javascript** hay un sin número de tutoriales en la web como [midudev](https://www.youtube.com/@midudev). Si quieres ir mas allá abre tu cuenta en [observablehq](https://observablehq.com/) (de pago); el cual es una plataforma en la nube donde encontrarás muchos ejemplos de todos los calibres para practicar en tus propios notebooks. La plataforma soporta importación de archivos, conexión a bd, tiene una potente herramienta de visualización de sintaxis reducida llamada **Framework** y puedes desplegar tu propia visualización en un site. Tambien puedes usar **d3.js** en la plataforma.
 
-- I love CSS passionately, and generally do not use any CSS libraries or frameworks, if I have the choice. I often lean on [SCSS](https://sass-lang.com/), though I do enjoy CSS modules as well. I love authoring smooth, fluid transitions and animations. I know [Tailwind](https://tailwindcss.com) and use it professionally. It's nice as a system, but I favor scoped CSS instead, which comes standard with just about every non-React framework these days. (I also favor those.)
+- [d3.js](https://d3js.org/) es una librería de javascript que te permite desarrollar cualquier tipo de visualización, personalmente lo uso con [svelte](https://svelte.dev/) que es un framework de fuerte aceptación en la comunidad. **Svelte** hace lo mismo que *React* o *Vue*; posee una sintaxis muy intuitiva y un compilador que te ayudará a detectar no sólo errores en tu código sino *typos* indetectables sin ayuda de librerías externas. Para el desarrollo de este blog usé [SvelteKit](https://kit.svelte.dev/), que posee los mismos fundamentos de svelte aplicado para desarrollo web.
+- [TypeScript](https://www.typescriptlang.org/) es un superconjunto de JavaScript que añade tipado estático opcional y funciones avanzadas a JavaScript. Tomate el tiempo de conocerlo, verás todo su potencial cuando tus proyectos se vuelvan cada vez más complejos. 
 
-- I wouldn't call myself a full-stack developer, I've worked in Ruby on Rails, Node, and [Deno](https://deno.com). I cut my teeth on [WordPress](https://wordpress.org/), and so I'm capable with PHP and MySQL. I'm also learning [Rust](https://www.rust-lang.org/) (very slowly).
+- [Python](https://www.python.org/) es una herramienta poderosa cuyas librerías ocupan todo el pipeline de datos desde la extracción hasta el despliegue. Sin embargo en mis proyectos lo usaré para preparar y transformar los datos. [R](https://www.r-project.org/) tambien tiene la misma funcionalidad pero a diferencia de **Python** su catálogo de librerías es menor.
 
-### Code tools
+### Herramientas de Código
 
-- [Visual Studio Code](https://code.visualstudio.com/): my favorite editor ever. I was a reluctant Sublime Text convert, but the switch was more than worth it.
+- [Visual Studio Code](https://code.visualstudio.com/): mi editor favorito por lejos. Antes solía utilizar *pycharm* y *jupyter notebooks* pero la cantidad de configuraciones y extensiones ha hecho de **VsCode** un estandard. 
+  - **Configuraciones**: Te dejo un enlace de [midudev](https://www.youtube.com/watch?v=uyEUVgNMvGI) con algunos consejos que te ayudarán a agilizar el desarrollo de tus proyectos.
 
-  - **Theme**: I love [Dracula Pro](https://draculatheme.com/pro); it strikes the perfect balance of contrast and color to my eye. I also appreciate that it comes with identical themes for other apps, like Slack, iTerm, and others. It _is_ expensive, however, so for a free option, I'd go with go with good ol' [Dracula Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula).
+  - **Extensiones**: Te menciono algunos:
 
-  - **Font**: [MonoLisa](https://www.monolisa.dev/).
-    I’m a code nerd and a font nerd, so I don't take this choice lightly, but this is my favorite dev font. I love its combination of legibility and subtle personality, and plus, the code ligatures are great. (If you’re not willing to spend the money, though—and I definitely understand if that’s the case—
-    [Fira Code](https://github.com/tonsky/FiraCode) is my runner-up.)
+    - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens): es una extraordinaria herramienta en la que observas el estado de tu git, sus ramas y el histórico de commits.
 
-  - **Extensions**: I don’t have too many global recommendations here (it depends a lot on what you’re working with), but I’ll mention:
+    - [Codeium](https://marketplace.visualstudio.com/items?itemName=Codeium.codeium): es un autocompletador de código que usa la IA y que está disponible para Python, Javascript, Typescript, Svelte y otros más.
 
-    - [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html):
-      treats HTML inside template literal strings like actual HTML code, for the purposes of highlighting, code completion, Emmett, etc.
+    - [Conventional Commits for VSCode](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits): Haz commits como todo un profesional. Te ayudará a sumergirte en las [mejores prácticas](https://www.conventionalcommits.org/en/v1.0.0/) sobre como etiquetar los cambios en tu código.
 
-    - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens):
-      less indispensable now that VS Code has the [Timeline view](https://scotch.io/bar-talk/vs-code-v144-adds-a-git-timeline-view), but still amazingly handy for viewing git status and history in projects.
+- [Markdown](https://www.markdownguide.org/): es un lenguaje de marcado que sirve para documentar tu código de manera [profesional](https://github.com/orgs/community/discussions/16925). Al seguir sus lineamientos tus colegas te lo agraderán cuando desees contribuir o elaborar una herramienta de software.
 
-    - [Font Preview](https://marketplace.visualstudio.com/items?itemName=ctcuff.font-preview): lets you check out fonts and their features right in your editor, which is super handy, especially for variable fonts and special features like ligatures.
+- [Chrome](hhttps://www.google.com/chrome/):
+   Es un excelente navegador que posee gran privacidad y extensiones increíbles. Otro navegador muy utilizado cuando necesitas hacer algo de web scraping es [thor](https://www.torproject.org/) ;).
 
-    - [Close HTML/XML Tag](https://marketplace.visualstudio.com/items?itemName=Compulim.compulim-vscode-closetag):
-      the only keyboard shortcut I miss from Sublime Text is easily replicated with this extension. Gives you a key command to auto-close whatever HTML tag your cursor is currently inside of.
+- [Cloudflare](https://www.cloudflare.com/): también son fan de *Github Pages* y *Netlify* porque su configuración es simple para un despliegue de proyecto ligero.
+  Sin embargo **Clouflare** es una plataforma global en la nube diseñada para que todos los recursos conectados a Internet sean seguros, privados, rápidos y confiables. Tiene una capa gratuita mucho más benévola que Amazon, Azure ó Google. Puedes hacer todo lo que hace Amazon desde alojamiento, archivar archivos super pesados (como los usados en cartografía) y configurarlo para que la respuesta de tu página (usualmente tu landing page) lo haga el servidor (CDN) más cercano. 
 
-    - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker):
-      Requires a bit of manual maintenance, but if you do any writing in Markdown, you'll appreciate having a spell checker along for the ride.
-
-- [Firefox](https://www.mozilla.org/en-US/firefox/new/):
-  Firefox is a great browser with some awesome tools, plus strong privacy. I use Edge when I need to test on Chromium; I don't even install Chrome on my personal machines.
-
-- [iTerm2](https://www.iterm2.com/):
-  I’ve tried other terminals, but none seem to run as well, and with the recent update, arguably, none look better, either.
-
-- [Netlify](https://www.netlify.com/):
-  I’m also a fan of
-  [Vercel](https://vercel.com/home) but Netlify has taken over my Jamstack hosting #1 spot. It’s free to start and unbelievably easy. Netlify makes the painfully difficult effortlessly simple.
-
-- [Plausible Analytics](https://plausible.io/): I've done away with Google Analytics. Plausible is privacy-respecting, GDPR compliant, and very affordable. Happy to support them.
 
 ## Hardware
+Desde que me cambié a Mac (hoy Apple M2) hace algunos años, no he vuelto a usar otro hardware. Es veloz, no tienes problemas de "reseteos" inesperados y muy seguro ante los virus. En caso te decidas por un equipo así pero aún manejas *PowerBI*, lamento decirte que la aplicación aún no está disponible para IOS. Te recomiendo usar [Parallels](https://www.parallels.com/) (algo parecido a una maquina virtual instalada en tu mac) para que puedas usar el **PowerBI** en windows, pero tiene costo.
 
-- [Logitech MX Ergo Plus trackball mouse](https://www.logitech.com/en-us/products/mice/mx-ergo-wireless-trackball-mouse.html): I was previously using an [Anker Vertical Mouse](https://www.anker.com/products/variant/xanker-24g-wireless-vertical-ergonomic-optical-mouse/xa7852011), but switched to a trackball when some wrist issues flared up. The trackball saves the arm movement. I tend to switch up what I use frequently these days, to keep any one thing from getting too repetitive (I also currently have a trackpad on my desk), but the trackball mouse has been my mainstay since summer 2022, and surprisingly easy to adjust to.
 
-- [MoErgo Glove80](https://moergo.com/) keyboard:
-  My ergonomic keyboard journey is kinda long and detailed, but the Glove80 is where I am right now (and have been for the past year or so). I love the feel of it, and even wrote a couple of blog posts about it; [first impressions here](/blog/glove80-first-impressions) and [followup here](/blog/glove80-followup/). Previously, I used the [ZSA Moonlander](https://www.zsa.io/moonlander) for close to a year, and before that, the [Kinesis Freestyle2 for Mac](https://kinesis-ergo.com/shop/freestyle2-mac/).
+## Productividad y Utilitarios
+- [FreeOTP Authenticator](https://apps.apple.com/us/app/freeotp-authenticator/id872559395?platform=iphone): Es una aplicación de autenticación de dos factores para sistemas que utilizan protocolos de contraseña de un solo uso. Lo uso en el móvil con mi cuenta de **GitHub** cada vez que hago una operación delicada como borrar algún repositorio, cambio de nombre de repositorio o cambio de contraseña.
 
-- [Herman Miller Sayl Chair](https://www.hermanmiller.com/products/seating/office-chairs/sayl-chairs/):
-  I made it about two months as a full-time work-from-home employee before I went and bought one of these chairs. It’s the most comfortable and easily adjustable office chair I’ve ever sat in (and it looks really nice, too).
+- [Harvest](https://www.getharvest.com/): una manera fácil de realizar un seguimiento del tiempo en todos tus proyectos, posee informes instantáneos, facturación y pagos fluidos. También tiene una capa gratuita.
 
-- [Uplift V2 C-Frame](https://www.upliftdesk.com/uplift-v2-standing-desk-frame/) standing desk:
-  Not a lot of purchases I’ve been happier with than this one. It works incredibly well and is surprisingly sturdy, even without springing for the commercial version. (I have the 27.5" feet for my larger Ikea desktop, and the Advanced Digital Memory Keypad.)
+- [Obsidian](https://obsidian.md/):
+  Mi aplicación de notas favorita. Estas pueden crecer y volverse tan complejas como lo necesites. La compatibilidad con Markdown y la opción de resaltar código es fantástico.
 
-- [CalDigit TS4 dock](https://www.caldigit.com/thunderbolt-station-4/): I am a simple man. All I want is to have just one, single cable I plug into my laptop to make everything work. This dock makes that possible.
+- [PhotoScape X](http://x.photoscape.org/): Editor gratuito de Imágenes y videos. Lo uso en conjunto con **Obsidian** para hacer mejores notas.
 
-## Productivity &amp; Utility
-
-- [1Password](https://1password.com):
-  The first thing I install on every new device. I’ve tried and liked other password software, but 1Password is just the most reliable cross-platform and -device in my experience.
-
-- [Raycast](https://www.raycast.com/):
-  the _second_ thing I install on every new Mac. (I previously used [Alfred](https://www.alfredapp.com/), which I still love and support—and even go back and forth between, as I [wrote about here](/blog/alfred-raycast).) The main features I love are clipboard history, snippet expansion, file search, and workflows to automate repetitive or tedious tasks. I love being able to just type a command to do it, without searching for anything or moving away from the current window. Wouldn’t ever want to work without it. As an added bonus, Raycast includes window management and emoji picking, which means you can forego some of the other apps previously on this list like [Rectangle](https://rectangleapp.com/) and [Rocket](https://matthewpalmer.net/rocket/) (though admittedly, Rocket's emoji picking is a little nicer).
-
-- [CleanShot X](https://cleanshot.com/):
-  taking screenshots and videos is a many-times-daily activity for me, and CleanShot X makes it as seamless as possible for an easy, one-time payment.
-
-- [RightFont](https://rightfontapp.com/):
-  a simple, minimalist app for managing your computer’s fonts that looks and works better than Mac’s built-in FontBook.
-
-- [Oh My ZSH](https://ohmyz.sh/):
-  makes your terminal easier to use and cooler-looking.
-
-- [Notion](https://notion.so):
-  my current favorite notes app. Can grow and get as complex as you need it to be, but for simple notes, the markdown and code highlight support is fantastic.
-
-## Design and Illustration
-
-- [Affinity Photo, Designer and Publisher](https://xaffinity.serif.com):
-  since each one of the items in this suite is $69, you can have software roughly as good as Photoshop, Illustrator and InDesign (better, even, in some ways), <em>yours forever</em>, for the less money than you'd pay for four months of Adobe Creative Cloud. Nice.
-
-- [Wacom Intuos Pro PTH-451](https://www.wacom.com/en-us/products/pen-tablets/intuos-pro-small) (small):
-  I don’t often illustrate these days, but when I do, I’m always glad I have this fantastic pad. Wireless is a big plus.
 
 ## This site
 
-<p class="details">This is about the fifth iteration of my personal brand. The colors haven't changed, but I rotate fonts and layout once every year or two.</p>
+<p class="details">Esta es la tercera versión de mi marca personal. Comparado con la última versión le he cambiado colores y diseño.</p>
 
 ### Colors
 

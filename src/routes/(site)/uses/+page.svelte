@@ -2,6 +2,7 @@
 	import Main from '$lib/components/Main.svelte'
 	import type { PageData } from './$types'
 	import type { Component } from 'svelte'
+	import { metaImagesUrl, siteTitles } from '$lib/config'
 
 	interface Props {
 		data: PageData
@@ -13,20 +14,14 @@
 </script>
 
 <svelte:head>
-	<title>Josh Collinsworth | Uses</title>
+	<title>{siteTitles.utilities}</title>
 	<meta
 		data-key="description"
 		name="description"
-		content="Things I use and like"
+		content="Cosas que me gustan y utilizo"
 	/>
-	<meta
-		property="og:image"
-		content="https://joshcollinsworth.com/images/site-image.png"
-	/>
-	<meta
-		name="twitter:image"
-		content="https://joshcollinsworth.com/images/site-image.png"
-	/>
+	<meta property="og:image" content={metaImagesUrl.ogImage} />
+	<meta name="twitter:image" content={metaImagesUrl.twitterImage} />
 </svelte:head>
 
 <Main>

@@ -20,16 +20,16 @@
 	import { dev } from '$app/environment'
 
 	interface Props {
-		data: LayoutData;
-		children?: import('svelte').Snippet;
+		data: LayoutData
+		children?: import('svelte').Snippet
 	}
 
-	let { data, children }: Props = $props();
+	let { data, children }: Props = $props()
 
 	let path: string = $state('')
 	$effect(() => {
-		({ path } = data)
-	});
+		;({ path } = data)
+	})
 
 	let root: HTMLElement
 
@@ -37,7 +37,6 @@
 	const isSinglePostCheck: RegExp = new RegExp(/\/blog\/[A-z0-9\-_]+\/?$/)
 
 	let isSinglePost: boolean = $derived(isSinglePostCheck.test(path))
-	
 
 	const handleScroll = throttle(() => {
 		// Early return if we're above mobile width
@@ -86,13 +85,13 @@
 <svelte:window onscroll={handleScroll} />
 
 <svelte:head>
-	<meta property="og:site_name" content="Josh Collinsworth" />
+	<meta property="og:site_name" content="Carlos León" />
 	<meta property="og:locale" content="en_US" />
 	<meta name="twitter:card" content="summary_large_image" />
 	{#if !dev}
 		<script
 			defer
-			data-domain="joshcollinsworth.com"
+			data-domain="carlosleon.dev"
 			src="https://plausible.io/js/plausible.js"
 		></script>
 	{/if}
