@@ -61,7 +61,7 @@
 <style lang="scss">
 	.footer {
 		width: 100%;
-		background: var(--darkBlue);
+		background: var(--darkGreen);
 		color: var(--white);
 		line-height: 1.6em;
 		padding: 2.5rem var(--margin) 2rem;
