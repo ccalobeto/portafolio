@@ -1,6 +1,6 @@
 <script>
 	import Main from '$lib/components/Main.svelte'
-	import EasingPlayground from '$lib/components/demos/EasingPlayground.svelte'
+	// import EasingPlayground from '$lib/components/demos/EasingPlayground.svelte'
 </script>
 
 <svelte:head>
@@ -36,5 +36,5 @@
 </svelte:head>
 
 <Main>
-	<EasingPlayground />
+	<!-- <EasingPlayground /> -->
 </Main>
