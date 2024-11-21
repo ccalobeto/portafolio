@@ -29,11 +29,12 @@
 				</p>
 				<ul>
 					<li>
-						<a href="https://sveltekit-static-starter.netlify.app">Live demo</a>
+						<a href="https://ccalobeto.github.io/latam-cartography/"
+							>Live demo</a
+						>
 					</li>
 					<li>
-						<a
-							href="https://github.com/josh-collinsworth/sveltekit-blog-starter"
+						<a href="https://github.com/ccalobeto/latam-cartography"
 							>GitHub repo</a
 						>
 					</li>
@@ -83,7 +84,7 @@
 
 			<div class="image-gallery">
 				<img
-					src="/images/quina-mockup1.png"
+					src="/images/post_images/earthquakes.png"
 					alt=""
 					loading="lazy"
 					width="1200"
@@ -117,7 +118,7 @@
 
 			<div class="image-gallery">
 				<img
-					src="/images/post_images/me/missing-child.jpg"
+					src="/images/post_images/missing-child.jpg"
 					alt=""
 					style="border: 1px solid;"
 				/>

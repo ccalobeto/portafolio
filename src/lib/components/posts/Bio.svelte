@@ -1,19 +1,17 @@
 <script lang="ts">
 	interface Props {
-		currentPage: string;
+		currentPage: string
 	}
 
-	let { currentPage }: Props = $props();
+	let { currentPage }: Props = $props()
 </script>
 
 <div class="bio-wrapper">
 	<div class="bio">
 		<div>
 			<p class="about">
-				I'm Josh Collinsworth, a frontend developer, designer, teacher, and
-				writer. I currently live in Kansas City, and work for <a
-					href="https://deno.land">Deno</a
-				> as a senior frontend developer.
+				Mi nombre es Carlos León y soy Ingeniero de Visualización de datos.
+				Actualmente vivo en Lima, Perú y desarrollo proyectos de código abierto.
 			</p>
 			<ul class="link-list">
 				<li class="link-list__kofi">
@@ -22,12 +20,10 @@
 					</a>
 				</li>
 				<li class="link-list__contact">
-					<a href="/contact?from_page={currentPage}">
-						Send me a note about this post
-					</a>
+					<a href="/contact?from_page={currentPage}"> Contáctate conmigo </a>
 				</li>
 				<li class="link-list__more">
-					<a href="/">More about me</a>
+					<a href="/">Mas acerca de mi</a>
 				</li>
 			</ul>
 		</div>

@@ -12,3 +12,5 @@ src/lib/content/posts/drafts/
 src/lib/components/_not-in-use
 src/routes/(site)/resume
 static/_not-in-use
+src/lib/data/_not-in-used
+static/images/post_images/_not-in-use

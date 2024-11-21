@@ -5,8 +5,8 @@
  * PLEASE BE SURE TO UPDATE THEM ALL! Thank you!
  **/ 
 export const metaImagesUrl ={
-  ogImage: 'https://joshcollinsworth.com/images/site-image.png',
-  twitterImage: 'https://joshcollinsworth.com/images/site-image.png'
+  ogImage: 'https://www.carlosleon.dev/images/site-image.png',
+  twitterImage: 'https://www.carlosleon.dev/images/site-image.png'
 }
 export const siteTitles = {
   aboutMe: 'Carlos León | Acerca de mi',
@@ -18,7 +18,7 @@ export const siteTitles = {
   category: 'Carlos León | Categoría',
   allCategories: 'Carlos León | Categorías',
 }
-export const siteURL = 'https://carlosleon.dev'
+export const siteURL = 'https://www.carlosleon.dev'
 export const siteAuthor = '- find and change this text in src/lib/config.js'
 
 // Controls how many posts are shown per page on the main blog index pages

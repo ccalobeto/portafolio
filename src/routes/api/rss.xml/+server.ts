@@ -23,16 +23,16 @@ const render = (
 ): string => `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>Josh Collinsworth</title>
-<description>Josh Collinsworth</description>
-<link>https://joshcollinsworth.com</link>
-<atom:link href="https://joshcollinsworth.com/api/rss.xml" rel="self" type="application/rss+xml"/>
+<title>Carlos León</title>
+<description>JCarlos León</description>
+<link>https://www.carlosleon.dev</link>
+<atom:link href="https://www.carlosleon.dev/api/rss.xml" rel="self" type="application/rss+xml"/>
 ${posts
 	.map(
 		(post) => `<item>
-<guid isPermaLink="true">https://joshcollinsworth.com/blog/${post.slug}</guid>
+<guid isPermaLink="true">https://www.carlosleon.dev/blog/${post.slug}</guid>
 <title>${post.title}</title>
-<link>https://joshcollinsworth.com/blog/${post.slug}</link>
+<link>https://www.carlosleon.dev/blog/${post.slug}</link>
 <description>${post.excerpt}</description>
 <pubDate>${new Date(post.date).toUTCString()}</pubDate>
 </item>`

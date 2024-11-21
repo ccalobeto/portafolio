@@ -1,7 +1,3 @@
-<script>
-  import FontTester from '$lib/components/demos/FontTester.svelte'
-  import SiteColors from '$lib/components/demos/SiteColors.svelte'
-</script>
 
 ## Desarrollo de Software
 
@@ -53,45 +49,3 @@ Desde que me cambié a Mac (hoy Apple M2) hace algunos años, no he vuelto a usa
 
 - [PhotoScape X](http://x.photoscape.org/): Editor gratuito de Imágenes y videos. Lo uso en conjunto con **Obsidian** para hacer mejores notas.
 
-
-## This site
-
-<p class="details">Esta es la tercera versión de mi marca personal. Comparado con la última versión le he cambiado colores y diseño.</p>
-
-### Colors
-
-<SiteColors />
-
-### Fonts
-
-<FontTester
-  font="Alkes"
-  label="Alkes"
-  link="https://www.myfonts.com/fonts/font-fabric/alkes/"
-  italic={true}
-  bold={true}
-/>
-<FontTester
-  font="Averta-Std"
-  label="Averta Std"
-  link="https://www.myfonts.com/fonts/intelligent-foundry/averta-standard/"
-  bold={true}
-/>
-<FontTester
-  font="MonoLisa"
-  label="MonoLisa
-  Regular"
-  link="https://www.monolisa.dev/"
-/>
-
-<p class="details">
-  Other fonts I've used previously:
-  <a href="https://www.myfonts.com/fonts/jcfonts/korb/" rel="external">Korb</a>
-  (both on its own and paired with <a href="https://fonts.google.com/specimen/Bitter/" rel="external">Bitter</a>);
-  <a href="https://www.myfonts.com/fonts/bitstream/clarendon/" rel="external">Clarendon BT Pro</a> +
-  <a href="https://www.myfonts.com/fonts/latinotype/texta/" rel="external">Texta</a>; and
-  <a href="https://www.myfonts.com/fonts/stawix/amsi-pro/" rel="external">Amsi Pro</a> +
-  <a href="https://www.myfonts.com/search/sagona/" rel="external">Sagona</a>;
-  <a href="https://www.myfonts.com/fonts/typemates/pensum-display/" rel="external">Pensum Display.</a>
-  (I know you do not care, but this is here mostly just for my own memory.)
-</p>

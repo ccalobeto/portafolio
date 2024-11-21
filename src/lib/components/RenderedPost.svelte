@@ -73,23 +73,20 @@
 </script>
 
 <svelte:head>
-	<title>{meta.title} - Josh Collinsworth blog</title>
+	<title>{meta.title} - Carlos León blog</title>
 	<meta data-key="description" name="description" content={meta.excerpt} />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={meta.title} />
 	<meta name="twitter:title" content={meta.title} />
 	<meta property="og:description" content={meta.excerpt} />
 	<meta name="twitter:description" content={meta.excerpt} />
-	<meta property="og:image" content="https://joshcollinsworth.com{imagePath}" />
+	<meta property="og:image" content="https://www.carlosleon.dev{imagePath}" />
 	<meta property="og:image:width" content={meta.coverWidth?.toString()} />
 	<meta property="og:image:height" content={meta.coverHeight?.toString()} />
-	<meta
-		name="twitter:image"
-		content="https://joshcollinsworth.com{imagePath}"
-	/>
+	<meta name="twitter:image" content="https://www.carlosleon.dev{imagePath}" />
 	<meta
 		property="og:url"
-		content="https://joshcollinsworth.com/blog/{meta.slug}/"
+		content="https://www.carlosleon.dev/blog/{meta.slug}/"
 	/>
 </svelte:head>
 
