@@ -10,7 +10,12 @@ src/routes/tweets/
 static/images/tweet_images/
 src/lib/content/posts/drafts/
 src/lib/components/_not-in-use
+src/lib/data/_not-in-used
+src/lib/content/posts/_not-in-use
 src/routes/(site)/resume
+src/routes/(site)/blog/page-transition-example
+src/routes/demos
+src/routes/.well-known
 static/_not-in-use
 src/lib/data/_not-in-used
 static/images/post_images/_not-in-use
