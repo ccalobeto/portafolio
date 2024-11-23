@@ -1,61 +1,48 @@
 <script lang="ts">
+	import { metaImagesUrl, siteTitles } from '$lib/config'
 	import Main from '$lib/components/Main.svelte'
 </script>
 
 <svelte:head>
-	<title>Josh Collinsworth</title>
-	<meta property="og:title" content="Josh Collinsworth" />
+	<title>{siteTitles.home}</title>
+	<meta property="og:title" content="Carlos León" />
 	<meta
 		data-key="description"
 		property="og:description"
 		name="description"
-		content="Front-end developer, designer, teacher and writer"
+		content="Data Visualization Engineer"
 	/>
-	<meta
-		property="og:image"
-		content="https://joshcollinsworth.com/images/site-image.png"
-	/>
-	<meta
-		name="twitter:image"
-		content="https://joshcollinsworth.com/images/site-image.png"
-	/>
+	<meta property="og:image" content={metaImagesUrl.ogImage} />
+	<meta name="twitter:image" content={metaImagesUrl.twitterImage} />
 </svelte:head>
 
 <Main>
 	<div class="intro">
 		<div class="intro__headline">
 			<h2>
-				<strong>Hi, I’m Josh</strong>. I'm a frontend developer, designer,
-				writer, and&nbsp;teacher.
+				<strong>Hola, mi nombre es Carlos</strong>. Soy Ingeniero de
+				Visualización de Datos.
 			</h2>
 
 			<p class="subhead h2">
-				I currently live in the Kansas City area, and work for <a
-					href="https://deno.land">Deno</a
-				> as a frontend engineer.
+				Actualmente vivo en Lima y construyo visualizaciones de datos utilizando
+				software de código abierto.
 			</p>
 
 			<p>
-				I specialize in performant, accessible, user-focused interfaces. I wrote
-				<a href="https://css-tricks.com/a-complete-beginners-guide-to-npm/"
-					><i>a Complete Beginner's Guide to npm</i></a
-				>
-				on <a href="https://css-tricks.com">CSS Tricks</a>. I
-				<a href="/projects">designed and built</a>
-				the word games
-				<a href="https://quina.app">Quina</a> and
-				<a href="https://playhondo.com">Hondo</a>. Occasionally I'll
-				<a href="/about-me#appearances">appear on a podcast</a>, and I
-				<a href="/blog">blog here</a> once in a while.
+				Me especializo en la performance, accesibilidad e interfaces de usuario
+				que describen visualmente el comportamiento de fenomenos sociales,
+				financieros y comerciales. Los artículos que escribí los encuentras
+				<a href="/blog">aquí</a> en mi blog.
 			</p>
 
 			<section>
 				<nav>
 					<ul>
-						<li><a href="/about-me">More about me and what I do</a></li>
-						<li><a href="/blog">My blog</a></li>
-						<li><a href="/projects">Some of my projects</a></li>
-						<li><a href="/contact">Get in touch</a></li>
+						<li><a href="/about-me">Mas acerca de mi y lo que hago</a></li>
+						<li><a href="/blog">Mi blog</a></li>
+						<li><a href="/projects">Mis proyectos</a></li>
+						<li><a href="/contact">Estemos en contacto</a></li>
 					</ul>
 				</nav>
 			</section>

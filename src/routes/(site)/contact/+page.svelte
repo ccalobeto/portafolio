@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { preventDefault } from 'svelte/legacy'
-
 	import type contactFormSubmission from '$lib/types/contact-form-submission'
+	import { metaImagesUrl, siteTitles } from '$lib/config'
 	import { onMount } from 'svelte'
 	import Main from '$lib/components/Main.svelte'
 
@@ -53,25 +52,19 @@
 </script>
 
 <svelte:head>
-	<title>Josh Collinsworth | Contact</title>
+	<title>{siteTitles.contact}</title>
 	<meta
 		data-key="description"
 		name="description"
-		content="If you fill out this form, I'll probably send you an email. What a bargain!"
+		content="Si llenas este formulario es muy posible que responda tu email."
 	/>
-	<meta
-		property="og:image"
-		content="https://joshcollinsworth.com/images/site-image.png"
-	/>
-	<meta
-		name="twitter:image"
-		content="https://joshcollinsworth.com/images/site-image.png"
-	/>
+	<meta property="og:image" content={metaImagesUrl.ogImage} />
+	<meta name="twitter:image" content={metaImagesUrl.twitterImage} />
 </svelte:head>
 
 <Main>
 	<div class="compressed-content">
-		<h2>Get in touch</h2>
+		<h2>Estemos en contacto</h2>
 
 		{#if !isSubmitted}
 			<noscript>
@@ -84,26 +77,20 @@
 			</noscript>
 
 			<p class="big">
-				Happy to chat! Email used only for replies. No solicitations, please.
+				¡Feliz de charlar contigo! Correo electrónico utilizado sólo para
+				respuestas. No solicitudes, por favor.
 			</p>
 
 			<ul class="small">
-				<li>
-					<strong>Yes</strong>, you may re-publish content from this blog in
-					other languages with attribution. No need to ask first.
-				</li>
-
-				<li>
-					<strong>No</strong>, I do not publish guest posts on this blog. Please
-					don't ask.
-				</li>
+				<strong>Si</strong>, puedes volver a publicar el contenido de este blog
+				en otros idiomas con atribución. No es necesario preguntar primero.
 			</ul>
 
 			<form
 				id="contact-form"
 				name="contact"
 				method="post"
-				onsubmit={preventDefault(handleSubmit)}
+				onsubmit={handleSubmit}
 				action="/success/"
 				data-netlify="true"
 				data-netlify-honeypot="bot-field"
@@ -117,47 +104,45 @@
 				<input type="hidden" name="from_page" bind:value={formData.from_page} />
 				<div class="sender-info">
 					<div class="field">
-						<label for="name" class="label">Your name:</label>
+						<label for="name" class="label">Tu nombre:</label>
 						<input
 							type="text"
 							name="name"
 							bind:value={formData.name}
-							placeholder="What should I call you?"
+							placeholder="¿Como te llamas?"
 						/>
 					</div>
 					<div class="field">
-						<label for="email"> Your email: </label>
+						<label for="email"> Tu email: </label>
 						<input
 							type="email"
 							name="email"
 							bind:value={formData.email}
-							placeholder="Where can I send a response?"
+							placeholder="¿Donde puedo contactarte?"
 						/>
 					</div>
 				</div>
 
 				<div class="message-wrapper field">
-					<label for="message">Message:</label>
+					<label for="message">Mensaje:</label>
 					<textarea
 						name="message"
 						bind:value={formData.message}
 						rows="6"
-						placeholder="What would you like to talk about?"
+						placeholder="¿De qué te gustaría hablar?"
 					></textarea>
 				</div>
 
 				{#if showError}
-					<div class="error">
-						Please be sure all above fields are filled out. Thanks!
-					</div>
+					<div class="error">Asegúrate de llenar todos los campos. Thanks!</div>
 				{/if}
 
-				<button type="submit"> Send </button>
+				<button type="submit"> Envío </button>
 			</form>
 		{:else}
-			<h3>Thanks for your message!</h3>
+			<h3>Gracias por el mensaje!</h3>
 
-			<p>I'll follow up by email if this wasn't spam. :)</p>
+			<p>Espero que tu correo haya llegado :)</p>
 		{/if}
 	</div>
 </Main>

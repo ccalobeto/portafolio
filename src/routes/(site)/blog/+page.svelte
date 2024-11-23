@@ -1,36 +1,31 @@
 <script lang="ts">
 	import type { PageData } from './$types'
 	import type Post from '$lib/types/post'
+	import { siteTitles, metaImagesUrl } from '$lib/config'
 
 	import Main from '$lib/components/Main.svelte'
 	import Pagination from '$lib/components/Pagination.svelte'
 	import PostList from '$lib/components/posts/PostList.svelte'
 
 	interface Props {
-		data: PageData;
+		data: PageData
 	}
 
-	let { data }: Props = $props();
+	let { data }: Props = $props()
 
 	let posts: Post[] = data.posts || []
 	let totalPosts: number = data.totalPosts.total
 </script>
 
 <svelte:head>
-	<title>Josh Collinsworth | Blog</title>
+	<title>J{siteTitles.blog}</title>
 	<meta
 		data-key="description"
 		name="description"
-		content="Writings on development, design, and random thoughts."
+		content="Escribiendo sobre desarrollo, diseño y otros temas."
 	/>
-	<meta
-		property="og:image"
-		content="https://joshcollinsworth.com/images/site-image.png"
-	/>
-	<meta
-		name="twitter:image"
-		content="https://joshcollinsworth.com/images/site-image.png"
-	/>
+	<meta property="og:image" content={metaImagesUrl.ogImage} />
+	<meta name="twitter:image" content={metaImagesUrl.twitterImage} />
 </svelte:head>
 
 <Main className="blog-roll">

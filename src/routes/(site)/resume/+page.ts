@@ -6,7 +6,7 @@ interface MarkdownPost {
 
 //TODO: wrong typing
 export const load = async (): Promise<MarkdownPost> => {
-	const resume = await import('$lib/content/resume.md')
+	const resume = await import('$lib/content/posts/_not-in-use/resume.md')
 	return {
 		Resume: resume.default
 	}

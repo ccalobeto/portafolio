@@ -53,3 +53,21 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+/* great-vibes-latin-400-normal */
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('$lib/assets/fonts/great-vibes-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Berkshire Swash';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('$lib/assets/fonts/berkshireswash-regular-webfont.woff2') format('woff2'), url('$lib/assets/fonts/berkshireswash-regular-webfont.woff') format('woff');
+
+}
