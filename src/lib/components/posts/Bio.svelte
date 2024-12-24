@@ -15,8 +15,8 @@
 			</p>
 			<ul class="link-list">
 				<li class="link-list__kofi">
-					<a href="https://ko-fi.com/collinsworth" rel="external">
-						Buy me a coffee
+					<a href="https://ko-fi.com/calobeto" rel="external">
+						Comprame un café.
 					</a>
 				</li>
 				<li class="link-list__contact">

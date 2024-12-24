@@ -68,11 +68,11 @@
 
 		{#if !isSubmitted}
 			<noscript>
-				<h3>Sorry, this contact form won't work without JavaScript enabled.</h3>
+				<h3>Disaculpa pero este formulario no funciona sin JavaScript.</h3>
 				<p>
-					I don't do any tracking or anything like that though (except some <a
-						href="https://plausible.io">privacy-respecting analytics</a
-					>), if that's your concern.
+					No hago ningún tipo de seguimiento (excepto algo de <a
+						href="https://plausible.io">análisis que respeta la privacidad</a
+					>), si ésta es tu preocupación.
 				</p>
 			</noscript>
 
@@ -83,7 +83,7 @@
 
 			<ul class="small">
 				<strong>Si</strong>, puedes volver a publicar el contenido de este blog
-				en otros idiomas con atribución. No es necesario preguntar primero.
+				en otros idiomas con atribución.
 			</ul>
 
 			<form

@@ -19,13 +19,13 @@
 	<div class="projects compressed-content double-wide">
 		<article>
 			<div class="sticky">
-				<h2>SvelteKit static blog starter</h2>
+				<h2>Cartografía de Perú y Ecuador</h2>
 
 				<p>
-					A fully open-source, pre-configured starter for a SvelteKit blog.
-					Includes Markdown and Sass preprocessing; has mdsvex with rehype
-					plugins pre-installed; and includes automatic prefetching of top-level
-					routes, an RSS feed, and a JSON API.
+					Una herramienta visual en la que puedes descargar la cartografía
+					ligera (en formato topojson) de Perú y Ecuador y que los puedes user
+					en proyectos de geolocalización sin comprometer la performance de tu
+					app. Tiene varias capas a nivel departamental, provincial y distrital.
 				</p>
 				<ul>
 					<li>
@@ -44,15 +44,15 @@
 			<div class="image-gallery">
 				<figure>
 					<iframe
-						src="https://sveltekit-static-starter.netlify.app"
+						src="https://latam-cartography.pages.dev/"
 						frameborder="0"
 						title="Live demo of the starter, from sveltekit-static-starter.netlify.app"
 						width="100%"
 						height="800"
 					></iframe>
 					<figcaption>
-						<a href="https://sveltekit-static-starter.netlify.app"
-							>sveltekit-static-starter.netlify.app</a
+						<a href="https://latam-cartography.pages.dev/"
+							>Perú y Ecuador cartography</a
 						>
 					</figcaption>
 				</figure>
@@ -63,16 +63,15 @@
 				<h2>Terremotos en el Perú</h2>
 
 				<p>
-					Una herramienta visual que muestra el ranking de los departamentos que
-					más sufrieron con este fenómeno con datos recopilados desde 1471 hasta
-					1959; y otro que muestra la posición y la intensidad a escala de los
-					movimientos sísmicos en el Perú ocurridos desde 1960 con datos
-					recopilados por sensores electrónicos.
+					Una herramienta visual que muestra la ubicación, profundidad e
+					intensidad a escala de los movimientos sísmicos ocurridos en el Perú y
+					el ranking de los departamentos que más sufrieron terremotos desde la
+					época colonial hasta la actualidad.
 				</p>
 				<ul>
 					<li>
-						Lee más sobre esta visualización <a href="/blog/earthquakes"
-							>en este blog</a
+						Lee más sobre esta visualización en este <a href="/blog/earthquakes"
+							>blog</a
 						>
 						y
 						<a rel="external" href="https://ccalobeto.github.io/earthquakes/">
@@ -99,8 +98,8 @@
 				<h2>Personas desaparecidas en el Ecuador</h2>
 
 				<p>
-					Visualización que muestra el análisis sobre las razones de
-					criminalidad relacionada a la desaparición de personas en el Ecuador.
+					Análisis de datos que muestra las razones detrás de la criminalidad
+					relacionada a la desaparición de personas en el Ecuador.
 				</p>
 
 				<ul>
@@ -134,20 +133,6 @@
 					>
 				</p>
 			</div>
-			<ul>
-				<li>
-					Website for <a href="https://rise.getflywheel.com" rel="external"
-						>Rise</a
-					>, Flywheel/WP Engine's BIPOC employee resource group
-				</li>
-
-				<li>
-					A Chrome extension, an internal knowledge base, various WordPress
-					themes, a couple of Node CLI tools, and a handful of trainings and
-					presentations (none of which I can show here because employer privacy
-					and such)
-				</li>
-			</ul>
 		</article>
 	</div>
 </Main>

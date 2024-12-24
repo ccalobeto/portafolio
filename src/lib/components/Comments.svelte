@@ -18,7 +18,7 @@
 	}
 	const options: Options = {
 		src: 'https://utteranc.es/client.js',
-		repo: 'josh-collinsworth/joco-sveltekit',
+		repo: 'ccalobeto/portafolio',
 		label: 'comments',
 		crossorigin: 'anonymous',
 		theme: siteTheme,

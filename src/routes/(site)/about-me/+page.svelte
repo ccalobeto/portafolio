@@ -19,34 +19,35 @@
 			src="/images/bio-photo.jpg"
 			alt="Mi foto generada con IA ;)."
 		/>
-		<h2>Quien Soy</h2>
+		<h2>Acerca de Mi</h2>
 
 		<p>
 			Soy Ingeniero Electrónico de profesión con más de 6 años de experiencia
 			profesional en la ciencia de datos. Mi última experiencia profesional fue
 			como <strong>Data Science Specialist</strong>
 			en
-			<a href="https://ifuxion.com/orphan/enrollment/products">Fuxion</a> donde
-			implementé varios pipelines de datos incluyendo el despliegue de tableros
-			en <strong>PowerBI</strong>. Actualmente estoy desarrollando proyectos
-			personales unsado la plataforma de datos abiertos.
+			<a href="https://nutraxeuticos.com/">Fuxion</a> donde implementé varios
+			pipelines de datos hasta su despliegue en
+			<strong>PowerBI Online</strong>. Actualmente estoy desarrollando proyectos
+			personales usando la
+			<a href="https://www.datosabiertos.gob.pe/"
+				>Plataforma de Datos Abiertos</a
+			> del Estado Peruano.
 		</p>
 		<p>
-			Cuando tengo tiempo escribo en mi blog personal sobre las experiencias
-			aprendidas en cada proyecto. Tambien hago el mantenimiento de herramientas
-			que los developers pueden utilizar en sus propios proyectos y que lo
-			puedes encontrar en mi cuenta de <a href="https://github.com/ccalobeto"
-				>Github</a
-			>.
+			Mi objetivo con este blog es que sea un espacio para compartir con la
+			comunidad de developers las experiencias aprendidas en cada proyecto. En
+			este viaje espero desarrollar herramientas que los developers pueden
+			utilizar en sus propios proyectos y que lo puedes encontrar en mi cuenta
+			de <a href="https://github.com/ccalobeto">Github</a>.
 		</p>
 
 		<p>
-			Antes de entrar al mundo developer, trabajé en una Empresa de
-			Telecomunicaciones en el Perú donde desempeñe roles en el área comercial y
-			recursos humanos. Fue en mis últimos años en ésta empresa donde me
-			convencí que mi pasión es automatizar tareas y desarrollar visualizaciones
-			que describan, expliquen y exploten mejor fenómenos comerciales, sociales
-			y financieros.
+			Antes de entrar al mundo de la <em>Ciencia de Datos</em>, trabajé en una
+			Empresa de Telecomunicaciones en el Perú donde desempeñe roles en el área
+			comercial y recursos humanos. Fue en mis últimos años en ésta empresa
+			donde me convencí que mi pasión es desarrollar visualizaciones que
+			describan y expliquen mejor fenómenos sociales, comerciales y financieros.
 		</p>
 
 		<p>

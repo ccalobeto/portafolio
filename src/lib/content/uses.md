@@ -2,14 +2,16 @@
 ## Desarrollo de Software
 
 ### Lenguajes y frameworks
-Los proyectos presentados en este blog usan código abierto. Su gran ventaja *a mi concepto* es que de lejos tienen un ecosistema más colaborativo y un pipeline de datos más corto.
+Los proyectos presentados en este blog usan código abierto. Su gran ventaja *a mi concepto* es que tienen un ecosistema más colaborativo y un pipeline de datos más corto.
 
-- **CSS** y **HTML** son la base para comprender a fondo el desarrollo web; aprende los fundamentos básicos ya que interactuan con *javascript*.
+- **CSS** y **HTML** son la base para comprender a fondo el desarrollo web; aprende los fundamentos básicos ya que interactúan con *javascript*.
 
-- El siguiente paso es familiarizarte con **javascript** hay un sin número de tutoriales en la web como [midudev](https://www.youtube.com/@midudev). Si quieres ir mas allá abre tu cuenta en [observablehq](https://observablehq.com/) (de pago); el cual es una plataforma en la nube donde encontrarás muchos ejemplos de todos los calibres para practicar en tus propios notebooks. La plataforma soporta importación de archivos, conexión a bd, tiene una potente herramienta de visualización de sintaxis reducida llamada **Framework** y puedes desplegar tu propia visualización en un site. Tambien puedes usar **d3.js** en la plataforma.
+- El siguiente paso es familiarizarte con **javascript**, hay un sin número de tutoriales en la web pero te recomiendo [midudev](https://www.youtube.com/@midudev). Si quieres ir más allá abre tu cuenta en [observablehq](https://observablehq.com/) (de pago); el cual es una plataforma en la nube donde encontrarás muchos ejemplos de todos los calibres para practicar en tus propios notebooks. La plataforma soporta importación de archivos, conexión a bd, tiene una potente herramienta de visualización de sintaxis reducida llamada **Framework** y puedes desplegar tu propia visualización en un website. También puedes usar **d3.js** en la plataforma.
 
-- [d3.js](https://d3js.org/) es una librería de javascript que te permite desarrollar cualquier tipo de visualización, personalmente lo uso con [svelte](https://svelte.dev/) que es un framework de fuerte aceptación en la comunidad. **Svelte** hace lo mismo que *React* o *Vue*; posee una sintaxis muy intuitiva y un compilador que te ayudará a detectar no sólo errores en tu código sino *typos* indetectables sin ayuda de librerías externas. Para el desarrollo de este blog usé [SvelteKit](https://kit.svelte.dev/), que posee los mismos fundamentos de svelte aplicado para desarrollo web.
-- [TypeScript](https://www.typescriptlang.org/) es un superconjunto de JavaScript que añade tipado estático opcional y funciones avanzadas a JavaScript. Tomate el tiempo de conocerlo, verás todo su potencial cuando tus proyectos se vuelvan cada vez más complejos. 
+- [d3.js](https://d3js.org/) es una potente librería de javascript que te permite desarrollar cualquier tipo de visualización. Si deseas proyectos que resuenen úsalo en combinación con **Svelte**.
+
+- [Svelte](https://svelte.dev/) es un framework de fuerte aceptación en la comunidad. **Svelte** hace lo mismo que *React* o *Vue*; posee una sintaxis muy intuitiva y un compilador que te ayudará a detectar no sólo errores en tu código sino *typos* indetectables sin ayuda de librerías externas. Para el desarrollo de este blog usé [SvelteKit](https://kit.svelte.dev/), que posee los mismos fundamentos de svelte aplicado para desarrollo web.
+- [TypeScript](https://www.typescriptlang.org/) es un superconjunto de JavaScript que añade tipado estático opcional y funciones avanzadas a JavaScript. Tómate el tiempo de conocerlo, verás todo su potencial cuando tus proyectos se vuelvan cada vez más complejos. 
 
 - [Python](https://www.python.org/) es una herramienta poderosa cuyas librerías ocupan todo el pipeline de datos desde la extracción hasta el despliegue. Sin embargo en mis proyectos lo usaré para preparar y transformar los datos. [R](https://www.r-project.org/) tambien tiene la misma funcionalidad pero a diferencia de **Python** su catálogo de librerías es menor.
 
@@ -26,14 +28,13 @@ Los proyectos presentados en este blog usan código abierto. Su gran ventaja *a 
 
     - [Conventional Commits for VSCode](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits): Haz commits como todo un profesional. Te ayudará a sumergirte en las [mejores prácticas](https://www.conventionalcommits.org/en/v1.0.0/) sobre como etiquetar los cambios en tu código.
 
-- [Markdown](https://www.markdownguide.org/): es un lenguaje de marcado que sirve para documentar tu código de manera [profesional](https://github.com/orgs/community/discussions/16925). Al seguir sus lineamientos tus colegas te lo agraderán cuando desees contribuir o elaborar una herramienta de software.
+- [Markdown](https://www.markdownguide.org/): es un lenguaje de marcado que sirve para documentar tu proyecto de manera [profesional](https://github.com/orgs/community/discussions/16925). Sigue sus lineamientos y tus colegas te lo agraderán cuando desees contribuir o elaborar una herramienta de software.
 
 - [Chrome](hhttps://www.google.com/chrome/):
    Es un excelente navegador que posee gran privacidad y extensiones increíbles. Otro navegador muy utilizado cuando necesitas hacer algo de web scraping es [thor](https://www.torproject.org/) ;).
 
 - [Cloudflare](https://www.cloudflare.com/): también son fan de *Github Pages* y *Netlify* porque su configuración es simple para un despliegue de proyecto ligero.
-  Sin embargo **Clouflare** es una plataforma global en la nube diseñada para que todos los recursos conectados a Internet sean seguros, privados, rápidos y confiables. Tiene una capa gratuita mucho más benévola que Amazon, Azure ó Google. Puedes hacer todo lo que hace Amazon desde alojamiento, archivar archivos super pesados (como los usados en cartografía) y configurarlo para que la respuesta de tu página (usualmente tu landing page) lo haga el servidor (CDN) más cercano. 
-
+  Sin embargo **Clouflare** es una plataforma global en la nube diseñada para que todos los recursos conectados a Internet sean seguros, privados, rápidos y confiables. Tiene una capa gratuita mucho más benévola que Amazon, Azure ó Google. Puedes hacer todo lo que hace Amazon desde el alojamiento de archivos super pesados (como los usados en cartografía) y configurarlo para que la respuesta de tu página (usualmente tu landing page) lo haga el servidor más cercano dentro de la red de servidores o CDN. 
 
 ## Hardware
 Desde que me cambié a Mac (hoy Apple M2) hace algunos años, no he vuelto a usar otro hardware. Es veloz, no tienes problemas de "reseteos" inesperados y muy seguro ante los virus. En caso te decidas por un equipo así pero aún manejas *PowerBI*, lamento decirte que la aplicación aún no está disponible para IOS. Te recomiendo usar [Parallels](https://www.parallels.com/) (algo parecido a una maquina virtual instalada en tu mac) para que puedas usar el **PowerBI** en windows, pero tiene costo.

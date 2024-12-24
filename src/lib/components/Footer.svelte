@@ -29,7 +29,7 @@
 				<li>
 					<a href="https://github.com/ccalobeto" rel="me">GitHub</a>
 				</li>
-				<li><a href="https://ko-fi.com/collinsworth">Ko-Fi</a></li>
+				<li><a href="https://ko-fi.com/calobeto">Ko-Fi</a></li>
 			</ul>
 		</div>
 
