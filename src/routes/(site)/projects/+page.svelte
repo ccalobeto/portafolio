@@ -105,7 +105,7 @@
 				<ul>
 					<li>
 						<a href="/blog/missed-in-ec/"
-							>Lee más sobre esta poblemática en este enlace</a
+							>Lee más sobre esta problemática en este enlace</a
 						>
 						o directamente en este
 						<a rel="external" href="https://ccalobeto.github.io/missed-in-ec/">
