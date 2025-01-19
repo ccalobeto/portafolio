@@ -17,7 +17,7 @@
 
 <Main>
 	<div class="projects compressed-content double-wide">
-		<article>
+		<!-- <article>
 			<div class="sticky">
 				<h2>Cartografía de Perú y Ecuador</h2>
 
@@ -57,7 +57,7 @@
 					</figcaption>
 				</figure>
 			</div>
-		</article>
+		</article> -->
 		<article>
 			<div class="sticky">
 				<h2>Terremotos en el Perú</h2>
