@@ -42,7 +42,7 @@
 						<li><a href="/about-me">Mas acerca de mi y lo que hago</a></li>
 						<li><a href="/blog">Mi blog</a></li>
 						<li><a href="/projects">Mis proyectos</a></li>
-						<li><a href="/contact">Estemos en contacto</a></li>
+						<!-- <li><a href="/contact">Estemos en contacto</a></li> -->
 					</ul>
 				</nav>
 			</section>

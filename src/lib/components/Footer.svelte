@@ -18,7 +18,7 @@
 					<li>
 						<a href={navItems.projects.route}>{navItems.projects.title}</a>
 					</li>
-					<li><a href={navItems.contact.route}>{navItems.contact.title}</a></li>
+					<!-- <li><a href={navItems.contact.route}>{navItems.contact.title}</a></li> -->
 				</ul>
 			</nav>
 		</div>
