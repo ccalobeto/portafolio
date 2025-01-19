@@ -59,9 +59,9 @@
 		<h3>Mas de mi:</h3>
 
 		<ul>
-			<li>
+			<!-- <li>
 				<a href="/contact?from_page=about">Contacto</a>
-			</li>
+			</li> -->
 			<li>
 				<a href="https://www.linkedin.com/in/carlosleonl" rel="nofollow"
 					>LinkedIn</a
