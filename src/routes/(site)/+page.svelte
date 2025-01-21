@@ -25,13 +25,13 @@
 			</h2>
 
 			<p class="subhead h2">
-				Actualmente vivo en Lima y construyo visualizaciones de datos utilizando
+				Actualmente vivo en Lima y elaboro visualizaciones de datos utilizando
 				software de código abierto.
 			</p>
 
 			<p>
 				Me especializo en la performance, accesibilidad e interfaces de usuario
-				que describen visualmente el comportamiento de fenomenos sociales,
+				que describen visualmente el comportamiento de fenómenos sociales,
 				financieros y comerciales. Los artículos que escribí los encuentras
 				<a href="/blog">aquí</a> en mi blog.
 			</p>
@@ -39,7 +39,7 @@
 			<section>
 				<nav>
 					<ul>
-						<li><a href="/about-me">Mas acerca de mi y lo que hago</a></li>
+						<li><a href="/about-me">Más acerca de mi y lo que hago</a></li>
 						<li><a href="/blog">Mi blog</a></li>
 						<li><a href="/projects">Mis proyectos</a></li>
 						<!-- <li><a href="/contact">Estemos en contacto</a></li> -->

@@ -25,9 +25,8 @@
 			Soy Ingeniero Electrónico de profesión con más de 6 años de experiencia
 			profesional en la ciencia de datos. Mi última experiencia profesional fue
 			como <strong>Data Science Specialist</strong>
-			en
-			<a href="https://nutraxeuticos.com/">Fuxion</a> donde implementé varios
-			pipelines de datos hasta su despliegue en
+			en una compañía de fabricación de productos nutracéuticos, donde implementé
+			varios pipelines de datos hasta su despliegue en
 			<strong>PowerBI Online</strong>. Actualmente estoy desarrollando proyectos
 			personales usando la
 			<a href="https://www.datosabiertos.gob.pe/"
@@ -35,25 +34,24 @@
 			> del Estado Peruano.
 		</p>
 		<p>
-			Mi objetivo con este blog es que sea un espacio para compartir con la
-			comunidad de developers las experiencias aprendidas en cada proyecto. En
-			este viaje espero desarrollar herramientas que los developers pueden
-			utilizar en sus propios proyectos y que lo puedes encontrar en mi cuenta
-			de <a href="https://github.com/ccalobeto">Github</a>.
+			La idea de este blog es compartir con otros developers lo que voy
+			aprendiendo en cada proyecto. Espero poder crear herramientas útiles que
+			puedas usar en tus propios proyectos, ¡y todo el código estará en mi
+			cuenta de <a href="https://github.com/ccalobeto">Github!</a>.
 		</p>
 
 		<p>
 			Antes de entrar al mundo de la <em>Ciencia de Datos</em>, trabajé en una
-			Empresa de Telecomunicaciones en el Perú donde desempeñe roles en el área
-			comercial y recursos humanos. Fue en mis últimos años en ésta empresa
-			donde me convencí que mi pasión es desarrollar visualizaciones que
-			describan y expliquen mejor fenómenos sociales, comerciales y financieros.
+			Empresa de Telecomunicaciones donde desempeñé roles en el área comercial y
+			recursos humanos. Fue en mis últimos años en ésta empresa donde me
+			convencí que mi pasión es desarrollar visualizaciones que describan y
+			expliquen mejor fenómenos sociales, comerciales y financieros.
 		</p>
 
 		<p>
 			Personalmente me considero: amante del ajedrez, me relajo mucho con la
 			natación, aún de pocas redes sociales excepto twitter, autodidacta, amante
-			de las playas y baterista frustado.
+			de las playas y baterista frustrado.
 		</p>
 
 		<h3>Mas de mi:</h3>
