@@ -86,9 +86,7 @@
 					src="/images/post_images/earthquakes.png"
 					alt=""
 					loading="lazy"
-					width="1200"
-					height="1697"
-					style="aspect-ratio: 1200 / 1697"
+					style="border: 1px solid;"
 				/>
 			</div>
 		</article>
@@ -117,7 +115,7 @@
 
 			<div class="image-gallery">
 				<img
-					src="/images/post_images/missing-child.jpg"
+					src="/images/post_images/missing-child.png"
 					alt=""
 					style="border: 1px solid;"
 				/>
