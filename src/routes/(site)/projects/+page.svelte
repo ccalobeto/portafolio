@@ -86,9 +86,7 @@
 					src="/images/post_images/earthquakes.png"
 					alt=""
 					loading="lazy"
-					width="1200"
-					height="1697"
-					style="aspect-ratio: 1200 / 1697"
+					style="border: 1px solid;"
 				/>
 			</div>
 		</article>
@@ -104,11 +102,11 @@
 
 				<ul>
 					<li>
-						<a href="/blog/missed-in-ec/"
+						<a href="/blog/missed-ec/"
 							>Lee más sobre esta problemática en este enlace</a
 						>
 						o directamente en este
-						<a rel="external" href="https://ccalobeto.github.io/missed-in-ec/">
+						<a rel="external" href="https://ccalobeto.github.io/missed-ec/">
 							tablero</a
 						>
 					</li>
@@ -117,7 +115,7 @@
 
 			<div class="image-gallery">
 				<img
-					src="/images/post_images/missing-child.jpg"
+					src="/images/post_images/missing-child.png"
 					alt=""
 					style="border: 1px solid;"
 				/>
