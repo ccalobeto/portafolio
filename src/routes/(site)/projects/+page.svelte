@@ -102,11 +102,11 @@
 
 				<ul>
 					<li>
-						<a href="/blog/missed-in-ec/"
+						<a href="/blog/missed-ec/"
 							>Lee más sobre esta problemática en este enlace</a
 						>
 						o directamente en este
-						<a rel="external" href="https://ccalobeto.github.io/missed-in-ec/">
+						<a rel="external" href="https://ccalobeto.github.io/missed-ec/">
 							tablero</a
 						>
 					</li>
