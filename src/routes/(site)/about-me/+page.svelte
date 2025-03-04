@@ -28,10 +28,7 @@
 			en una compañía de fabricación de productos nutracéuticos, donde implementé
 			varios pipelines de datos hasta su despliegue en
 			<strong>PowerBI Online</strong>. Actualmente estoy desarrollando proyectos
-			personales usando la
-			<a href="https://www.datosabiertos.gob.pe/"
-				>Plataforma de Datos Abiertos</a
-			> del Estado Peruano.
+			personales usando <em>datos abiertos</em>.
 		</p>
 		<p>
 			La idea de este blog es compartir con otros developers lo que voy
@@ -43,7 +40,7 @@
 		<p>
 			Antes de entrar al mundo de la <em>Ciencia de Datos</em>, trabajé en una
 			Empresa de Telecomunicaciones donde desempeñé roles en el área comercial y
-			recursos humanos. Fue en mis últimos años en ésta empresa donde me
+			recursos humanos. Fue en estos últimos años en ésta empresa que me
 			convencí que mi pasión es desarrollar visualizaciones que describan y
 			expliquen mejor fenómenos sociales, comerciales y financieros.
 		</p>

@@ -167,21 +167,19 @@
 		}
 
 		.image-gallery {
-			figure {
-				margin-top: 0;
-			}
+			display: flex;
+			justify-content: center;
 
 			img {
 				margin: 0 auto var(--halfNote);
 				display: block;
-				max-width: unset;
+				// max-width: unset;
 				width: calc(100% + (var(--margin) * 2));
-				margin-left: calc(var(--margin) * -1);
+				// margin-left: calc(var(--margin) * -1);
 
 				@media (min-width: vars.$sm) {
-					max-width: calc(100% + var(--margin));
-					width: auto;
-					margin-left: 0;
+					max-width: calc(100% + (var(--margin) * 2));
+					width: 70vw;
 				}
 			}
 		}
