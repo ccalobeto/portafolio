@@ -17,3 +17,8 @@ En el año 2024, las autoridades policiales de Ecuador han registrado 6,952 denu
 
 Si deseas ver las visualizaciones construidas que describen este problema te invito a hacer click en la imagen.[![Image of missing](/images/post_images/missing-child.png)](https://ccalobeto.github.io/missed-ec/)
 
+El detalle técnico del proyecto se resumen en lo siguiente:
+- Scripts elaborados en **python** que limpian y transforman los datos.
+- Uso de la librería **geopandas** que transforma coordenadas geográficas a código de Canton.
+- Uso de la librería **Layercake** para construir visualizaciones.
+
