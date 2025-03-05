@@ -17,15 +17,16 @@
 
 <Main>
 	<div class="projects compressed-content double-wide">
-		<!-- <article>
+		<article>
 			<div class="sticky">
-				<h2>Cartografía de Perú y Ecuador</h2>
+				<h2>Cartografía de Perú</h2>
 
 				<p>
-					Una herramienta visual en la que puedes descargar la cartografía
-					ligera (en formato topojson) de Perú y Ecuador y que los puedes user
-					en proyectos de geolocalización sin comprometer la performance de tu
-					app. Tiene varias capas a nivel departamental, provincial y distrital.
+					Una herramienta visual que te permite descargar la cartografía del
+					Perú en diversos formatos. Uno de ellos es <b>topojson</b>, formato
+					super ligero y que puedes usar en tus proyectos de data analytics sin
+					comprometer el rendimiento de tu app. Tiene varias capas a nivel
+					departamental, provincial y distrital.
 				</p>
 				<ul>
 					<li>
@@ -42,22 +43,14 @@
 			</div>
 
 			<div class="image-gallery">
-				<figure>
-					<iframe
-						src="https://latam-cartography.pages.dev/"
-						frameborder="0"
-						title="Live demo of the starter, from sveltekit-static-starter.netlify.app"
-						width="100%"
-						height="800"
-					></iframe>
-					<figcaption>
-						<a href="https://latam-cartography.pages.dev/"
-							>Perú y Ecuador cartography</a
-						>
-					</figcaption>
-				</figure>
+				<img
+					src="/images/post_images/latam-carto.gif"
+					alt=""
+					loading="lazy"
+					style="border: 1px solid;"
+				/>
 			</div>
-		</article> -->
+		</article>
 		<article>
 			<div class="sticky">
 				<h2>Terremotos en el Perú</h2>
