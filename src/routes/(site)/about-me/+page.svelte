@@ -22,27 +22,27 @@
 		<h2>Acerca de Mi</h2>
 
 		<p>
-			Soy Ingeniero Electrónico de profesión con más de 6 años de experiencia
+			Soy Ingeniero Electrónico de profesión con 7 años de experiencia
 			profesional en la ciencia de datos. Mi última experiencia profesional fue
 			como <strong>Data Science Specialist</strong>
 			en una compañía de fabricación de productos nutracéuticos, donde implementé
-			varios pipelines de datos hasta su despliegue en
-			<strong>PowerBI Online</strong>. Actualmente estoy desarrollando proyectos
-			personales usando <em>datos abiertos</em>.
+			varios pipelines de datos usando el ecosistema empresarial (SQL, Python, Apache
+			Airflow y su despliegue en
+			<strong>PowerBI Online)</strong>. Actualmente estoy desarrollando
+			proyectos de interés público y empresarial usando <em>datos abiertos</em>.
 		</p>
 		<p>
-			La idea de este blog es compartir con otros developers lo que voy
-			aprendiendo en cada proyecto. Espero poder crear herramientas útiles que
-			puedas usar en tus propios proyectos, ¡y todo el código estará en mi
-			cuenta de <a href="https://github.com/ccalobeto">Github!</a>.
+			La idea de este blog es compartir lo que voy aprendiendo en cada proyecto
+			y espero desarrollar herramientas útiles que puedas usar en los tuyos, ¡y
+			el código estará en mi cuenta de <a href="https://github.com/ccalobeto"
+				>Github!</a
+			>.
 		</p>
 
 		<p>
 			Antes de entrar al mundo de la <em>Ciencia de Datos</em>, trabajé en una
 			Empresa de Telecomunicaciones donde desempeñé roles en el área comercial y
-			recursos humanos. Fue en estos últimos años en ésta empresa que me
-			convencí que mi pasión es desarrollar visualizaciones que describan y
-			expliquen mejor fenómenos sociales, comerciales y financieros.
+			recursos humanos.
 		</p>
 
 		<p>

@@ -2,11 +2,11 @@
 ## Desarrollo de Software
 
 ### Lenguajes y frameworks
-Los proyectos presentados en este blog usan código abierto. Su gran ventaja *a mi concepto* es que tienen un ecosistema más colaborativo y un pipeline de datos más corto.
+Los proyectos presentados en este blog usan <b>código abierto</b>. Su gran ventaja *a mi concepto* es que tienen un entorno más colaborativo y un pipeline de datos más corto. Si lo tuyo es la visualización de los datos, aquí te dejo un potente ecosistema de desarrollo.
 
 - **CSS** y **HTML** son la base para comprender a fondo el desarrollo web; aprende los fundamentos básicos ya que interactúan con *javascript*.
 
-- El siguiente paso es familiarizarte con **javascript**, hay un sin número de tutoriales en la web pero te recomiendo [midudev](https://www.youtube.com/@midudev). Si quieres ir más allá abre tu cuenta en [observablehq](https://observablehq.com/) (de pago); el cual es una plataforma en la nube donde encontrarás muchos ejemplos de todos los calibres para practicar en tus propios notebooks. La plataforma soporta importación de archivos, conexión a bd, tiene una potente herramienta de visualización de sintaxis reducida llamada **Framework** y puedes desplegar tu propia visualización en un website. También puedes usar **d3.js** en la plataforma.
+- **Javascript**, es un lenguaje de programación que permite que las páginas web sean interactivas y dinámicas. Si HTML es el esqueleto de una página web y CSS es su ropa y estilo, JavaScript es el cerebro que le da vida y movimiento. Hay un sin número de tutoriales en la web pero te recomiendo [midudev](https://www.youtube.com/@midudev). Si quieres ir más allá abre tu cuenta en [observablehq](https://observablehq.com/) (de pago); el cual es una plataforma en la nube donde encontrarás muchos ejemplos de todos los calibres y te permitirá también desarrollar tus propios proyectos.
 
 - [d3.js](https://d3js.org/) es una potente librería de javascript que te permite desarrollar cualquier tipo de visualización. Si deseas proyectos que resuenen úsalo en combinación con **Svelte**.
 
@@ -43,7 +43,7 @@ Desde que me cambié a Mac (hoy Apple M2) hace algunos años, no he vuelto a usa
 ## Productividad y Utilitarios
 - [FreeOTP Authenticator](https://apps.apple.com/us/app/freeotp-authenticator/id872559395?platform=iphone): Es una aplicación de autenticación de dos factores para sistemas que utilizan protocolos de contraseña de un solo uso. Lo uso en el móvil con mi cuenta de **GitHub** cada vez que hago una operación delicada como borrar algún repositorio, cambio de nombre de repositorio o cambio de contraseña.
 
-- [Harvest](https://www.getharvest.com/): una manera fácil de realizar un seguimiento del tiempo en todos tus proyectos, posee informes instantáneos, facturación y pagos fluidos. También tiene una capa gratuita.
+- [Harvest](https://www.getharvest.com/): una manera fácil de realizar un seguimiento del tiempo en todos tus proyectos. Posee una capa gratuita que te permite informes instantáneos, facturación y pagos fluidos. 
 
 - [Obsidian](https://obsidian.md/):
   Mi aplicación de notas favorita. Estas pueden crecer y volverse tan complejas como lo necesites. La compatibilidad con Markdown y la opción de resaltar código es fantástica.

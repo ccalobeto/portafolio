@@ -20,20 +20,19 @@
 	<div class="intro">
 		<div class="intro__headline">
 			<h2>
-				<strong>Hola, mi nombre es Carlos</strong>. Soy Ingeniero de
-				Visualización de Datos.
+				Hola, mi nombre es <strong>Carlos</strong> y soy Data Scientist
 			</h2>
 
-			<p class="subhead h2">
-				Actualmente vivo en Lima y elaboro visualizaciones de datos utilizando
-				software de código abierto.
-			</p>
+			<p class="subhead h2">Keep Calm and Let the Data Decide</p>
 
 			<p>
-				Me especializo en la performance, accesibilidad e interfaces de usuario
-				que describen visualmente el comportamiento de fenómenos sociales,
-				financieros y comerciales. Los artículos que escribí los encuentras
-				<a href="/blog">aquí</a> en mi blog.
+				Adapto e implemento soluciones basadas en datos, utilizando la
+				<b>visualización y la narrativa</b> como herramientas clave para transformar
+				información compleja en conocimientos accesibles. A través del análisis de
+				patrones, tendencias y correlaciones, revelo hallazgos que aportan claridad
+				y contexto sobre temas de interés público y empresarial, facilitando la toma
+				de decisiones informadas y fomentando una comprensión más profunda de la
+				realidad.
 			</p>
 
 			<section>
