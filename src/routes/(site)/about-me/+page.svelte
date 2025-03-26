@@ -29,7 +29,7 @@
 			varios pipelines de datos usando el ecosistema empresarial (SQL, Python, Apache
 			Airflow y su despliegue en
 			<strong>PowerBI Online)</strong>. Actualmente estoy desarrollando
-			proyectos de interés público y empresarial usando <em>datos abiertos</em>.
+			proyectos de interés público y empresarial.
 		</p>
 		<p>
 			La idea de este blog es compartir lo que voy aprendiendo en cada proyecto

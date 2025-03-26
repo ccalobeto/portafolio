@@ -20,7 +20,7 @@
 	<div class="intro">
 		<div class="intro__headline">
 			<h2>
-				Hola, mi nombre es <strong>Carlos</strong> y soy Data Scientist
+				Hola, mi nombre es <strong>Carlos</strong> y soy Data Engineer
 			</h2>
 
 			<p class="subhead h2">Keep Calm and Let the Data Decide</p>
