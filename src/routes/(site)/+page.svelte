@@ -28,11 +28,7 @@
 			<p>
 				Adapto e implemento soluciones basadas en datos, utilizando la
 				<b>visualización y la narrativa</b> como herramientas clave para transformar
-				información compleja en conocimientos accesibles. A través del análisis de
-				patrones, tendencias y correlaciones, revelo hallazgos que aportan claridad
-				y contexto sobre temas de interés público y empresarial, facilitando la toma
-				de decisiones informadas y fomentando una comprensión más profunda de la
-				realidad.
+				información compleja en conocimientos accesibles.
 			</p>
 
 			<section>
