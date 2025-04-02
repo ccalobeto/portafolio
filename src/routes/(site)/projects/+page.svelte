@@ -19,6 +19,30 @@
 	<div class="projects compressed-content double-wide">
 		<article>
 			<div class="sticky">
+				<h2>Indexado Espacial</h2>
+
+				<p>
+					Una herramienta visual que demuestra el poder <b>indexado espacial</b
+					>, aplicado a la optimización de recursos empresariales.
+				</p>
+				<ul>
+					<li>
+						<a href="https://h3-sales-quota.pages.dev/">Live demo</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="image-gallery">
+				<img
+					src="/images/post_images/peru-spatial-index.gif"
+					alt=""
+					loading="lazy"
+					style="border: 1px solid;"
+				/>
+			</div>
+		</article>
+		<article>
+			<div class="sticky">
 				<h2>Cartografía de Perú</h2>
 
 				<p>
