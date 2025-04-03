@@ -20,7 +20,7 @@
 					</a>
 				</li> -->
 				<li class="link-list__contact">
-					<a href="/contact?from_page={currentPage}"> Contáctate conmigo </a>
+					<a href="mailto:leon.calobeto@gmail.com"> Contáctate conmigo </a>
 				</li>
 				<li class="link-list__more">
 					<a href="/">Mas acerca de mi</a>
