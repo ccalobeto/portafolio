@@ -14,13 +14,13 @@
 				Perú y desarrollo proyectos de código abierto usando svelte y d3.js.
 			</p>
 			<ul class="link-list">
-				<li class="link-list__kofi">
+				<!-- <li class="link-list__kofi">
 					<a href="https://ko-fi.com/calobeto" rel="external">
 						Comprame un café.
 					</a>
-				</li>
+				</li> -->
 				<li class="link-list__contact">
-					<a href="/contact?from_page={currentPage}"> Contáctate conmigo </a>
+					<a href="mailto:leon.calobeto@gmail.com"> Contáctate conmigo </a>
 				</li>
 				<li class="link-list__more">
 					<a href="/">Mas acerca de mi</a>
@@ -72,9 +72,9 @@
 				}
 			}
 
-			&__kofi::marker {
-				content: '☕ ';
-			}
+			// &__kofi::marker {
+			// 	content: '☕ ';
+			// }
 
 			&__contact::marker {
 				content: '📩 ';
