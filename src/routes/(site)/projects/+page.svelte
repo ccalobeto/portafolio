@@ -100,7 +100,7 @@
 
 			<div class="image-gallery">
 				<img
-					src="/images/post_images/earthquakes.png"
+					src="/images/post_images/peru-earthquakes-map.svg"
 					alt=""
 					loading="lazy"
 					style="border: 1px solid;"
