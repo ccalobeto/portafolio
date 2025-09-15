@@ -10,8 +10,8 @@
 	<div class="bio">
 		<div>
 			<p class="about">
-				Mi nombre es Carlos León y soy Data Engineer. Actualmente vivo en Lima,
-				Perú y desarrollo proyectos de código abierto usando svelte y d3.js.
+				Mi nombre es Carlos León y soy Data Analytics Engineer. Actualmente vivo
+				en Lima, Perú y desarrollo pipeline de datos en la nube.
 			</p>
 			<ul class="link-list">
 				<!-- <li class="link-list__kofi">

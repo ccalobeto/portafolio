@@ -20,23 +20,41 @@
 	<div class="intro">
 		<div class="intro__headline">
 			<h2>
-				Hola, mi nombre es <strong>Carlos</strong> y soy Data Engineer
+				Hola, mi nombre es <strong>Carlos</strong> y soy Data Analytics Engineer
 			</h2>
 
-			<p class="subhead h2">Keep Calm and Let the Data Decide</p>
+			<!-- <p class="subhead h3">
+				<b>Keep Calm and Let the Data Decide</b>
+			</p> -->
 
-			<p>
-				Adapto e implemento soluciones basadas en datos, utilizando la
-				<b>visualización y la narrativa</b> como herramientas clave para transformar
-				información compleja en conocimientos accesibles.
+			<p class="subhead h3">
+				De datos a decisiones: entrego análisis claros y confiables para
+				potenciar el trabajo de prensa, encuestadoras y analistas.
 			</p>
+			<h3 style="font-size: 1.4rem; margin-bottom: 0.75rem;">
+				<b>Lo Que Ofrezco:</b>
+			</h3>
+			<h5 style="font-size: 1.4rem; margin-bottom: 0.75rem;">
+				<b>Soluciones para la toma de decisiones</b>
+			</h5>
 
 			<section>
 				<nav>
-					<ul>
-						<li><a href="/about-me">Más acerca de mi y lo que hago</a></li>
-						<li><a href="/blog">Mi blog</a></li>
-						<li><a href="/projects">Mis proyectos</a></li>
+					<ul
+						style="padding: 1rem; margin: 0; font-size: 1.3rem; line-height: 1.75rem;"
+					>
+						<li>
+							<b>Prensa - </b> Accede a análisis de sentimiento y tendencias en YouTube,
+							listos para tus notas.
+						</li>
+						<li>
+							<b>Ingeniería - </b>Elaboración de pipelines en la nube con datos
+							transformados y listos para tus dashboards
+						</li>
+						<li>
+							<b>Análisis - </b>Ahorra tiempo con datasets limpios, listos para
+							consultar en CSV, Parquet o BigQuery
+						</li>
 						<!-- <li><a href="/contact">Estemos en contacto</a></li> -->
 					</ul>
 				</nav>

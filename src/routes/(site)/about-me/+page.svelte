@@ -22,33 +22,36 @@
 		<h2>Acerca de Mi</h2>
 
 		<p>
-			Soy Ingeniero Electrónico de profesión con 7 años de experiencia
-			profesional en la ciencia de datos. Mi última experiencia profesional fue
-			como <strong>Data Science Specialist</strong>
-			en una compañía de fabricación de productos nutracéuticos, donde implementé
-			varios pipelines de datos usando el ecosistema empresarial (SQL, Python, Apache
-			Airflow y su despliegue en
-			<strong>PowerBI Online)</strong>. Actualmente estoy desarrollando
-			proyectos de interés público y empresarial.
+			Soy Ingeniero Electrónico con más de 5 años de experiencia en Ciencia de
+			Datos, especializado en el diseño y construcción de <strong
+				>pipelines</strong
+			> que transforman datos crudos en información valiosa para la toma de decisiones
+			basadas en datos.
 		</p>
 		<p>
-			La idea de este blog es compartir lo que voy aprendiendo en cada proyecto
-			y espero desarrollar herramientas útiles que puedas usar en los tuyos, ¡y
-			el código estará en mi cuenta de <a href="https://github.com/ccalobeto"
-				>Github!</a
-			>.
+			En mi etapa más reciente, he trabajado como <strong>Developer</strong> de
+			mi propio portafolio, capacitándome como <em>Data Analytics Engineer</em>.
+			Este proceso me permitió dominar herramientas clave en el ecosistema de
+			Ingeniería de Datos: almacenamiento y cómputo en la nube,
+			<strong>Spark</strong> y <strong>dbt</strong> para la transformación, y
+			<strong>Kestra</strong> y <strong>Airflow</strong> para la orquestación de
+			flujos de datos. Además, profundicé mis conocimientos en el desarrollo web
+			con
+			<strong>Svelte</strong>
+			y <strong>ObservableHQ</strong>, integrando visualizaciones interactivas
+			con datos geo espaciales.
 		</p>
-
 		<p>
-			Antes de entrar al mundo de la <em>Ciencia de Datos</em>, trabajé en una
-			Empresa de Telecomunicaciones donde desempeñé roles en el área comercial y
-			recursos humanos.
+			Previamente, me desempeñé como <strong>Data Science Specialist</strong> en
+			una empresa de biotecnología nutracéutica, donde implementé pipelines de datos
+			escalables y dashboards interactivos utilizando SQL, Python, Apache Airflow
+			y Power BI, impactando directamente en las áreas de ventas y marketing.
 		</p>
-
 		<p>
-			Personalmente me considero: amante del ajedrez, me relajo mucho con la
-			natación, aún de pocas redes sociales excepto twitter, autodidacta, amante
-			de las playas y baterista frustrado.
+			Antes de entrar al mundo de la Ciencia de Datos, trabajé en el sector de
+			<em>telecomunicaciones</em> en roles vinculados al área comercial y de recursos
+			humanos. Fue allí donde descubrí mi pasión por el análisis, la automatización
+			y la mejora continua; habilidades que hoy aplico en cada proyecto de datos.
 		</p>
 
 		<h3>Mas de mi:</h3>
@@ -65,6 +68,9 @@
 			<li>
 				<a href="https://github.com/ccalobeto" rel="nofollow">GitHub</a>
 			</li>
+			<li class="link-list__contact">
+				<a href="mailto:leon.calobeto@gmail.com"> Contáctate conmigo </a>
+			</li>
 		</ul>
 	</div>
 </Main>
@@ -79,7 +85,7 @@
 			aspect-ratio: 1 / 1;
 			object-fit: cover;
 			border-radius: 10rem;
-			margin: 4.5rem 0 var(--quarterNote) var(--quarterNote);
+			margin: 2.5rem 0 var(--quarterNote) var(--quarterNote);
 			shape-outside: circle(6rem);
 			float: right;
 			max-width: 30vw;
