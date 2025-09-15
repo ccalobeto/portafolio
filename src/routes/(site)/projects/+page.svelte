@@ -22,8 +22,10 @@
 				<h2>Indexado Espacial</h2>
 
 				<p>
-					Una herramienta visual que demuestra el poder <b>indexado espacial</b
-					>, aplicado a la optimización de recursos empresariales.
+					Herramienta visual que te muestra un tipo de segmentación basado en
+					hexágonos y que le permita a las empresas prospectar/atender a sus
+					clientes de acuerdo a su <b>facturación geográfica</b>, mejorando la
+					eficiencia operativa y reduciendo sus costos.
 				</p>
 				<ul>
 					<li>
@@ -58,11 +60,11 @@
 							>Live demo</a
 						>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="https://github.com/ccalobeto/latam-cartography"
 							>GitHub repo</a
 						>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 
@@ -81,18 +83,12 @@
 
 				<p>
 					Una herramienta visual que muestra la ubicación, profundidad e
-					intensidad a escala de los movimientos sísmicos ocurridos en el Perú y
-					el ranking de los departamentos que más sufrieron terremotos desde la
-					época colonial hasta la actualidad.
+					intensidad de los movimientos sísmicos ocurridos en el Perú.
 				</p>
 				<ul>
 					<li>
-						Lee más sobre esta visualización en este <a href="/blog/earthquakes"
-							>blog</a
-						>
-						y
 						<a rel="external" href="https://ccalobeto.github.io/earthquakes/">
-							tablero</a
+							Live demo</a
 						>
 					</li>
 				</ul>
@@ -119,12 +115,8 @@
 
 				<ul>
 					<li>
-						<a href="/blog/missed-ec/"
-							>Lee más sobre esta problemática en este enlace</a
-						>
-						o directamente en este
 						<a rel="external" href="https://ccalobeto.github.io/missed-ec/">
-							tablero</a
+							Live demo</a
 						>
 					</li>
 				</ul>
@@ -143,7 +135,7 @@
 			<div class="sticky">
 				<h2>Otros proyectos y&nbsp;apps</h2>
 				<p>
-					Tambien puedes encontrar más de mi trabajo en <a
+					Puedes encontrar más de mi trabajo en <a
 						href="https://github.com/ccalobeto">GitHub</a
 					>
 				</p>
