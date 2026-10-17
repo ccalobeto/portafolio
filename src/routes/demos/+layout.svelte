@@ -43,7 +43,7 @@
 		root = document.documentElement
 		root.classList.add('smooth-scroll')
 		if (!prefersReducedData()) {
-			const routesToPreload = ['/', '/blog', '/projects', '/about-me']
+			const routesToPreload = ['/', '/projects', '/about-me']
 			routesToPreload.forEach((route) => preloadCode(route))
 		}
 	})

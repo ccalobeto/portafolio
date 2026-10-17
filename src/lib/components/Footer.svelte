@@ -13,7 +13,6 @@
 			<nav>
 				<ul aria-labelledby="footer-pages">
 					<li><a href={navItems.home.route}>{navItems.home.title}</a></li>
-					<li><a href={navItems.blog.route}>{navItems.blog.title}</a></li>
 					<li><a href={navItems.about.route}>{navItems.about.title}</a></li>
 					<li>
 						<a href={navItems.projects.route}>{navItems.projects.title}</a>
@@ -25,7 +24,6 @@
 		<div class="footer__links">
 			<h2 class="h4" id="footer-links">Links</h2>
 			<ul aria-labelledby="footer-links">
-				<li><a href="/api/rss.xml" data-sveltekit-reload>RSS</a></li>
 				<li>
 					<a href="https://github.com/ccalobeto" rel="me">GitHub</a>
 				</li>

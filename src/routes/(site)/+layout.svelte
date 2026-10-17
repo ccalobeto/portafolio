@@ -34,9 +34,6 @@
 	let root: HTMLElement
 
 	let lastScrollPosition: number = 0
-	const isSinglePostCheck: RegExp = new RegExp(/\/blog\/[A-z0-9\-_]+\/?$/)
-
-	let isSinglePost: boolean = $derived(isSinglePostCheck.test(path))
 
 	const handleScroll = throttle(() => {
 		// Early return if we're above mobile width
@@ -76,7 +73,7 @@
 		root = document.documentElement
 		root.classList.add('smooth-scroll')
 		if (!prefersReducedData()) {
-			const routesToPreload = ['/', '/blog', '/projects', '/about-me']
+			const routesToPreload = ['/', '/projects', '/about-me']
 			routesToPreload.forEach((route) => preloadCode(route))
 		}
 	})
@@ -103,7 +100,7 @@
 	<Header {path} />
 
 	<div class="layout">
-		<PageHeading title={path} {isSinglePost} />
+		<PageHeading title={path} />
 
 		<PageTransition refresh={path}>
 			{@render children?.()}

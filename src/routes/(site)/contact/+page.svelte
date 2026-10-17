@@ -82,11 +82,6 @@
 				respuestas. No solicitudes, por favor.
 			</p>
 
-			<ul class="small">
-				<strong>Si</strong>, puedes volver a publicar el contenido de este blog
-				en otros idiomas con atribución.
-			</ul>
-
 			<form
 				id="contact-form"
 				name="contact"
@@ -157,11 +152,6 @@
 		font-family: var(--headingFont);
 		font-size: var(--quarterNote);
 		text-wrap: balance;
-	}
-
-	.small {
-		font-size: 0.8em;
-		line-height: 1.4;
 	}
 
 	#contact-form {

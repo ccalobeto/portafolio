@@ -1,5 +1,0 @@
-```jsx
-{
-	isUserLoggedIn ? <WelcomeBanner /> : <LoginForm />
-}
-```
