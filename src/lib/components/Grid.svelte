@@ -87,6 +87,7 @@
 <div class="grid-wrapper" style="--base: {base}px">
 	{#key thisPage}
 		<div class="cell-grid" class:inverted aria-hidden="true">
+			<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
 			{#each Array(count) as cell}
 				<GridCell color={randomColor()} {out} {base} {gridWidth} />
 			{/each}

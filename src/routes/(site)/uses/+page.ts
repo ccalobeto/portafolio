@@ -5,7 +5,10 @@ interface MarkdownPost {
 }
 
 export const load = async (): Promise<MarkdownPost> => {
-	const Uses = await import('/src/lib/content/uses.md')
+	const [loadModule] = Object.values(
+		import.meta.glob('../../../lib/content/uses.md')
+	)
+	const Uses = (await loadModule()) as { default: Component }
 
 	return {
 		Uses: Uses.default

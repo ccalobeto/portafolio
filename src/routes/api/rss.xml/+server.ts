@@ -25,14 +25,14 @@ const render = (
 <channel>
 <title>Carlos León</title>
 <description>JCarlos León</description>
-<link>https://www.carlosleon.dev</link>
-<atom:link href="https://www.carlosleon.dev/api/rss.xml" rel="self" type="application/rss+xml"/>
+<link>https://ccalobeto.github.io</link>
+<atom:link href="https://ccalobeto.github.io/api/rss.xml" rel="self" type="application/rss+xml"/>
 ${posts
 	.map(
 		(post) => `<item>
-<guid isPermaLink="true">https://www.carlosleon.dev/blog/${post.slug}</guid>
+<guid isPermaLink="true">https://ccalobeto.github.io/blog/${post.slug}</guid>
 <title>${post.title}</title>
-<link>https://www.carlosleon.dev/blog/${post.slug}</link>
+<link>https://ccalobeto.github.io/blog/${post.slug}</link>
 <description>${post.excerpt}</description>
 <pubDate>${new Date(post.date).toUTCString()}</pubDate>
 </item>`

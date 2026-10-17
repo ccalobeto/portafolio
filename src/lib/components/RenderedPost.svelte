@@ -80,13 +80,13 @@
 	<meta name="twitter:title" content={meta.title} />
 	<meta property="og:description" content={meta.excerpt} />
 	<meta name="twitter:description" content={meta.excerpt} />
-	<meta property="og:image" content="https://www.carlosleon.dev{imagePath}" />
+	<meta property="og:image" content="https://ccalobeto.github.io{imagePath}" />
 	<meta property="og:image:width" content={meta.coverWidth?.toString()} />
 	<meta property="og:image:height" content={meta.coverHeight?.toString()} />
-	<meta name="twitter:image" content="https://www.carlosleon.dev{imagePath}" />
+	<meta name="twitter:image" content="https://ccalobeto.github.io{imagePath}" />
 	<meta
 		property="og:url"
-		content="https://www.carlosleon.dev/blog/{meta.slug}/"
+		content="https://ccalobeto.github.io/blog/{meta.slug}/"
 	/>
 </svelte:head>
 
@@ -121,7 +121,7 @@
 		<PostContent />
 
 		<aside class="post-footer">
-			<Bio currentPage={meta.slug} />
+			<Bio />
 
 			{#if meta.categories}
 				<h2 class="h4">Posted in:</h2>

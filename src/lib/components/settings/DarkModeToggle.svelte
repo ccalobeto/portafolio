@@ -56,25 +56,27 @@
 	<LightDarkIcon />
 </button>
 
-<style lang="scss" global>
+<style lang="scss">
 	#dark-mode-toggle {
 		background: var(--buttonBackground);
 
 		&:hover,
 		&:focus {
-			svg {
-				path,
-				circle {
+			:global(svg) {
+				:global(path),
+				:global(circle) {
 					stroke: var(--yellow);
 				}
 			}
 		}
 
-		&.dark svg {
-			transform: translateY(0);
+		&.dark {
+			:global(svg) {
+				transform: translateY(0);
+			}
 		}
 
-		svg {
+		:global(svg) {
 			--itemTransition: 0.4s cubic-bezier(0.7, -0.01, 0, 1.01);
 			width: 2rem;
 			height: 4rem;
@@ -82,8 +84,8 @@
 			transition: transform var(--itemTransition), fill var(--itemTransition),
 				stroke var(--itemTransition), background var(--itemTransition);
 
-			path,
-			circle {
+			:global(path),
+			:global(circle) {
 				transition: transform var(--itemTransition), fill var(--itemTransition),
 					stroke var(--itemTransition), background var(--itemTransition);
 				stroke: var(--ink);

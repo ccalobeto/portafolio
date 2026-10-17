@@ -1,14 +1,14 @@
 ---
-title: "Optimización de Recursos Empresariales con Indexado Espacial H3"
-date: "2025-04-02"
+title: 'Optimización de Recursos Empresariales con Indexado Espacial H3'
+date: '2025-04-02'
 updated: '2025-04-02'
-categories: 
+categories:
   - Administración de Recursos
   - Indexado Espacial
 coverImage: 'peru-spatial-index.png'
 coverWidth: 320
 coverHeight: 480
-excerpt: "Encontraremos las zonas geográficas con mayores clientes usando datos sintéticos para optimizar el dimensionamiento de recursos."
+excerpt: 'Encontraremos las zonas geográficas con mayores clientes usando datos sintéticos para optimizar el dimensionamiento de recursos.'
 ---
 
 ## Insigths
@@ -48,4 +48,3 @@ El indexado espacial H3 es una herramienta poderosa que permite a las empresas a
 La visualización construida usando el indexado espacial para <b>alcanzar objetivos de ventas </b> la puedes encontrar [aquí](https://h3-sales-quota.pages.dev/).
 
 Si quieres explorar cómo H3 puede beneficiar a tu empresa, ¡no dudes en contactarme!
-

@@ -30,10 +30,10 @@
 	</div>
 </Main>
 
-<style lang="scss" global>
+<style lang="scss">
 	.uses {
-		li a,
-		p a {
+		:global(li a),
+		:global(p a) {
 			font-weight: bold;
 		}
 	}

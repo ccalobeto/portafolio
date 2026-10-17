@@ -1,11 +1,3 @@
-<script lang="ts">
-	interface Props {
-		currentPage: string
-	}
-
-	let { currentPage }: Props = $props()
-</script>
-
 <div class="bio-wrapper">
 	<div class="bio">
 		<div>

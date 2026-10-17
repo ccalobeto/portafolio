@@ -4,9 +4,11 @@ interface MarkdownPost {
 	Resume: Component
 }
 
-//TODO: wrong typing
 export const load = async (): Promise<MarkdownPost> => {
-	const resume = await import('$lib/content/posts/_not-in-use/resume.md')
+	const [loadModule] = Object.values(
+		import.meta.glob('../../../lib/content/posts/_not-in-use/resume.md')
+	)
+	const resume = (await loadModule()) as { default: Component }
 	return {
 		Resume: resume.default
 	}

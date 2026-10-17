@@ -1,14 +1,14 @@
 ---
-title: "Terremotos en el Perú"
-date: "2024-04-16"
-updated: "2024-11-21"
-categories: 
+title: 'Terremotos en el Perú'
+date: '2024-04-16'
+updated: '2024-11-21'
+categories:
   - desastre natural
   - choropleth
 coverImage: 'peru-earthquakes-map.svg'
 coverWidth: 150
 coverHeight: 180
-excerpt: "Visualización de Terremotos en el Perú a lo largo de nuestra historia"
+excerpt: 'Visualización de Terremotos en el Perú a lo largo de nuestra historia'
 ---
 
 # Terremotos en el Perú: Una Historia de Poder Destructivo
@@ -30,10 +30,12 @@ La medida que mejor representa el poder destructivo de estos fenómenos es la **
 **[¡Haz click aquí para ver la visualización interactiva de terremotos en Perú!](https://ccalobeto.github.io/earthquakes/)**
 
 Este proyecto muestra dos visualizaciones fascinantes:
+
 - Un **timeline chart** que revela la cantidad de terremotos por departamento a lo largo de la historia
 - Un **map chart** que muestra la ubicación geográfica, magnitud y profundidad de cada evento
 
 Para crear estas visualizaciones, tuvimos que:
+
 1. Trabajar con datos desde 1471 hasta febrero de 2024
 2. Para los registros antiguos (1471-1959), seleccionamos la magnitud máxima entre las tres variables que ofrece el IGP
 3. Como el IGP no proporciona la localidad exacta de cada evento, usamos la librería **turf** de JavaScript para determinar el distrito más cercano al epicentro
@@ -41,6 +43,7 @@ Para crear estas visualizaciones, tuvimos que:
 Si te interesa la parte técnica, puedes explorar todos los detalles de la preparación del dataset en este [repositorio](https://github.com/ccalobeto/earthquakes).
 
 El análisis de los datos revela patrones sorprendentes:
+
 - Arequipa lidera con 23 terremotos superiores a 7M, seguido de Lima con 21
 - Los círculos verdes indican terremotos ocurridos después de 1960
 - Arequipa ha tenido actividad sísmica más frecuente e intensa en los últimos 100 años
@@ -54,7 +57,3 @@ Desde 1960, hemos registrado 1,208 eventos superiores a 5.5M, incluyendo 6 terre
 Visualizar estos datos nos ayuda a comprender la verdadera dimensión de nuestra actividad sísmica histórica. Aunque las autoridades intentan crear conciencia, seguimos enfrentando cierta indiferencia colectiva entre nosotros y nuestros líderes.
 
 ¿No crees que ya es hora de desarrollar una verdadera cultura de prevención como la de Chile o Japón? La historia sísmica nos dice que no es cuestión de "si" ocurrirá otro gran terremoto, sino de "cuándo".
-
-
-
-
