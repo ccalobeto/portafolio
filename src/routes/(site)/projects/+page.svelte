@@ -16,179 +16,248 @@
 
 <Main>
 	<div class="projects compressed-content double-wide">
-		<article>
-			<div class="sticky">
-				<h2>Indexado Espacial</h2>
+		<div class="project-grid">
+			<a class="project-card" href="https://h3-sales-quota.pages.dev/">
+				<div class="frame">
+					<span class="num">01</span>
+					<img
+						src="/images/post_images/peru-spatial-index.gif"
+						alt="Demo de segmentación hexagonal para prospección de clientes"
+						loading="lazy"
+					/>
+				</div>
+				<div class="body">
+					<span class="cat">Herramienta visual</span>
+					<h2>Indexado Espacial</h2>
+					<p>
+						Herramienta visual que te muestra un tipo de segmentación basado en
+						hexágonos y que le permita a las empresas prospectar/atender a sus
+						clientes de acuerdo a su <b>facturación geográfica</b>, mejorando la
+						eficiencia operativa y reduciendo sus costos.
+					</p>
+					<span class="cta">Live demo <span class="arrow">→</span></span>
+				</div>
+			</a>
 
-				<p>
-					Herramienta visual que te muestra un tipo de segmentación basado en
-					hexágonos y que le permita a las empresas prospectar/atender a sus
-					clientes de acuerdo a su <b>facturación geográfica</b>, mejorando la
-					eficiencia operativa y reduciendo sus costos.
-				</p>
-				<ul>
-					<li>
-						<a href="https://h3-sales-quota.pages.dev/">Live demo</a>
-					</li>
-				</ul>
-			</div>
+			<a
+				class="project-card"
+				href="https://ccalobeto.github.io/latam-cartography/"
+			>
+				<div class="frame">
+					<span class="num">02</span>
+					<img
+						src="/images/post_images/latam-carto-qresize.png"
+						alt="Visualización de capas cartográficas del Perú"
+						loading="lazy"
+					/>
+				</div>
+				<div class="body">
+					<span class="cat">Datos geoespaciales</span>
+					<h2>Cartografía de Perú</h2>
+					<p>
+						Una herramienta visual que te permite descargar la cartografía del
+						Perú en diversos formatos. Uno de ellos es <b>topojson</b>, formato
+						super ligero y que puedes usar en tus proyectos de data analytics
+						sin comprometer el rendimiento de tu app. Tiene varias capas a
+						nivel departamental, provincial y distrital.
+					</p>
+					<span class="cta">Live demo <span class="arrow">→</span></span>
+				</div>
+			</a>
 
-			<div class="image-gallery">
-				<img
-					src="/images/post_images/peru-spatial-index.gif"
-					alt=""
-					loading="lazy"
-					style="border: 1px solid;"
-				/>
-			</div>
-		</article>
-		<article>
-			<div class="sticky">
-				<h2>Cartografía de Perú</h2>
+			<a
+				class="project-card"
+				rel="external"
+				href="https://ccalobeto.github.io/earthquakes/"
+			>
+				<div class="frame">
+					<span class="num">03</span>
+					<img
+						src="/images/post_images/peru-earthquakes-qresize.png"
+						alt="Mapa de sismos en el Perú"
+						loading="lazy"
+					/>
+				</div>
+				<div class="body">
+					<span class="cat">Visualización de datos</span>
+					<h2>Terremotos en el Perú</h2>
+					<p>
+						Una herramienta visual que muestra la ubicación, profundidad e
+						intensidad de los movimientos sísmicos ocurridos en el Perú.
+					</p>
+					<span class="cta">Live demo <span class="arrow">→</span></span>
+				</div>
+			</a>
 
-				<p>
-					Una herramienta visual que te permite descargar la cartografía del
-					Perú en diversos formatos. Uno de ellos es <b>topojson</b>, formato
-					super ligero y que puedes usar en tus proyectos de data analytics sin
-					comprometer el rendimiento de tu app. Tiene varias capas a nivel
-					departamental, provincial y distrital.
-				</p>
-				<ul>
-					<li>
-						<a href="https://ccalobeto.github.io/latam-cartography/"
-							>Live demo</a
+			<a
+				class="project-card"
+				rel="external"
+				href="https://ccalobeto.github.io/missed-ec/"
+			>
+				<div class="frame">
+					<span class="num">04</span>
+					<img
+						src="/images/post_images/missing-child-qresize.png"
+						alt="Análisis de desapariciones en Ecuador"
+						loading="lazy"
+					/>
+				</div>
+				<div class="body">
+					<span class="cat">Análisis de datos</span>
+					<h2>Personas desaparecidas en el Ecuador</h2>
+					<p>
+						Análisis de datos que muestra las razones detrás de la
+						criminalidad relacionada a la desaparición de personas en el
+						Ecuador.
+					</p>
+					<span class="cta">Live demo <span class="arrow">→</span></span>
+				</div>
+			</a>
+
+			<div class="project-card project-card--more">
+				<div class="body">
+					<h2>Otros proyectos y&nbsp;apps</h2>
+					<p>
+						Puedes encontrar más de mi trabajo en <a
+							href="https://github.com/ccalobeto">GitHub</a
 						>
-					</li>
-					<!-- <li>
-						<a href="https://github.com/ccalobeto/latam-cartography"
-							>GitHub repo</a
-						>
-					</li> -->
-				</ul>
+					</p>
+				</div>
 			</div>
-
-			<div class="image-gallery">
-				<img
-					src="/images/post_images/latam-carto-qresize.png"
-					alt=""
-					loading="lazy"
-					style="border: 1px solid;"
-				/>
-			</div>
-		</article>
-		<article>
-			<div class="sticky">
-				<h2>Terremotos en el Perú</h2>
-
-				<p>
-					Una herramienta visual que muestra la ubicación, profundidad e
-					intensidad de los movimientos sísmicos ocurridos en el Perú.
-				</p>
-				<ul>
-					<li>
-						<a rel="external" href="https://ccalobeto.github.io/earthquakes/">
-							Live demo</a
-						>
-					</li>
-				</ul>
-			</div>
-
-			<div class="image-gallery">
-				<img
-					src="/images/post_images/peru-earthquakes-qresize.png"
-					alt=""
-					loading="lazy"
-					style="border: 1px solid;"
-				/>
-			</div>
-		</article>
-
-		<article>
-			<div class="sticky">
-				<h2>Personas desaparecidas en el Ecuador</h2>
-
-				<p>
-					Análisis de datos que muestra las razones detrás de la criminalidad
-					relacionada a la desaparición de personas en el Ecuador.
-				</p>
-
-				<ul>
-					<li>
-						<a rel="external" href="https://ccalobeto.github.io/missed-ec/">
-							Live demo</a
-						>
-					</li>
-				</ul>
-			</div>
-
-			<div class="image-gallery">
-				<img
-					src="/images/post_images/missing-child-qresize.png"
-					alt=""
-					style="border: 1px solid;"
-				/>
-			</div>
-		</article>
-
-		<article>
-			<div class="sticky">
-				<h2>Otros proyectos y&nbsp;apps</h2>
-				<p>
-					Puedes encontrar más de mi trabajo en <a
-						href="https://github.com/ccalobeto">GitHub</a
-					>
-				</p>
-			</div>
-		</article>
+		</div>
 	</div>
 </Main>
 
 <style lang="scss">
-	.projects {
-		p {
-			max-width: var(--maxWidth);
-			// min-width: 12em;
-		}
+	.project-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: var(--dottedHalfNote);
+	}
 
-		article {
-			display: grid;
-			grid-template-columns: 1fr;
-			gap: var(--halfNote);
-			align-items: start;
+	.project-card {
+		display: block;
+		color: inherit;
+		text-decoration: none;
+		transition: transform 0.25s ease;
 
-			@media (min-width: vars.$sm) {
-				grid-template-columns: 2fr 3fr;
-
-				.sticky {
-					position: sticky;
-					top: var(--halfNote);
-				}
-			}
-
-			@media (min-width: vars.$lg) {
-				grid-template-columns: 2fr 3fr;
-			}
-
-			+ article {
-				margin-top: 6rem;
-			}
-		}
-
-		.image-gallery {
+		&--more {
 			display: flex;
+			align-items: center;
 			justify-content: center;
+			border: 1px dashed var(--lightGray);
+			min-height: 10rem;
 
-			img {
-				margin: 0 auto var(--halfNote);
-				display: block;
-				// max-width: unset;
-				width: calc(100% + (var(--margin) * 2));
-				// margin-left: calc(var(--margin) * -1);
+			p {
+				margin: 0;
+			}
+		}
+	}
 
-				@media (min-width: vars.$sm) {
-					max-width: calc(100% + (var(--margin) * 2));
-					width: 70vw;
-				}
+	.frame {
+		position: relative;
+		overflow: hidden;
+		aspect-ratio: 4 / 3;
+		border: 1px solid var(--lightGray);
+		background: var(--paper);
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+			transition: transform 0.25s ease;
+		}
+	}
+
+	.num {
+		position: absolute;
+		top: var(--eighthNote);
+		left: var(--eighthNote);
+		font-family: var(--labelFont);
+		font-size: 0.75rem;
+		font-weight: bold;
+		background: var(--paper);
+		color: var(--ink);
+		border: 1px solid var(--lightGray);
+		padding: 0.15rem 0.4rem;
+	}
+
+	.body {
+		padding-top: var(--eighthNote);
+
+		h2 {
+			font-size: 1.3rem;
+			margin-top: 0.3rem;
+		}
+
+		p {
+			font-size: 0.95rem;
+		}
+	}
+
+	.cat {
+		font-family: var(--labelFont);
+		font-size: 0.7rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--tagColor);
+	}
+
+	.cta {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4em;
+		font-family: var(--labelFont);
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--linkColor);
+
+		.arrow {
+			transition: transform 0.2s ease;
+		}
+	}
+
+	// Only animate the hover tilt/scale on devices that can genuinely hover
+	// (mouse/trackpad) -- touch devices just get the static card, no stuck state.
+	@media (hover: hover) {
+		.project-card:hover {
+			transform: translateY(-4px);
+		}
+
+		.project-card:nth-child(odd):hover .frame img {
+			transform: rotate(-2deg) scale(1.08);
+		}
+
+		.project-card:nth-child(even):hover .frame img {
+			transform: rotate(2deg) scale(1.08);
+		}
+
+		.project-card:hover h2 {
+			color: var(--accentColor);
+		}
+
+		.project-card:hover .cta .arrow {
+			transform: translateX(3px);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.project-card,
+		.frame img,
+		.cta .arrow {
+			transition: none;
+		}
+
+		@media (hover: hover) {
+			.project-card:hover {
+				transform: none;
+			}
+
+			.project-card:nth-child(odd):hover .frame img,
+			.project-card:nth-child(even):hover .frame img {
+				transform: none;
 			}
 		}
 	}
