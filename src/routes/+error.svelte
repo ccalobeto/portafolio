@@ -10,7 +10,6 @@
 	<p><strong>Ope!</strong> Maybe try these links?</p>
 	<ul>
 		<li><a href="/">Home</a></li>
-		<li><a href="/blog">Blog</a></li>
 		<li><a href="/contact?from_page=error">Contact</a></li>
 	</ul>
 </Main>

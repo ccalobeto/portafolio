@@ -6,7 +6,7 @@ interface MarkdownPost {
 
 export const load = async (): Promise<MarkdownPost> => {
 	const [loadModule] = Object.values(
-		import.meta.glob('../../../lib/content/posts/_not-in-use/resume.md')
+		import.meta.glob('../../../lib/content/resume.md')
 	)
 	const resume = (await loadModule()) as { default: Component }
 	return {

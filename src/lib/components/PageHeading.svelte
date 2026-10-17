@@ -4,10 +4,9 @@
 
 	interface Props {
 		title: string
-		isSinglePost?: boolean
 	}
 
-	let { title = $bindable(), isSinglePost = false }: Props = $props()
+	let { title = $bindable() }: Props = $props()
 
 	let computedTitle: string = $state('')
 	let isWorking: boolean = $state(false)
@@ -32,33 +31,31 @@
 	})
 </script>
 
-<PageTransition refresh={isSinglePost} span={true}>
+<PageTransition span={true}>
 	<div class="page-head">
-		{#if !isSinglePost}
-			<div
-				class="heading-wrapper"
-				class:in={isWorking}
-				class:no-motion={$prefersReducedMotion}
-			>
-				<span class="brace" aria-hidden="true">[</span>
-				<h1>
-					<div class="title-wrap">
-						{computedTitle}
-						<noscript>{title}</noscript>
-					</div>
-				</h1>
-				<span class="brace closing-brace" aria-hidden="true">]</span>
+		<div
+			class="heading-wrapper"
+			class:in={isWorking}
+			class:no-motion={$prefersReducedMotion}
+		>
+			<span class="brace" aria-hidden="true">[</span>
+			<h1>
+				<div class="title-wrap">
+					{computedTitle}
+					<noscript>{title}</noscript>
+				</div>
+			</h1>
+			<span class="brace closing-brace" aria-hidden="true">]</span>
 
-				<noscript>
-					<!-- Just here to allow the heading to show when JS is disabled. -->
-					<style>
-						.closing-brace {
-							transform: none !important;
-						}
-					</style>
-				</noscript>
-			</div>
-		{/if}
+			<noscript>
+				<!-- Just here to allow the heading to show when JS is disabled. -->
+				<style>
+					.closing-brace {
+						transform: none !important;
+					}
+				</style>
+			</noscript>
+		</div>
 	</div>
 </PageTransition>
 

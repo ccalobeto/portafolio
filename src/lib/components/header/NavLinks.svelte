@@ -18,7 +18,6 @@
 		{path}
 		mobileOnly={true}
 	/>
-	<NavLink to={navItems.blog.route} text={navItems.blog.title} {path} />
 	<NavLink to={navItems.projects.route} text={navItems.projects.title} {path} />
 	<NavLink to={navItems.about.route} text={navItems.about.title} {path} />
 	<!-- <NavLink to={navItems.contact.route} text={navItems.contact.title} {path} /> -->

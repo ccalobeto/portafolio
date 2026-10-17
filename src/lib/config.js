@@ -13,26 +13,16 @@ export const siteTitles = {
 	contact: 'Carlos León | Contacto',
 	utilities: 'Carlos León | Utilidades',
 	projects: 'Carlos León | Proyectos',
-	blog: 'Carlos León | Blog',
-	home: 'Carlos León',
-	category: 'Carlos León | Categoría',
-	allCategories: 'Carlos León | Categorías'
+	home: 'Carlos León'
 }
 export const siteURL = 'https://ccalobeto.github.io'
 export const siteAuthor = '- find and change this text in src/lib/config.js'
-
-// Controls how many posts are shown per page on the main blog index pages
-export const postsPerPage = 10
 
 // Edit this to alter the main nav menu. (Also used by the footer and mobile nav.)
 export const navItems = {
 	home: {
 		title: 'Inicio',
 		route: '/'
-	},
-	blog: {
-		title: 'Blog',
-		route: '/blog'
 	},
 	projects: {
 		title: 'Proyectos',

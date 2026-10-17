@@ -1,5 +1,0 @@
-```jsx
-{
-	isShown && <Hello />
-}
-```
