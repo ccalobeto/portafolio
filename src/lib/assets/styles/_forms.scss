@@ -135,4 +135,10 @@ input[type='submit'] {
 	.dark & {
 		border-width: 2px; //Prevents overrides from above button styles
 	}
+
+	:root:not(.light) & {
+		@media (prefers-color-scheme: dark) {
+			border-width: 2px; //Prevents overrides from above button styles
+		}
+	}
 }

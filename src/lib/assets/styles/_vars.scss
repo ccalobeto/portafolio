@@ -180,3 +180,28 @@ $xxxl: 122rem;
 
 	font-size: var(--bodyFontSize);
 }
+
+// Dark mode has two independent activation paths: the explicit .dark/.light class on
+// <html> (set by DarkModeToggle, persisted in localStorage) and the prefers-color-scheme
+// fallback for users who haven't touched the toggle yet. Themed components must handle
+// both or they silently break for system-preference-only users — see CLAUDE.md. This
+// mixin pairs the two so a component can't implement one without the other. $selector
+// is taken as a string (not `&`) since Svelte's compiler rejects `&` nested inside
+// `:global(...)` after Sass expands it. Only usable inside a Svelte component's
+// <style lang="scss"> block — :global() has no meaning in a plain .scss partial.
+//
+// Usage, inside a component's <style lang="scss">:
+//   @include vars.dark-mode('.my-component') {
+//     background: var(--darkVariant);
+//   }
+@mixin dark-mode($selector) {
+	:global(.dark #{$selector}) {
+		@content;
+	}
+
+	:global(html:not(.light) #{$selector}) {
+		@media (prefers-color-scheme: dark) {
+			@content;
+		}
+	}
+}
