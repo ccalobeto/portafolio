@@ -147,7 +147,7 @@
 			font-family: var(--headingFont);
 			font-style: normal;
 			font-size: 0.65rem;
-			color: var(--midGray);
+			color: var(--secondaryInk);
 			margin: 0.5em 0 0;
 		}
 

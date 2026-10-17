@@ -84,6 +84,18 @@ input[type='submit'] {
 
 	.dark & {
 		background: var(--darkBlue);
+		// --ink (lavender) only hits 3.69:1 against --darkBlue -- fails AA. See issue #21.
+		color: var(--trueWhite);
+	}
+
+	// This rule only fired for the explicit .dark class -- a system-dark preference with
+	// no toggle clicked left the button on its light background while --ink had already
+	// switched to lavender (1.39:1, way under AA). See issue #21.
+	:root:not(.light) & {
+		@media (prefers-color-scheme: dark) {
+			background: var(--darkBlue);
+			color: var(--trueWhite);
+		}
 	}
 
 	&:hover {
