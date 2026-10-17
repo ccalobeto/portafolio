@@ -91,7 +91,7 @@
 	{#if !dev}
 		<script
 			defer
-			data-domain="carlosleon.dev"
+			data-domain="ccalobeto.github.io"
 			src="https://plausible.io/js/plausible.js"
 		></script>
 	{/if}
