@@ -48,8 +48,9 @@
 		}
 	}
 
+	// --ink (lavender) only hits 3.69:1 against --darkBlue -- fails AA. See issue #21.
 	:global(.dark .tag .tag__link) {
-		color: var(--ink);
+		color: var(--trueWhite);
 		background: var(--darkBlue);
 	}
 
@@ -57,7 +58,7 @@
 		@media (prefers-color-scheme: dark) {
 			.tag .tag__link {
 				background: var(--darkBlue);
-				color: var(--ink);
+				color: var(--trueWhite);
 			}
 		}
 	}

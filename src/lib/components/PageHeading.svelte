@@ -86,14 +86,17 @@
 				font-family: var(--headingFont);
 				font-weight: normal;
 				font-size: 1.25em;
-				color: var(--lightGray);
+				color: var(--secondaryInk);
 				margin: 0 0.1em 0 0;
 				z-index: 2;
 				position: relative;
 				left: -1px;
 
 				&.closing-brace {
-					color: var(--yellow);
+					// --yellow only hits 1.18:1 against the new lavender paper -- fails
+					// AA. --tagColor is the same amber family, already validated at
+					// >=4.5:1 against --paper in both themes. See issue #21.
+					color: var(--tagColor);
 					margin: 0;
 					transition: var(--transition);
 					transform: translateX(calc(-100% + 0.3em));

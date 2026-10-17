@@ -83,11 +83,31 @@
 		}
 	}
 
+	// --ink (lavender) only hits 3.69:1 against --darkBlue -- fails AA. See issue #21.
+	// The system-preference variant was missing entirely: with no .dark class, a
+	// system-dark preference left these links on --lighterBlue while --ink had already
+	// switched to lavender (1.39:1, far under AA).
 	:global(.dark .pagination ul a) {
 		background: var(--darkBlue) !important;
+		color: var(--trueWhite);
 
 		&[aria-current='true'] {
 			background: var(--yellow) !important;
+			color: var(--black);
+		}
+	}
+
+	:global(html:not(.light)) {
+		@media (prefers-color-scheme: dark) {
+			.pagination ul a {
+				background: var(--darkBlue);
+				color: var(--trueWhite);
+
+				&[aria-current='true'] {
+					background: var(--yellow);
+					color: var(--black);
+				}
+			}
 		}
 	}
 </style>
