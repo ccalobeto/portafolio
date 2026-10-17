@@ -1,6 +1,6 @@
 {
 	"name": "portafolio",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"scripts": {
 		"dev": "vite dev --port 1027",
 		"host": "vite dev --port 1027 --host",
