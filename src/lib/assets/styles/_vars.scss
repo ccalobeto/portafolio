@@ -23,6 +23,19 @@ $xxxl: 122rem;
 	--orangeHSL: 22, 100%, 53.8%; //#ff6a13
 	--redHSL: 349, 100%, 45%; //#e6002a
 	--midGrayHSL: 204, 2%, 54%; // #878a8c
+
+	// ink/paper pair chosen via coolcontrast.vercel.app — 8.19:1 (AAA) in both directions
+	--navyHSL: 211.8, 73.9%, 18%; // #0c2c50
+	--lavenderHSL: 228.5, 60.5%, 83.1%; // #bac4ee
+
+	// accent swatches: "Dark" variants read on lavender (light theme), "Light" variants read on navy (dark theme).
+	// Each hits at least 4.5:1 (AA) against its paper — see issue #18.
+	--signalHSL: 20, 80%, 30.5%; // #8c3910 — 4.51:1 on lavender
+	--signalLightHSL: 20, 80%, 55.5%; // #e86f33 — 4.53:1 on navy
+	--routeHSL: 208, 65%, 32%; // #1d5587 — 4.52:1 on lavender
+	--routeLightHSL: 208, 65%, 57.5%; // #4c97d9 — 4.52:1 on navy
+	--flagHSL: 42, 80%, 23%; // #6a4d0c — 4.56:1 on lavender
+	--flagLightHSL: 42, 80%, 41%; // #bc8a15 — 4.55:1 on navy
 	// --darkGrayHSL: 214, 4%, 34%; // Older darkGray based on #53565a
 	--darkGrayHSL: 210, 4%, 27%; // Newer, darker darkGray based on #424548
 	--darkerGrayHSL: 349, 25%, 16%; // #331f22
@@ -73,13 +86,25 @@ $xxxl: 122rem;
 	--blueToYellow: #7ba7bc, #75b1bf, #66c6b6, #4fd27b, #56e035, #acef1b, #faf008,
 		#ffd100;
 
-	--ink: var(--darkGray);
-	--paper: var(--white);
-	--paperHSL: var(--whiteHSL);
-	--headingColor: var(--darkerGray);
-	--accentColor: var(--darkBlue);
-	--linkColor: var(--darkBlue);
+	--navy: hsl(var(--navyHSL));
+	--lavender: hsl(var(--lavenderHSL));
+	--signal: hsl(var(--signalHSL));
+	--signalLight: hsl(var(--signalLightHSL));
+	--route: hsl(var(--routeHSL));
+	--routeLight: hsl(var(--routeLightHSL));
+	--flag: hsl(var(--flagHSL));
+	--flagLight: hsl(var(--flagLightHSL));
+
+	// --highlightColor stays on the old gray swatches — it colors selected text against
+	// --yellow (see global.scss ::selection), unrelated to the ink/paper/accent redesign.
+	--ink: var(--navy);
+	--paper: var(--lavender);
+	--paperHSL: var(--lavenderHSL);
+	--headingColor: var(--ink);
+	--accentColor: var(--signal);
+	--linkColor: var(--route);
 	--highlightColor: var(--darkGray);
+	--tagColor: var(--flag);
 
 	--maxWidth: 34rem;
 	--sidebarWidth: 15rem;
@@ -115,13 +140,14 @@ $xxxl: 122rem;
 	}
 
 	&.dark {
-		--paper: var(--black);
-		--paperHSL: var(--blackHSL);
-		--ink: var(--white);
-		--headingColor: var(--white);
-		--accentColor: var(--lightBlue);
-		--linkColor: var(--lightBlue);
+		--paper: var(--navy);
+		--paperHSL: var(--navyHSL);
+		--ink: var(--lavender);
+		--headingColor: var(--ink);
+		--accentColor: var(--signalLight);
+		--linkColor: var(--routeLight);
 		--highlightColor: var(--darkerGray);
+		--tagColor: var(--flagLight);
 		--lighterGray: hsl(var(--lightGrayHS), 26%);
 		--lightestGray: hsl(var(--lightGrayHS), 13%);
 	}
@@ -129,13 +155,14 @@ $xxxl: 122rem;
 	// Ensures media query only runs if a theme has not been set AND the user prefers dark color schemes
 	&:not(.light) {
 		@media (prefers-color-scheme: dark) {
-			--paper: var(--black);
-			--paperHSL: var(--blackHSL);
-			--ink: var(--white);
-			--headingColor: var(--white);
-			--accentColor: var(--lightBlue);
-			--linkColor: var(--lightBlue);
+			--paper: var(--navy);
+			--paperHSL: var(--navyHSL);
+			--ink: var(--lavender);
+			--headingColor: var(--ink);
+			--accentColor: var(--signalLight);
+			--linkColor: var(--routeLight);
 			--highlightColor: var(--darkerGray);
+			--tagColor: var(--flagLight);
 		}
 	}
 
