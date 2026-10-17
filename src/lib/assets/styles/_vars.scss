@@ -50,10 +50,12 @@ $xxxl: 122rem;
 	--black: hsl(var(--blackHSL));
 	--trueBlack: hsl(var(--trueBlackHSL));
 
-	--headingFont: 'Averta-Std', -apple-system, system-ui, BlinkMacSystemFont,
+	--headingFont: 'Fraunces', Georgia, 'Times New Roman', serif;
+	--bodyFont: 'Archivo', -apple-system, system-ui, BlinkMacSystemFont,
 		'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-	--bodyFont: 'Alkes', Georgia, serif;
 	--codeFont: 'MonoLisa', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+		monospace;
+	--labelFont: 'Space Mono', Menlo, Consolas, 'Andale Mono', 'Ubuntu Mono',
 		monospace;
 
 	--bodyFontWeight: normal;
