@@ -70,7 +70,7 @@
 
 			<div class="image-gallery">
 				<img
-					src="/images/post_images/latam-carto.gif"
+					src="/images/post_images/latam-carto-qresize.png"
 					alt=""
 					loading="lazy"
 					style="border: 1px solid;"
@@ -96,7 +96,7 @@
 
 			<div class="image-gallery">
 				<img
-					src="/images/post_images/peru-earthquakes-map.svg"
+					src="/images/post_images/peru-earthquakes-qresize.png"
 					alt=""
 					loading="lazy"
 					style="border: 1px solid;"
@@ -124,7 +124,7 @@
 
 			<div class="image-gallery">
 				<img
-					src="/images/post_images/missing-child.png"
+					src="/images/post_images/missing-child-qresize.png"
 					alt=""
 					style="border: 1px solid;"
 				/>
