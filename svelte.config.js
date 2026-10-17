@@ -18,7 +18,7 @@ const config = {
 			postcss: {
 				plugins: [autoprefixer]
 			}
-	}),
+		}),
 		mdsvex({
 			extensions: ['.md'],
 			highlight: {
@@ -30,10 +30,10 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-      fallback: '404.html' // or '404.html'
-    }),
+			fallback: '404.html' // or '404.html'
+		}),
 		alias: {
-			$lib: 'src/lib',
+			$lib: 'src/lib'
 		},
 		prerender: {
 			handleMissingId: 'ignore'

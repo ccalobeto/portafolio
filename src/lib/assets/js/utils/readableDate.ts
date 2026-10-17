@@ -1,4 +1,4 @@
-const months: (string | null) [] = [
+const months: (string | null)[] = [
 	null, // January should be 1, not 0, etc.
 	'January',
 	'February',

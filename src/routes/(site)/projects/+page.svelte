@@ -1,5 +1,4 @@
 <script lang="ts">
-	import CodePenLink from '$lib/components/CodePenLink.svelte'
 	import Main from '$lib/components/Main.svelte'
 	import { metaImagesUrl, siteTitles } from '$lib/config'
 </script>

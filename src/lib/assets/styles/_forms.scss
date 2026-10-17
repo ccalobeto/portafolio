@@ -105,7 +105,9 @@ input[type='submit'] {
 	border-radius: 2rem;
 	border: 2px solid var(--ink);
 	background: var(--buttonBackground);
-	transition: background var(--itemTransition), color var(--itemTransition),
+	transition:
+		background var(--itemTransition),
+		color var(--itemTransition),
 		border-color var(--itemTransition),
 		transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 	z-index: 11;

@@ -19,16 +19,17 @@
 		formData = { ...formData, from_page: params.get('from_page') ?? '' }
 	})
 
-	const encode = (data: { [key: string]: any }): string => {
+	const encode = (data: Record<string, string | null>): string => {
 		return Object.keys(data)
 			.map(
-				(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+				(key) =>
+					encodeURIComponent(key) + '=' + encodeURIComponent(data[key] ?? '')
 			)
 			.join('&')
 	}
 
 	const handleSubmit = (e: Event): void => {
-		const { name, email, message, from_page } = formData
+		const { name, email, message } = formData
 
 		if (!name || !email || !message) {
 			showError = true

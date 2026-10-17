@@ -38,8 +38,8 @@ export const load = async ({ params }): Promise<MarkdownPost | undefined> => {
 			}
 		} catch (err: unknown) {
 			if (err instanceof Error) {
-			throw error(404, err.message)
-		}
+				throw error(404, err.message)
+			}
 		}
 	}
 }
