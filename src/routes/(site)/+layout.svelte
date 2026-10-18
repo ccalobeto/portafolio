@@ -3,17 +3,11 @@
 	import '$lib/assets/styles/global.scss'
 
 	import throttle from 'just-throttle'
+	import PageShell from '$lib/components/PageShell.svelte'
 	import Header from '$lib/components/header/Header.svelte'
-	import Footer from '$lib/components/Footer.svelte'
 	import PageTransition from '$lib/components/transitions/PageTransition.svelte'
 	import PageHeading from '$lib/components/PageHeading.svelte'
-	import Loader from '$lib/components/Loader.svelte'
-	import { prefersReducedData } from '$lib/assets/js/utils'
-	import { isLoading, prefersReducedMotion, isScrollingDown } from '$lib/data/store'
-	import { menu } from '$lib/components/header/nav'
-	import { onMount } from 'svelte'
-	import { afterNavigate, beforeNavigate, preloadCode } from '$app/navigation'
-	import { dev } from '$app/environment'
+	import { isScrollingDown } from '$lib/data/store'
 
 	interface Props {
 		data: LayoutData
@@ -26,8 +20,6 @@
 	$effect(() => {
 		;({ path } = data)
 	})
-
-	let root: HTMLElement
 
 	let lastScrollPosition: number = 0
 
@@ -51,48 +43,11 @@
 		}
 		lastScrollPosition = currentScrollPosition
 	}, 100)
-
-	beforeNavigate(({ to }) => {
-		menu.close()
-		if (to?.route?.id) {
-			$isLoading = true
-			root.classList.remove('smooth-scroll')
-		}
-	})
-
-	afterNavigate(() => {
-		$isLoading = false
-		root.classList.add('smooth-scroll')
-	})
-
-	onMount(() => {
-		root = document.documentElement
-		root.classList.add('smooth-scroll')
-		if (!prefersReducedData()) {
-			const routesToPreload = ['/', '/projects', '/about-me']
-			routesToPreload.forEach((route) => preloadCode(route))
-		}
-	})
 </script>
 
 <svelte:window onscroll={handleScroll} />
 
-<svelte:head>
-	<meta property="og:site_name" content="Carlos León" />
-	<meta property="og:locale" content="en_US" />
-	<meta name="twitter:card" content="summary_large_image" />
-	{#if !dev}
-		<script
-			defer
-			data-domain="ccalobeto.github.io"
-			src="https://plausible.io/js/plausible.js"
-		></script>
-	{/if}
-</svelte:head>
-
-<div id="app" class:reduce-motion={$prefersReducedMotion}>
-	<Loader loading={$isLoading} />
-
+<PageShell>
 	<Header />
 
 	<div class="layout">
@@ -102,6 +57,4 @@
 			{@render children?.()}
 		</PageTransition>
 	</div>
-
-	<Footer />
-</div>
+</PageShell>
