@@ -1,21 +1,15 @@
 <script lang="ts">
 	import NavLinks from '$lib/components/header/NavLinks.svelte'
 	import HamburgerButton from '$lib/components/header/HamburgerButton.svelte'
-	import { isMenuOpen } from '$lib/data/store'
-
-	interface Props {
-		path: string;
-	}
-
-	let { path }: Props = $props();
+	import { menu } from './nav'
 </script>
 
 <template>
 	<div>
 		<HamburgerButton />
 
-		<nav class="main-nav nav" class:open={$isMenuOpen}>
-			<NavLinks {path} />
+		<nav class="main-nav nav" class:open={$menu}>
+			<NavLinks />
 		</nav>
 	</div>
 </template>

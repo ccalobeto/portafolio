@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { isMenuOpen } from '$lib/data/store'
+	import { menu } from './nav'
 
-	let readableMenuStateOpposite: string = $derived($isMenuOpen ? 'Close' : 'Open')
-	
+	let readableMenuStateOpposite: string = $derived($menu ? 'Close' : 'Open')
+
 </script>
 
 <button
 	id="hamburger"
-	aria-pressed={$isMenuOpen}
-	class:fixed={$isMenuOpen}
+	aria-pressed={$menu}
+	class:fixed={$menu}
 	class="settings-toggle"
-	onclick={() => isMenuOpen.set(!$isMenuOpen)}
+	onclick={() => menu.toggle()}
 >
 	<span class="sr">{readableMenuStateOpposite} menu</span>
 	<div class="line line-top" aria-hidden="true"></div>

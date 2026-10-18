@@ -9,12 +9,8 @@
 	import PageHeading from '$lib/components/PageHeading.svelte'
 	import Loader from '$lib/components/Loader.svelte'
 	import { prefersReducedData } from '$lib/assets/js/utils'
-	import {
-		isLoading,
-		prefersReducedMotion,
-		isScrollingDown,
-		isMenuOpen
-	} from '$lib/data/store'
+	import { isLoading, prefersReducedMotion, isScrollingDown } from '$lib/data/store'
+	import { menu } from '$lib/components/header/nav'
 	import { onMount } from 'svelte'
 	import { afterNavigate, beforeNavigate, preloadCode } from '$app/navigation'
 	import { dev } from '$app/environment'
@@ -57,7 +53,7 @@
 	}, 100)
 
 	beforeNavigate(({ to }) => {
-		$isMenuOpen = false
+		menu.close()
 		if (to?.route?.id) {
 			$isLoading = true
 			root.classList.remove('smooth-scroll')
@@ -97,7 +93,7 @@
 <div id="app" class:reduce-motion={$prefersReducedMotion}>
 	<Loader loading={$isLoading} />
 
-	<Header {path} />
+	<Header />
 
 	<div class="layout">
 		<PageHeading title={path} />
