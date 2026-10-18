@@ -13,45 +13,40 @@
 </svelte:head>
 
 <Main>
-	<div class="compressed-content writing">
-		<img
-			class="profile-pic"
-			src="/images/bio-photo.jpg"
-			alt="Mi foto generada con IA ;)."
-		/>
-		<h2>Acerca de Mi</h2>
+	<div class="compressed-content wider writing">
+		<div class="intro-header">
+			<img
+				class="profile-pic"
+				src="/images/bio-photo.jpg"
+				alt="Mi foto generada con IA ;)."
+			/>
+			<div class="intro-header__text">
+				<h2>Acerca de Mi</h2>
+				<p>
+					Soy <strong>Analytics Engineer</strong> en una empresa privada, donde
+					diseño y desarrollo plataformas de datos end-to-end en la nube — desde
+					la ingesta y transformación hasta modelos de pronóstico de demanda. Mi
+					trabajo más reciente: una arquitectura Lakehouse en AWS que automatiza
+					seis datamarts y distribuye cerca de
+					<strong>1,800 series pronosticadas</strong> cada mes.
+				</p>
+			</div>
+		</div>
 
 		<p>
-			Soy Ingeniero Electrónico con más de 5 años de experiencia en Ciencia de
-			Datos, especializado en el diseño y construcción de <strong
-				>pipelines</strong
-			> que transforman datos crudos en información valiosa para la toma de decisiones
-			basadas en datos.
+			Este sitio es mi espacio personal para explorar la analítica más allá de
+			la empresa: desde segmentación geoespacial para negocios hasta análisis
+			con impacto social, como sismos y desapariciones en Perú y Ecuador.
+			Podés ver esos proyectos en <a href="/projects">Proyectos</a>.
 		</p>
+
 		<p>
-			En mi etapa más reciente, he trabajado como <strong>Developer</strong> de
-			mi propio portafolio, capacitándome como <em>Data Analytics Engineer</em>.
-			Este proceso me permitió dominar herramientas clave en el ecosistema de
-			Ingeniería de Datos: almacenamiento y cómputo en la nube,
-			<strong>Spark</strong> y <strong>dbt</strong> para la transformación, y
-			<strong>Kestra</strong> y <strong>Airflow</strong> para la orquestación de
-			flujos de datos. Además, profundicé mis conocimientos en el desarrollo web
-			con
-			<strong>Svelte</strong>
-			y <strong>ObservableHQ</strong>, integrando visualizaciones interactivas
-			con datos geo espaciales.
-		</p>
-		<p>
-			Previamente, me desempeñé como <strong>Data Science Specialist</strong> en
-			una empresa de biotecnología nutracéutica, donde implementé pipelines de datos
-			escalables y dashboards interactivos utilizando SQL, Python, Apache Airflow
-			y Power BI, impactando directamente en las áreas de ventas y marketing.
-		</p>
-		<p>
-			Antes de entrar al mundo de la Ciencia de Datos, trabajé en el sector de
-			<em>telecomunicaciones</em> en roles vinculados al área comercial y de recursos
-			humanos. Fue allí donde descubrí mi pasión por el análisis, la automatización
-			y la mejora continua; habilidades que hoy aplico en cada proyecto de datos.
+			Soy Ingeniero Electrónico de formación. Antes de dedicarme a los datos
+			trabajé en <em>telecomunicaciones</em>, en roles comerciales y de
+			recursos humanos — ahí descubrí mi interés por el análisis y la
+			automatización, que profundicé después como
+			<strong>Data Science Specialist</strong> en una empresa de biotecnología
+			nutracéutica.
 		</p>
 
 		<h3>Mas de mi:</h3>
@@ -80,20 +75,48 @@
 		h2 {
 			margin-bottom: var(--quarterNote);
 		}
+	}
 
-		.profile-pic {
-			aspect-ratio: 1 / 1;
-			object-fit: cover;
-			border-radius: 10rem;
-			margin: 2.5rem 0 var(--quarterNote) var(--quarterNote);
-			shape-outside: circle(6rem);
-			float: right;
-			max-width: 30vw;
+	.intro-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--halfNote);
+		margin-bottom: var(--halfNote);
+		text-align: center;
 
-			@media (min-width: vars.$xxs) {
-				max-width: 12rem;
-				shape-outside: circle(8rem);
+		@media (min-width: vars.$xxs) {
+			flex-direction: row;
+			align-items: flex-start;
+			text-align: left;
+		}
+
+		&__text {
+			flex: 1;
+
+			h2 {
+				margin-bottom: var(--quarterNote);
 			}
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.profile-pic {
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
+		border-radius: 10rem;
+		width: 10rem;
+		flex-shrink: 0;
+
+		@media (min-width: vars.$xxs) {
+			width: 12rem;
+		}
+
+		@media (min-width: vars.$xs) {
+			width: 14rem;
 		}
 	}
 </style>
