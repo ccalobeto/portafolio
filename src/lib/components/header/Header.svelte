@@ -1,15 +1,11 @@
 <script lang="ts">
+	import { page } from '$app/stores'
 	import LogoSVG from '$lib/components/header/LogoSVG.svelte'
 	import Grid from '$lib/components/Grid.svelte'
 	import NavMenu from '$lib/components/header/NavMenu.svelte'
 	import DarkModeToggle from '$lib/components/settings/DarkModeToggle.svelte'
-	import { isMenuOpen, isScrollingDown } from '$lib/data/store'
-
-	interface Props {
-		path: string
-	}
-
-	let { path }: Props = $props()
+	import { isScrollingDown } from '$lib/data/store'
+	import { menu } from './nav'
 
 	// I don't love any part of this, but it's necessary to make the "skip to main content" link work properly, so we'll live with it.
 	const focusMain = (e: Event): void => {
@@ -32,16 +28,16 @@
 
 		<div
 			class="icon-container"
-			class:sticky={$isMenuOpen}
-			class:ghosty={$isScrollingDown && !$isMenuOpen}
+			class:sticky={$menu}
+			class:ghosty={$isScrollingDown && !$menu}
 		>
 			<!-- <ReduceMotionToggle /> -->
 			<DarkModeToggle />
-			<NavMenu {path} />
+			<NavMenu />
 		</div>
 	</header>
 
-	<Grid refresh={path} />
+	<Grid refresh={$page.url.pathname} />
 
 	<noscript>
 		<style>

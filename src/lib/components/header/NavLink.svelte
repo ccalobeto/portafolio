@@ -1,27 +1,22 @@
 <script lang="ts">
-	import { isMenuOpen, prefersReducedMotion } from '$lib/data/store'
+	import { page } from '$app/stores'
+	import { prefersReducedMotion } from '$lib/data/store'
+	import { menu, isActive } from './nav'
 
 	interface Props {
 		text: string;
 		to: string;
-		path: string;
 		mobileOnly?: string | boolean;
 	}
 
-	let {
-		text,
-		to,
-		path,
-		mobileOnly = false
-	}: Props = $props();
+	let { text, to, mobileOnly = false }: Props = $props();
 
-	let isCurrentPage: boolean = $derived(path === to)
-	
+	let isCurrentPage: boolean = $derived(isActive($page.url.pathname, to))
 </script>
 
 <li
 	class="nav__item"
-	class:open={$isMenuOpen}
+	class:open={$menu}
 	class:no-motion={$prefersReducedMotion}
 	class:mobile-only={mobileOnly}
 >
