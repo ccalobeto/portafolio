@@ -40,7 +40,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"just-debounce": "^1.1.0",
 		"just-throttle": "^4.2.0",
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-slug": "^5.1.0"

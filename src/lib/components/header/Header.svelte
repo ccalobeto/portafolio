@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores'
 	import LogoSVG from '$lib/components/header/LogoSVG.svelte'
-	import Grid from '$lib/components/Grid.svelte'
 	import NavMenu from '$lib/components/header/NavMenu.svelte'
 	import DarkModeToggle from '$lib/components/settings/DarkModeToggle.svelte'
 	import { isScrollingDown } from '$lib/data/store'
@@ -36,8 +34,6 @@
 			<NavMenu />
 		</div>
 	</header>
-
-	<Grid refresh={$page.url.pathname} />
 
 	<noscript>
 		<style>
