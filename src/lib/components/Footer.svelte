@@ -1,12 +1,10 @@
 <script lang="ts">
-	import Grid from './Grid.svelte'
 	import { navItems } from '$lib/config'
 
 	const currentYear: number = new Date().getFullYear()
 </script>
 
 <div class="footer-wrapper">
-	<Grid inverted={true} />
 	<footer class="footer">
 		<div class="footer__links">
 			<h2 class="h4" id="footer-pages">Páginas</h2>
