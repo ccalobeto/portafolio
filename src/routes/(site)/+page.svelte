@@ -10,7 +10,7 @@
 		data-key="description"
 		property="og:description"
 		name="description"
-		content="Data Visualization Engineer"
+		content="Analytics Engineer"
 	/>
 	<meta property="og:image" content={metaImagesUrl.ogImage} />
 	<meta name="twitter:image" content={metaImagesUrl.twitterImage} />
@@ -20,51 +20,57 @@
 	<div class="intro">
 		<div class="intro__headline">
 			<h2>
-				Hola, mi nombre es <strong>Carlos</strong> y soy Data Analytics Engineer
+				Hola, mi nombre es <strong>Carlos</strong> y soy Analytics Engineer
 			</h2>
 
-			<!-- <p class="subhead h3">
-				<b>Keep Calm and Let the Data Decide</b>
-			</p> -->
-
 			<p class="subhead h3">
-				De datos a decisiones: entrego análisis claros y confiables para
-				potenciar el trabajo de prensa, encuestadoras y analistas.
+				Diseño plataformas de datos en la nube para empresas, y en mi tiempo
+				personal exploro cómo la analítica resuelve problemas sociales.
 			</p>
-			<h3 style="font-size: 1.4rem; margin-bottom: 0.75rem;">
-				<b>Lo Que Ofrezco:</b>
-			</h3>
-			<h5 style="font-size: 1.4rem; margin-bottom: 0.75rem;">
-				<b>Soluciones para la toma de decisiones</b>
-			</h5>
 
-			<section>
-				<nav>
-					<ul
-						style="padding: 1rem; margin: 0; font-size: 1.3rem; line-height: 1.75rem;"
-					>
-						<li>
-							<b>Prensa - </b> Accede a análisis de sentimiento y tendencias en YouTube,
-							listos para tus notas.
-						</li>
-						<li>
-							<b>Ingeniería - </b>Elaboración de pipelines en la nube con datos
-							transformados y listos para tus dashboards
-						</li>
-						<li>
-							<b>Análisis - </b>Ahorra tiempo con datasets limpios, listos para
-							consultar en CSV, Parquet o BigQuery
-						</li>
-						<!-- <li><a href="/contact">Estemos en contacto</a></li> -->
-					</ul>
-				</nav>
-			</section>
+			<ul class="capability-tags">
+				<li>Data Engineering</li>
+				<li>Cloud Architecture</li>
+				<li>Analytics &amp; Forecasting</li>
+			</ul>
+		</div>
+
+		<div class="intro__visual" aria-hidden="true">
+			<svg
+				class="data-diagram"
+				viewBox="0 0 420 280"
+				role="presentation"
+				preserveAspectRatio="xMidYMid meet"
+			>
+				<rect class="d-square" x="18" y="190" width="16" height="16" fill="var(--signal)" />
+				<rect class="d-square" x="55" y="230" width="10" height="10" fill="var(--route)" />
+				<rect class="d-square" x="40" y="140" width="12" height="12" fill="var(--flag)" />
+				<rect class="d-square" x="95" y="200" width="20" height="20" fill="var(--yellow)" />
+				<rect class="d-square" x="130" y="160" width="9" height="9" fill="var(--orange)" />
+				<rect class="d-square" x="160" y="220" width="13" height="13" fill="var(--lightBlue)" />
+				<rect class="d-square" x="20" y="90" width="8" height="8" fill="var(--route)" />
+				<rect class="d-square" x="185" y="140" width="11" height="11" fill="var(--signal)" />
+				<rect class="d-square" x="70" y="70" width="10" height="10" fill="var(--orange)" />
+				<rect class="d-square" x="110" y="100" width="7" height="7" fill="var(--flag)" />
+				<rect class="d-square" x="200" y="190" width="15" height="15" fill="var(--route)" />
+				<rect class="d-square" x="145" y="60" width="9" height="9" fill="var(--yellow)" />
+
+				<path
+					class="d-line"
+					d="M25,250 C100,235 140,190 170,150 C210,100 260,70 320,55 C350,47 370,43 400,40"
+					fill="none"
+					stroke="var(--accentColor)"
+					stroke-width="3"
+					stroke-linecap="round"
+				/>
+				<circle class="d-point" cx="400" cy="40" r="7" fill="var(--accentColor)" />
+			</svg>
 		</div>
 	</div>
 </Main>
 
 <style lang="scss">
-	@for $i from 1 through 4 {
+	@for $i from 1 through 3 {
 		.intro .intro__headline > *:nth-child(#{$i}) {
 			animation-delay: 0.2 + ($i * 0.14s);
 		}
@@ -90,8 +96,9 @@
 		}
 
 		@media (min-width: vars.$xl) {
-			display: grid; //TODO: leftover from old design. Probably not needed unless I decide to put stuff in that narrow right column again.
+			display: grid;
 			grid-template-columns: 48rem 1fr;
+			align-items: center;
 			gap: 0 calc(var(--wholeNote) * 2);
 		}
 
@@ -124,20 +131,78 @@
 			:global(.dark) & {
 				color: var(--ink);
 			}
-
-			a {
-				text-decoration: underline;
-			}
 		}
+	}
 
-		p {
-			max-width: 38em;
-		}
+	.capability-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		list-style: none;
+		margin: 0;
+		padding: 0;
 
-		ul {
-			margin-top: var(--halfNote);
-			margin-bottom: 0;
+		li {
+			font-family: var(--labelFont);
+			font-size: 0.75rem;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			color: var(--tagColor);
+			border: 1px solid var(--tagColor);
+			padding: 0.3em 0.7em;
 		}
+	}
+
+	.intro__visual {
+		margin-top: var(--wholeNote);
+		max-width: 26rem;
+
+		@media (min-width: vars.$xl) {
+			margin-top: 0;
+			max-width: none;
+		}
+	}
+
+	.data-diagram {
+		width: 100%;
+		height: auto;
+		overflow: visible;
+	}
+
+	@for $i from 1 through 12 {
+		.d-square:nth-child(#{$i}) {
+			animation-delay: 1.1s + ($i * 0.07s);
+		}
+	}
+
+	.d-square {
+		opacity: 0;
+		transform: translateY(12px);
+		transform-box: fill-box;
+		transform-origin: center;
+		animation: fade_in_intro 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+
+		:global(.reduce-motion) & {
+			transform: translateY(0);
+		}
+	}
+
+	.d-line,
+	.d-point {
+		opacity: 0;
+		transform: translateY(12px);
+		transform-box: fill-box;
+		transform-origin: center;
+		animation: fade_in_intro 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+		animation-delay: 2s;
+
+		:global(.reduce-motion) & {
+			transform: translateY(0);
+		}
+	}
+
+	.d-point {
+		animation-delay: 2.3s;
 	}
 
 	@keyframes fade_in_intro {
