@@ -30,10 +30,9 @@
 					<span class="cat">Herramienta visual</span>
 					<h2>Indexado Espacial</h2>
 					<p>
-						Herramienta visual que te muestra un tipo de segmentación basado en
-						hexágonos y que le permita a las empresas prospectar/atender a sus
-						clientes de acuerdo a su <b>facturación geográfica</b>, mejorando la
-						eficiencia operativa y reduciendo sus costos.
+						Segmentación hexagonal para prospección de clientes por <b
+							>facturación geográfica</b
+						>. Reduce costos operativos al enfocar mejor la atención comercial.
 					</p>
 					<span class="cta">Live demo <span class="arrow">→</span></span>
 				</div>
@@ -55,11 +54,10 @@
 					<span class="cat">Datos geoespaciales</span>
 					<h2>Cartografía de Perú</h2>
 					<p>
-						Una herramienta visual que te permite descargar la cartografía del
-						Perú en diversos formatos. Uno de ellos es <b>topojson</b>, formato
-						super ligero y que puedes usar en tus proyectos de data analytics
-						sin comprometer el rendimiento de tu app. Tiene varias capas a
-						nivel departamental, provincial y distrital.
+						Descarga la cartografía del Perú en formatos ligeros como <b
+							>topojson</b
+						>, lista para tus proyectos de analítica. Incluye capas
+						departamentales, provinciales y distritales.
 					</p>
 					<span class="cta">Live demo <span class="arrow">→</span></span>
 				</div>
@@ -82,8 +80,8 @@
 					<span class="cat">Visualización de datos</span>
 					<h2>Terremotos en el Perú</h2>
 					<p>
-						Una herramienta visual que muestra la ubicación, profundidad e
-						intensidad de los movimientos sísmicos ocurridos en el Perú.
+						Ubicación, profundidad e intensidad de los sismos ocurridos en el
+						Perú. Visualización interactiva para explorar patrones geográficos.
 					</p>
 					<span class="cta">Live demo <span class="arrow">→</span></span>
 				</div>
@@ -106,9 +104,9 @@
 					<span class="cat">Análisis de datos</span>
 					<h2>Personas desaparecidas en el Ecuador</h2>
 					<p>
-						Análisis de datos que muestra las razones detrás de la
-						criminalidad relacionada a la desaparición de personas en el
-						Ecuador.
+						Análisis de datos sobre las causas detrás de la desaparición de
+						personas en Ecuador. Una mirada cuantitativa a un problema social
+						urgente.
 					</p>
 					<span class="cta">Live demo <span class="arrow">→</span></span>
 				</div>
